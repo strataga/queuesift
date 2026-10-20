@@ -63,6 +63,25 @@ headline maintainer-accuracy gold. A 30-positive MRE count therefore permits a
 secondary Slice 2 judgment only; it does not authorize a headline
 missing-reproduction accuracy claim.
 
+### Missing-reproduction negative
+
+An eligible member is an MRE negative when all of the following hold:
+
+1. It is not duplicate-positive.
+2. It has no current `needs-mre` label.
+3. No Tier A/B maintainer explicitly requested a reproduction, log,
+   environment detail, configuration, setup step, or another missing diagnostic
+   artifact in a bug-like report. A version-only check is not enough for an MRE
+   positive.
+4. The operator reviewed the pre-freeze thread and the Tier A/B label/triage
+   history and found no rejected positive signal.
+5. Feature, design, or use-case scoping questions are negatives for this
+   reproduction class, and their report scope is recorded.
+
+Negative controls are selected as the oldest eligible members to avoid
+cherry-picking. Unexamined or ambiguous threads remain unknown and are excluded
+from binary denominators.
+
 ## Stale positive
 
 An issue is stale-positive when both conditions hold:

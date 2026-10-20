@@ -17,8 +17,8 @@ Gold rules:
 Prepare—not run—an offline evaluation for the only qualified backlog tasks:
 
 - Stale-triage classification: 145 positives, 5 negatives.
-- Missing-reproduction secondary judgment: 54 positives; negatives not yet
-  adjudicated.
+- Missing-reproduction secondary judgment: 55 positives and 30 adjudicated
+  negatives.
 - Duplicate retrieval/classification: no evaluation; the gold set has only 3
   positives against a 30-positive minimum.
 
@@ -95,10 +95,10 @@ a queue-utility outcome, not proof of semantic understanding.
 
 MRE reporting requires both:
 
-- At least 54 adjudicated positives, already present.
-- At least 30 adjudicated true negatives, not yet complete.
+- At least 30 adjudicated positives: 55 are present.
+- At least 30 adjudicated true negatives: 30 are present.
 
-When negatives are complete, report:
+Report:
 
 - Confusion matrix.
 - Precision, recall, and F1 with Wilson 95% intervals.
@@ -152,7 +152,7 @@ Slice 2 implementation and scoring remain blocked until all are true:
    spike.
 2. Updated provider training/retention ADR for real issue text.
 3. Recorded pre-scoring spend cap.
-4. At least 30 adjudicated MRE true negatives.
+4. Completed MRE denominators: 55 positives and 30 negatives.
 5. A Slice 2 scope restricted to stale and secondary MRE evaluation.
 6. Issue-level creation-time test proving that no future state, current label,
    or later timeline signal reaches model inputs.

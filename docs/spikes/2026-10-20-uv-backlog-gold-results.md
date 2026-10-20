@@ -14,9 +14,10 @@ Date: 2026-10-20. Cohort: `evals/manifests/uv-backlog-sweep-2026-10-20.json`
   showed the 14 marks nominated other issues as duplicates of the sampled
   issues; those sampled issues are canonical hubs, not duplicate positives.
   A cohort-wide Tier A duplicate-language scan found no additional positives.
-- Missing reproduction: **54 positives / 30 required — PASS as a secondary
-  operator judgment only**. All 50 current `needs-mre` members plus four
-  explicit Tier A/B bug-report requests were reviewed.
+- Missing reproduction: **55 positives and 30 negatives / 30 required —
+  PASS as a secondary operator judgment only**. All 50 current `needs-mre`
+  members, five explicit Tier A/B bug-report requests, and the oldest 30
+  eligible non-duplicate negative controls were reviewed.
   This does not authorize a headline missing-reproduction accuracy claim under
   design §8.
 - Stale: **145 positives / 30 required — PASS**. The deterministic rule found

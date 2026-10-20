@@ -1,3 +1,6 @@
+import json
+from pathlib import Path
+
 from app.gold import (
     TimelineSignal,
     duplicate_candidate,
@@ -61,3 +64,23 @@ def test_minimum_positive_verdict_uses_thirty() -> None:
 
 def test_public_org_maintainer_counts_without_timeline_association() -> None:
     assert is_accepted_maintainer("zsol", None) is True
+
+
+def test_committed_backlog_gold_has_qualified_denominators() -> None:
+    path = (
+        Path(__file__).resolve().parents[1]
+        / "evals"
+        / "adjudication"
+        / "uv-backlog-gold-2026-10-20.json"
+    )
+    gold = json.loads(path.read_text())
+
+    mre = gold["missing_reproduction"]
+    positives = {item["number"] for item in mre["positives"]}
+    negatives = {item["number"] for item in mre["negatives"]}
+    assert mre["adjudicated_positives"] >= 30
+    assert mre["adjudicated_negatives"] >= 30
+    assert positives.isdisjoint(negatives)
+    assert gold["duplicate"]["adjudicated_positives"] == 3
+    assert len(gold["duplicate"]["canonical_hubs_not_counted"]) == 14
+    assert gold["stale"]["adjudicated_positives"] == 145
