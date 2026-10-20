@@ -1,8 +1,8 @@
 # QueueSift (Project B) — Support Triage-and-Resolve: Design
 
 - **Working name:** QueueSift (owner-confirmed 2026-10-19; search-checked, not trademark-checked)
-- **Status:** Draft revision 2 for owner approval, after builder-check and critical review.
-  No code is authorised by this document alone.
+- **Status:** Approved by owner 2026-10-19 (revision 2, after builder-check and critical
+  review). Implementation proceeds under the gates in §11 and §14.
 - **Date:** 2026-10-19 (revision 2 same day)
 - **Owner / builder:** Jason (solo learner, targeting Forward Deployed Engineer roles)
 - **Target queue:** `langchain-ai/langchain` GitHub Issues (owner-confirmed 2026-10-19)
