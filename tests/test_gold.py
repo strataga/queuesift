@@ -1,6 +1,7 @@
 from app.gold import (
     TimelineSignal,
     duplicate_candidate,
+    is_accepted_maintainer,
     is_stale,
     minimum_positive_verdict,
     missing_reproduction_candidate,
@@ -56,3 +57,7 @@ def test_stale_requires_old_issue_and_no_maintainer_action_in_window() -> None:
 def test_minimum_positive_verdict_uses_thirty() -> None:
     assert minimum_positive_verdict(29) == "fail"
     assert minimum_positive_verdict(30) == "pass"
+
+
+def test_public_org_maintainer_counts_without_timeline_association() -> None:
+    assert is_accepted_maintainer("zsol", None) is True

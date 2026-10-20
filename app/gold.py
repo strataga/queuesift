@@ -20,12 +20,18 @@ MIN_ADJUDICATED_POSITIVES = 30
 
 TIER_A_MAINTAINERS = frozenset(
     {
+        "AlexWaygood",
         "BurntSushi",
         "charliermarsh",
+        "dcreager",
+        "dhruvmanila",
+        "EliteTK",
         "ibraheemdev",
         "konstin",
+        "MichaReiser",
         "woodruffw",
         "zanieb",
+        "zsol",
     }
 )
 TIER_B_MAINTAINERS = frozenset({"notatallshaw", "samypr100"})

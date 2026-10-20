@@ -5,15 +5,22 @@
     "author_association MEMBER on sampled issue records in queuesift-uv-backlog.db",
     "MEMBER/COLLABORATOR author_association on sampled timeline/comment records in queuesift-uv-backlog.db",
     "docs/spikes/2026-10-20-uv-switch-verdict.md observation of active human maintainers",
+    "public GitHub organization membership via GET /orgs/astral-sh/members on 2026-10-20",
     "public GitHub user profile affiliation for woodruffw (@astral-sh)"
   ],
   "maintainers_tier_a": [
+    "AlexWaygood",
     "BurntSushi",
     "charliermarsh",
+    "dcreager",
+    "dhruvmanila",
+    "EliteTK",
     "ibraheemdev",
     "konstin",
+    "MichaReiser",
     "woodruffw",
-    "zanieb"
+    "zanieb",
+    "zsol"
   ],
   "maintainers_tier_b": [
     "notatallshaw",
@@ -30,5 +37,5 @@
     "spdk-bot",
     "zaniebot"
   ],
-  "limits": "Repository collaborators endpoint returns 403 for this token, so private collaborator coverage may be incomplete. Tier C can support an explicitly worded request but cannot create gold by itself. A current label or event actor with no recorded MEMBER/COLLABORATOR association is not automatically Tier A/B, except woodruffw for the reason above."
+  "limits": "Repository collaborators endpoint returns 403 for this token, and organization membership lists only public members, so non-public maintainer coverage may be incomplete. Tier C can support an explicitly worded request but cannot create gold by itself. A current label or event actor with no recorded MEMBER/COLLABORATOR association is not automatically Tier A/B, except allowlisted public members and woodruffw for the reasons above."
 }
