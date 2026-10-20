@@ -1,0 +1,34 @@
+{
+  "repo": "langchain-ai/langchain",
+  "snapshot_date": "2026-10-20",
+  "sources": [
+    ".github/CODEOWNERS (ccurme, eyurtsev, mdrxy)",
+    "timeline/comment author_association OWNER/MEMBER/COLLABORATOR in 90-day backfill",
+    "public org members via GET /orgs/langchain-ai/members (public membership only; incomplete)"
+  ],
+  "maintainers_tier_a": [
+    "byhow",
+    "ccurme",
+    "eyurtsev",
+    "mdrxy",
+    "sydney-runkle"
+  ],
+  "maintainers_tier_b_public_org": [
+    "amazansky",
+    "bracesproul",
+    "christian-bromann",
+    "hntrl",
+    "paarth-a",
+    "ramon-langchain",
+    "ramonpetgrave64"
+  ],
+  "bots": [
+    "coderabbitai[bot]",
+    "cursor[bot]",
+    "github-actions[bot]",
+    "langchain-oss-automated-triage[bot]",
+    "langsmith-fleet[bot]",
+    "open-swe[bot]"
+  ],
+  "limits": "Repository collaborators endpoint requires push access (403 for this token). Tier B proves public org membership only; per-action review is still required. Private org members may be missing."
+}

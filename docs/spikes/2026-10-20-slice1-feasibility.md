@@ -116,3 +116,25 @@ negligible under either provider.
 Next concrete step: finish the actor allowlist and manually adjudicate a
 bounded F1 sample to test whether thread-level positives change blocker 2,
 before building Slice 2 model plumbing.
+
+## Adjudication follow-up (same day)
+
+Completed. Actor allowlist: `evals/actors/langchain-actors-2026-10-20.json`
+(CODEOWNERS plus timeline associations as tier A; public org members as
+tier B; collaborators endpoint is 403 without push access, so private org
+members may still be missing). Sample: every 4th F1 member by issue number
+(37 of 145), full comment threads fetched, maintainer evidence searched with
+written rules and candidate snippets operator-reviewed (single rater).
+Result in `evals/adjudication/f1-sample-2026-10-20.json`: duplicate confirmed
+1, missing-information requests 0, forum redirects 0, known-issue links 0,
+maintainer label changes 0. An any-author text search surfaced many
+"reproduced / I would like to work on this" contributor comments, which are
+not maintainer missing-information requests and were rejected as positives.
+
+**Blocker 2 stands.** Thread-level evidence does not rescue the sparse
+classes at sample scale, and full-cohort actuals already bound duplicates at
+2 in F1. Proceeding to Slice 2 therefore needs an explicit owner decision:
+(a) re-scope evaluated value to denser outcomes, (b) invoke the one permitted
+KB4 switch to the uv backlog after re-measuring its templates and class
+prevalence, or (c) stop at the Slice 0/1 portfolio artifact. Silently
+lowering the minimum-30 rule is not an option under the approved design.
