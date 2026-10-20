@@ -1,0 +1,458 @@
+{
+  "repo": "langchain-ai/langchain",
+  "snapshot_date": "2026-10-20",
+  "source": "GET /repos/langchain-ai/langchain/labels (paginated, via gh api)",
+  "family_rule": "intent/workflow/unscored sets from app/analysis.py; all other labels are package family",
+  "labels": [
+    {
+      "name": "OpenSWE",
+      "description": null,
+      "color": "ededed",
+      "family": "package"
+    },
+    {
+      "name": "anthropic",
+      "description": "`langchain-anthropic` package issues & PRs",
+      "color": "cc3518",
+      "family": "package"
+    },
+    {
+      "name": "bot",
+      "description": null,
+      "color": "ededed",
+      "family": "package"
+    },
+    {
+      "name": "breaking",
+      "description": "Breaking changes",
+      "color": "C8594B",
+      "family": "unscored"
+    },
+    {
+      "name": "bug",
+      "description": "Related to a bug, vulnerability, unexpected error with an existing feature",
+      "color": "b60205",
+      "family": "intent"
+    },
+    {
+      "name": "bypass-issue-check",
+      "description": null,
+      "color": "0e8a16",
+      "family": "package"
+    },
+    {
+      "name": "candidate",
+      "description": "Feature candidates",
+      "color": "494df9",
+      "family": "package"
+    },
+    {
+      "name": "chroma",
+      "description": "`langchain-chroma` package issues & PRs",
+      "color": "ee16ba",
+      "family": "package"
+    },
+    {
+      "name": "ci-ignore",
+      "description": "\u26a0\ufe0f Shouldn't be regularly used!  Bypasses CI (e.g. linting)",
+      "color": "171717",
+      "family": "unscored"
+    },
+    {
+      "name": "codspeed-ignore",
+      "description": "\u26a0\ufe0f Shouldn't be regularly used!  Bypasses Codspeed performance checks",
+      "color": "171717",
+      "family": "package"
+    },
+    {
+      "name": "core",
+      "description": "`langchain-core` package issues & PRs",
+      "color": "f9d0c4",
+      "family": "package"
+    },
+    {
+      "name": "deepseek",
+      "description": "`langchain-deepseek` package issues & PRs",
+      "color": "a2f32a",
+      "family": "package"
+    },
+    {
+      "name": "dependencies",
+      "description": "Pull requests that update a dependency file (e.g. `pyproject.toml` or `uv.lock`)",
+      "color": "0366d6",
+      "family": "unscored"
+    },
+    {
+      "name": "docker",
+      "description": "Pull requests that update docker code",
+      "color": "21ceff",
+      "family": "unscored"
+    },
+    {
+      "name": "documentation",
+      "description": "Improvements or additions to documentation",
+      "color": "f9d0c4",
+      "family": "intent"
+    },
+    {
+      "name": "exa",
+      "description": "`langchain-exa` package issues & PRs",
+      "color": "81b707",
+      "family": "package"
+    },
+    {
+      "name": "external",
+      "description": "",
+      "color": "d32751",
+      "family": "workflow"
+    },
+    {
+      "name": "feature",
+      "description": "For PRs that implement a new feature; NOT A FEATURE REQUEST",
+      "color": "ededed",
+      "family": "intent"
+    },
+    {
+      "name": "feature request",
+      "description": "Request for an enhancement / additional functionality",
+      "color": "058a42",
+      "family": "intent"
+    },
+    {
+      "name": "fireworks",
+      "description": "`langchain-fireworks` package issues & PRs",
+      "color": "c66169",
+      "family": "package"
+    },
+    {
+      "name": "fix",
+      "description": "For PRs that implement a fix",
+      "color": "ededed",
+      "family": "package"
+    },
+    {
+      "name": "fork-main-head",
+      "description": null,
+      "color": "b76e79",
+      "family": "package"
+    },
+    {
+      "name": "github_actions",
+      "description": "Pull requests that update GitHub Actions code",
+      "color": "000000",
+      "family": "package"
+    },
+    {
+      "name": "great-writeup",
+      "description": "This is a stellar example of the types of issues/PRs we're looking for",
+      "color": "cfd3d7",
+      "family": "package"
+    },
+    {
+      "name": "groq",
+      "description": "`langchain-groq` package issues & PRs",
+      "color": "b161e8",
+      "family": "package"
+    },
+    {
+      "name": "help wanted",
+      "description": "Open to community contribution.",
+      "color": "1D76DB",
+      "family": "package"
+    },
+    {
+      "name": "hotfix",
+      "description": null,
+      "color": "b76e79",
+      "family": "package"
+    },
+    {
+      "name": "huggingface",
+      "description": "`langchain-huggingface` package issues & PRs",
+      "color": "97a58e",
+      "family": "package"
+    },
+    {
+      "name": "ignore-lint-pr-title",
+      "description": "\u26a0\ufe0f Shouldn't be regularly used!  Bypasses the Validate PR Title linting action",
+      "color": "171717",
+      "family": "package"
+    },
+    {
+      "name": "infra",
+      "description": "PRs made that include chores, devops, repo meta changes",
+      "color": "f9d0c4",
+      "family": "unscored"
+    },
+    {
+      "name": "integration",
+      "description": "PR made that is related to a provider partner package integration",
+      "color": "bfd4f2",
+      "family": "package"
+    },
+    {
+      "name": "internal",
+      "description": "",
+      "color": "91d983",
+      "family": "package"
+    },
+    {
+      "name": "investigate",
+      "description": "Flagged for investigation",
+      "color": "0e8a16",
+      "family": "workflow"
+    },
+    {
+      "name": "langchain",
+      "description": "`langchain` package issues & PRs",
+      "color": "f9d0c4",
+      "family": "package"
+    },
+    {
+      "name": "langchain-classic",
+      "description": "`langchain-classic` package issues & PRs",
+      "color": "b6d8f1",
+      "family": "package"
+    },
+    {
+      "name": "langchain-mcp-adapters",
+      "description": "",
+      "color": "000618",
+      "family": "package"
+    },
+    {
+      "name": "linting",
+      "description": null,
+      "color": "ededed",
+      "family": "unscored"
+    },
+    {
+      "name": "mcp",
+      "description": "Model Context Protocol (MCP)",
+      "color": "7057ff",
+      "family": "package"
+    },
+    {
+      "name": "missing-issue-link",
+      "description": "",
+      "color": "d6670a",
+      "family": "package"
+    },
+    {
+      "name": "mistralai",
+      "description": "`langchain-mistralai` package issues & PRs",
+      "color": "3a88e5",
+      "family": "package"
+    },
+    {
+      "name": "model-profiles",
+      "description": "`langchain-model-profiles` package issues & PRs",
+      "color": "d54836",
+      "family": "package"
+    },
+    {
+      "name": "needs test",
+      "description": "PR needs to be updated with tests",
+      "color": "ea4c8e",
+      "family": "package"
+    },
+    {
+      "name": "new-contributor",
+      "description": null,
+      "color": "b76e79",
+      "family": "package"
+    },
+    {
+      "name": "nomic",
+      "description": "`langchain-nomic` package issues & PRs",
+      "color": "dc8b79",
+      "family": "package"
+    },
+    {
+      "name": "ollama",
+      "description": "`langchain-ollama` package issues & PRs",
+      "color": "39563c",
+      "family": "package"
+    },
+    {
+      "name": "openai",
+      "description": "`langchain-openai` package issues & PRs",
+      "color": "e1b975",
+      "family": "package"
+    },
+    {
+      "name": "openrouter",
+      "description": "`langchain-openrouter` package issues & PRs",
+      "color": "1f2e57",
+      "family": "package"
+    },
+    {
+      "name": "performance",
+      "description": null,
+      "color": "ededed",
+      "family": "unscored"
+    },
+    {
+      "name": "perplexity",
+      "description": "`langchain-perplexity` package issues & PRs",
+      "color": "240f4c",
+      "family": "package"
+    },
+    {
+      "name": "prompty",
+      "description": "`langchain-prompty` package issues & PRs",
+      "color": "86af65",
+      "family": "package"
+    },
+    {
+      "name": "python",
+      "description": "Pull requests that update python code",
+      "color": "2b67c6",
+      "family": "package"
+    },
+    {
+      "name": "python:uv",
+      "description": "Pull requests that update python:uv code",
+      "color": "2b67c6",
+      "family": "package"
+    },
+    {
+      "name": "qdrant",
+      "description": "`langchain-qdrant` package issues & PRs",
+      "color": "384308",
+      "family": "package"
+    },
+    {
+      "name": "refactor",
+      "description": "PRs that include a refactor",
+      "color": "55836d",
+      "family": "unscored"
+    },
+    {
+      "name": "release",
+      "description": "PRs made to release a package",
+      "color": "D3237A",
+      "family": "unscored"
+    },
+    {
+      "name": "release-deps: acknowledged",
+      "description": "see #38062",
+      "color": "fbc56a",
+      "family": "package"
+    },
+    {
+      "name": "reproduced",
+      "description": "Maintainers are able to reproduce the provided example",
+      "color": "e65b5d",
+      "family": "workflow"
+    },
+    {
+      "name": "revert",
+      "description": "PRs made to revert a change",
+      "color": "cdfc2e",
+      "family": "package"
+    },
+    {
+      "name": "security",
+      "description": null,
+      "color": "aaaaaa",
+      "family": "package"
+    },
+    {
+      "name": "size: L",
+      "description": "500-999 LOC",
+      "color": "b76e79",
+      "family": "unscored"
+    },
+    {
+      "name": "size: M",
+      "description": "200-499 LOC",
+      "color": "b76e79",
+      "family": "unscored"
+    },
+    {
+      "name": "size: S",
+      "description": "50-199 LOC",
+      "color": "b76e79",
+      "family": "unscored"
+    },
+    {
+      "name": "size: XL",
+      "description": "1000+ LOC",
+      "color": "b76e79",
+      "family": "unscored"
+    },
+    {
+      "name": "size: XS",
+      "description": "< 50 LOC",
+      "color": "b76e79",
+      "family": "unscored"
+    },
+    {
+      "name": "standard-tests",
+      "description": "Related to the package `standard-tests`",
+      "color": "f9d0c4",
+      "family": "package"
+    },
+    {
+      "name": "tests",
+      "description": "PRs made that add, modify, or remove tests",
+      "color": "515337",
+      "family": "unscored"
+    },
+    {
+      "name": "text-splitters",
+      "description": "Related to the package `text-splitters`",
+      "color": "f9d0c4",
+      "family": "package"
+    },
+    {
+      "name": "trusted-contributor",
+      "description": ">= 5 merged PRs in the `langchain-ai/langchain` repo",
+      "color": "8642c5",
+      "family": "package"
+    },
+    {
+      "name": "typesafe",
+      "description": null,
+      "color": "b76e79",
+      "family": "package"
+    },
+    {
+      "name": "typing",
+      "description": "",
+      "color": "5F5931",
+      "family": "unscored"
+    },
+    {
+      "name": "unable-to-reproduce",
+      "description": "LangChain's maintainers are not able to reproduce this issue and consequently cannot work on it",
+      "color": "ea4c8e",
+      "family": "workflow"
+    },
+    {
+      "name": "v1",
+      "description": "Issue specific to LangChain 1.0",
+      "color": "66d1d0",
+      "family": "package"
+    },
+    {
+      "name": "vllm",
+      "description": "",
+      "color": "577c64",
+      "family": "package"
+    },
+    {
+      "name": "waiting-on-author",
+      "description": "Maintainer awaits response from a issue/PR author to move forward. Removed automatically on comment",
+      "color": "0205D3",
+      "family": "workflow"
+    },
+    {
+      "name": "xai",
+      "description": "`langchain-xai` package issues & PRs",
+      "color": "9ea2a1",
+      "family": "package"
+    }
+  ]
+}

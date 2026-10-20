@@ -1,0 +1,1321 @@
+{
+  "name": "F1",
+  "freeze_date": "2026-10-20",
+  "creation_window": {
+    "start_inclusive": "2026-08-24",
+    "end_inclusive": "2026-09-20"
+  },
+  "outcome_observation_days": 30,
+  "eligibility": "GitHub issue type Bug or Feature; task/privileged/pull-request items excluded",
+  "input_rule": "creation-time title/body/template fields only; later comments and final labels are outcome evidence",
+  "taxonomy_snapshot": "evals/taxonomy/langchain-labels-2026-10-20.json",
+  "declared_before_any_system_output": true,
+  "member_count": 145,
+  "members": [
+    {
+      "repo": "langchain-ai/langchain",
+      "number": 39877,
+      "github_id": 5233931010,
+      "created_at": "2026-08-24T10:56:53Z",
+      "issue_type": "Feature",
+      "body_sha256": "6c2b20f8fce10c555c522e36ca115ac605610a43be67717a78b31f0559c7c84b",
+      "body_reconstruction": "no-edited-timeline-event"
+    },
+    {
+      "repo": "langchain-ai/langchain",
+      "number": 39882,
+      "github_id": 5238002159,
+      "created_at": "2026-08-24T18:15:00Z",
+      "issue_type": "Bug",
+      "body_sha256": "d6688353294d18692881c047dc2d77febb2a13592190488cb26c2b1c1dbc032f",
+      "body_reconstruction": "no-edited-timeline-event"
+    },
+    {
+      "repo": "langchain-ai/langchain",
+      "number": 39883,
+      "github_id": 5238404760,
+      "created_at": "2026-08-24T19:02:13Z",
+      "issue_type": "Bug",
+      "body_sha256": "ce40540f6a9ceb6b3ec467dfd9acb8ca16d877e6e9bd12c291b61dcbe91d2016",
+      "body_reconstruction": "no-edited-timeline-event"
+    },
+    {
+      "repo": "langchain-ai/langchain",
+      "number": 39895,
+      "github_id": 5242228288,
+      "created_at": "2026-08-25T04:59:09Z",
+      "issue_type": "Bug",
+      "body_sha256": "f627da90bcfea549a0a70522be5dc914a1e00a46cc016bf13cf9ae9a14f61dbd",
+      "body_reconstruction": "no-edited-timeline-event"
+    },
+    {
+      "repo": "langchain-ai/langchain",
+      "number": 39896,
+      "github_id": 5242416933,
+      "created_at": "2026-08-25T05:31:29Z",
+      "issue_type": "Bug",
+      "body_sha256": "0ee6618ab6c911172a559699162c60a6ec9f9e2d9378245514a828fc7aaa752b",
+      "body_reconstruction": "no-edited-timeline-event"
+    },
+    {
+      "repo": "langchain-ai/langchain",
+      "number": 39897,
+      "github_id": 5242447117,
+      "created_at": "2026-08-25T05:36:52Z",
+      "issue_type": "Bug",
+      "body_sha256": "ddd1cfe423b8cf7e678e790153f0ecb381ca712652bdb223dc9efbf62fda565b",
+      "body_reconstruction": "no-edited-timeline-event"
+    },
+    {
+      "repo": "langchain-ai/langchain",
+      "number": 39900,
+      "github_id": 5242766138,
+      "created_at": "2026-08-25T06:28:00Z",
+      "issue_type": "Bug",
+      "body_sha256": "8d128d890af62abfaf04b0095b87dab4655c70c321d0ffdf1fef18fdfd105158",
+      "body_reconstruction": "no-edited-timeline-event"
+    },
+    {
+      "repo": "langchain-ai/langchain",
+      "number": 39904,
+      "github_id": 5243338456,
+      "created_at": "2026-08-25T07:44:16Z",
+      "issue_type": "Feature",
+      "body_sha256": "f3f6e9bdb0c903d36e2e84c9d37d1ca9a09ad876f668b84119ccac75f4271df8",
+      "body_reconstruction": "no-edited-timeline-event"
+    },
+    {
+      "repo": "langchain-ai/langchain",
+      "number": 39908,
+      "github_id": 5243732052,
+      "created_at": "2026-08-25T08:31:33Z",
+      "issue_type": "Feature",
+      "body_sha256": "76f21ff4a94cdc8fc37191420ae44062e8ff170d1709b2412fabcf53b6a92ddb",
+      "body_reconstruction": "no-edited-timeline-event"
+    },
+    {
+      "repo": "langchain-ai/langchain",
+      "number": 39926,
+      "github_id": 5254239831,
+      "created_at": "2026-08-26T06:59:34Z",
+      "issue_type": "Bug",
+      "body_sha256": "4882dd8d64e348cb5b948a3682df76e5578630d3f80d29953b0257c943a68a3d",
+      "body_reconstruction": "no-edited-timeline-event"
+    },
+    {
+      "repo": "langchain-ai/langchain",
+      "number": 39935,
+      "github_id": 5257116451,
+      "created_at": "2026-08-26T12:42:16Z",
+      "issue_type": "Bug",
+      "body_sha256": "22598a664b3f1dc6b75e93ffda4257950bd279a86eb7c4af0d4c743597032178",
+      "body_reconstruction": "no-edited-timeline-event"
+    },
+    {
+      "repo": "langchain-ai/langchain",
+      "number": 39940,
+      "github_id": 5260468149,
+      "created_at": "2026-08-26T18:57:04Z",
+      "issue_type": "Bug",
+      "body_sha256": "388dcd16ccf04be9e7469342a4f878930c0fee00c56f4c5bca992be3e5f3e108",
+      "body_reconstruction": "no-edited-timeline-event"
+    },
+    {
+      "repo": "langchain-ai/langchain",
+      "number": 39944,
+      "github_id": 5263924965,
+      "created_at": "2026-08-27T04:33:24Z",
+      "issue_type": "Feature",
+      "body_sha256": "d3f5f54ec7e5b9611698121566cba14acb8f82a8fbe866c0f4d2dfb3ed9ca960",
+      "body_reconstruction": "no-edited-timeline-event"
+    },
+    {
+      "repo": "langchain-ai/langchain",
+      "number": 39945,
+      "github_id": 5263971025,
+      "created_at": "2026-08-27T04:42:44Z",
+      "issue_type": "Feature",
+      "body_sha256": "c7e10973adb4129fad7b51a3f70763162d591e7b0dd78823c015a2a521c4617c",
+      "body_reconstruction": "no-edited-timeline-event"
+    },
+    {
+      "repo": "langchain-ai/langchain",
+      "number": 39948,
+      "github_id": 5265959951,
+      "created_at": "2026-08-27T09:21:44Z",
+      "issue_type": "Bug",
+      "body_sha256": "db9928ca28f4e88b8884e0804f0c4603bc046848644d0b3e53cb9f2f84754915",
+      "body_reconstruction": "no-edited-timeline-event"
+    },
+    {
+      "repo": "langchain-ai/langchain",
+      "number": 39953,
+      "github_id": 5266745592,
+      "created_at": "2026-08-27T10:57:33Z",
+      "issue_type": "Bug",
+      "body_sha256": "ff0dc01067cb0383d2149a9010d8029cff2084b127a5eed783d8a6d5d49259ae",
+      "body_reconstruction": "no-edited-timeline-event"
+    },
+    {
+      "repo": "langchain-ai/langchain",
+      "number": 39968,
+      "github_id": 5270607388,
+      "created_at": "2026-08-27T17:59:35Z",
+      "issue_type": "Feature",
+      "body_sha256": "5867cb7a6f4be51ccd21d7a67b5dc7135faf716e65a69c847328095d0be6e8ba",
+      "body_reconstruction": "no-edited-timeline-event"
+    },
+    {
+      "repo": "langchain-ai/langchain",
+      "number": 39977,
+      "github_id": 5272730784,
+      "created_at": "2026-08-27T22:33:06Z",
+      "issue_type": "Bug",
+      "body_sha256": "198a5b2289bd0e0e34905b178ea56eadbcfd0c82dcc975e8928243c72c60c916",
+      "body_reconstruction": "no-edited-timeline-event"
+    },
+    {
+      "repo": "langchain-ai/langchain",
+      "number": 39994,
+      "github_id": 5280484819,
+      "created_at": "2026-08-28T17:04:32Z",
+      "issue_type": "Bug",
+      "body_sha256": "2af6ae36dda74917d55fa4668c0d83fd6d3f7f84f20930be16d683600294da44",
+      "body_reconstruction": "no-edited-timeline-event"
+    },
+    {
+      "repo": "langchain-ai/langchain",
+      "number": 40000,
+      "github_id": 5283356115,
+      "created_at": "2026-08-29T00:09:02Z",
+      "issue_type": "Bug",
+      "body_sha256": "dc34e8901f7f1a1d580d296b79a00fd58bab879e6b5955936355a1b6a5ed99f4",
+      "body_reconstruction": "no-edited-timeline-event"
+    },
+    {
+      "repo": "langchain-ai/langchain",
+      "number": 40001,
+      "github_id": 5283364382,
+      "created_at": "2026-08-29T00:10:34Z",
+      "issue_type": "Bug",
+      "body_sha256": "bd2b1de3c4099b01002b5e1c33a861d7e01c73dba195230b562b22907d4c9c91",
+      "body_reconstruction": "no-edited-timeline-event"
+    },
+    {
+      "repo": "langchain-ai/langchain",
+      "number": 40002,
+      "github_id": 5283372892,
+      "created_at": "2026-08-29T00:12:11Z",
+      "issue_type": "Bug",
+      "body_sha256": "4dbf656cfb338542d8fd2bba21a7f13dd4cd1c765ebb1c1133536c07b97deec5",
+      "body_reconstruction": "no-edited-timeline-event"
+    },
+    {
+      "repo": "langchain-ai/langchain",
+      "number": 40004,
+      "github_id": 5284028777,
+      "created_at": "2026-08-29T02:39:52Z",
+      "issue_type": "Feature",
+      "body_sha256": "e44a5f6618f17883751b7f562fc27c81baeb82052632fe11e3972f6ff8703bd5",
+      "body_reconstruction": "no-edited-timeline-event"
+    },
+    {
+      "repo": "langchain-ai/langchain",
+      "number": 40008,
+      "github_id": 5285174271,
+      "created_at": "2026-08-29T06:56:52Z",
+      "issue_type": "Bug",
+      "body_sha256": "4228824a56e80fdfed69f5bd646dcec4c0679a0896a7571ea3fc951a9332f60c",
+      "body_reconstruction": "no-edited-timeline-event"
+    },
+    {
+      "repo": "langchain-ai/langchain",
+      "number": 40025,
+      "github_id": 5290105093,
+      "created_at": "2026-08-30T03:13:19Z",
+      "issue_type": "Bug",
+      "body_sha256": "ef1f724ee14ee71d63d0fc8cf4c8836cf1f17ef80f7f04985e5dc352009d81c1",
+      "body_reconstruction": "no-edited-timeline-event"
+    },
+    {
+      "repo": "langchain-ai/langchain",
+      "number": 40027,
+      "github_id": 5290167778,
+      "created_at": "2026-08-30T03:32:52Z",
+      "issue_type": "Bug",
+      "body_sha256": "3cdac5bfeaa6d5b41dd77405f1c2b26841aedefd195c179500262c8635fd30f3",
+      "body_reconstruction": "no-edited-timeline-event"
+    },
+    {
+      "repo": "langchain-ai/langchain",
+      "number": 40030,
+      "github_id": 5290319611,
+      "created_at": "2026-08-30T04:20:33Z",
+      "issue_type": "Bug",
+      "body_sha256": "05957da4bb4514860a869c41790c0e0cf0a9c5b2c822098c905199054106b685",
+      "body_reconstruction": "no-edited-timeline-event"
+    },
+    {
+      "repo": "langchain-ai/langchain",
+      "number": 40031,
+      "github_id": 5290345255,
+      "created_at": "2026-08-30T04:28:58Z",
+      "issue_type": "Bug",
+      "body_sha256": "f32226f8d6df10a2146963f33f865153a9cbe0ce4586c97555c45cab0f69e3a6",
+      "body_reconstruction": "no-edited-timeline-event"
+    },
+    {
+      "repo": "langchain-ai/langchain",
+      "number": 40037,
+      "github_id": 5291920636,
+      "created_at": "2026-08-30T11:55:49Z",
+      "issue_type": "Feature",
+      "body_sha256": "aecd204bce7d1e52d7b4d027a507815250c26c6ebf09c194caaf6b732db27f72",
+      "body_reconstruction": "no-edited-timeline-event"
+    },
+    {
+      "repo": "langchain-ai/langchain",
+      "number": 40045,
+      "github_id": 5296742643,
+      "created_at": "2026-08-31T05:21:39Z",
+      "issue_type": "Bug",
+      "body_sha256": "60a9bb2c17332603f0fc2a46778541c88d60fc0766d632d603dbefac218bf2ab",
+      "body_reconstruction": "no-edited-timeline-event"
+    },
+    {
+      "repo": "langchain-ai/langchain",
+      "number": 40057,
+      "github_id": 5300068992,
+      "created_at": "2026-08-31T12:21:21Z",
+      "issue_type": "Bug",
+      "body_sha256": "8e5c1ba1935497e1f2513c6053508ee8f7d0ec2d8c5db42b1eda2e60a725e6ab",
+      "body_reconstruction": "no-edited-timeline-event"
+    },
+    {
+      "repo": "langchain-ai/langchain",
+      "number": 40062,
+      "github_id": 5301946973,
+      "created_at": "2026-08-31T15:32:24Z",
+      "issue_type": "Bug",
+      "body_sha256": "4495cd573cf4aafab8a52300ac19c41ae57716eab084e26afb8f58923912cb3d",
+      "body_reconstruction": "no-edited-timeline-event"
+    },
+    {
+      "repo": "langchain-ai/langchain",
+      "number": 40063,
+      "github_id": 5301972401,
+      "created_at": "2026-08-31T15:34:56Z",
+      "issue_type": "Bug",
+      "body_sha256": "6783bcc49b134d587b4b48f2cf7bcf37956c672aa5dddc860d1d4971d7a81601",
+      "body_reconstruction": "no-edited-timeline-event"
+    },
+    {
+      "repo": "langchain-ai/langchain",
+      "number": 40070,
+      "github_id": 5303223959,
+      "created_at": "2026-08-31T17:52:28Z",
+      "issue_type": "Bug",
+      "body_sha256": "19ff51b916cc8f5c98aaa85bf0d4763c8d3b3d5f7dad49ca68537b9f6769d32f",
+      "body_reconstruction": "no-edited-timeline-event"
+    },
+    {
+      "repo": "langchain-ai/langchain",
+      "number": 40071,
+      "github_id": 5303239105,
+      "created_at": "2026-08-31T17:54:18Z",
+      "issue_type": "Bug",
+      "body_sha256": "047b0e2790b1234817e8a63a7d449c2c9cc6e074dfdc8f44bd0c681b8a1772ba",
+      "body_reconstruction": "no-edited-timeline-event"
+    },
+    {
+      "repo": "langchain-ai/langchain",
+      "number": 40075,
+      "github_id": 5303786987,
+      "created_at": "2026-08-31T18:58:59Z",
+      "issue_type": "Bug",
+      "body_sha256": "4857ce3261c176279e569a24537175fe4368e82e9d500fc22ee82ccdf6d28714",
+      "body_reconstruction": "no-edited-timeline-event"
+    },
+    {
+      "repo": "langchain-ai/langchain",
+      "number": 40077,
+      "github_id": 5303939575,
+      "created_at": "2026-08-31T19:16:54Z",
+      "issue_type": "Bug",
+      "body_sha256": "24170dcc90fba2cc8ef35e71033d02e4a74b01d8dac6f4143af29311e3798566",
+      "body_reconstruction": "no-edited-timeline-event"
+    },
+    {
+      "repo": "langchain-ai/langchain",
+      "number": 40095,
+      "github_id": 5310311616,
+      "created_at": "2026-09-01T09:43:36Z",
+      "issue_type": "Bug",
+      "body_sha256": "5cd973d14fd72002af080b0457d7f9c890ea88f5697040114f222e151c932289",
+      "body_reconstruction": "no-edited-timeline-event"
+    },
+    {
+      "repo": "langchain-ai/langchain",
+      "number": 40097,
+      "github_id": 5312159102,
+      "created_at": "2026-09-01T13:03:04Z",
+      "issue_type": "Bug",
+      "body_sha256": "49f268edc8aab21e83ec782753151c06acd0b369fb8c01ce45825953179bd94e",
+      "body_reconstruction": "no-edited-timeline-event"
+    },
+    {
+      "repo": "langchain-ai/langchain",
+      "number": 40132,
+      "github_id": 5317738850,
+      "created_at": "2026-09-01T23:06:22Z",
+      "issue_type": "Feature",
+      "body_sha256": "fb6b6d176018c6ab0fdfc7b4ddf85adaa57c1194fb1bdec5b4ae1d7b3c8e0ba2",
+      "body_reconstruction": "no-edited-timeline-event"
+    },
+    {
+      "repo": "langchain-ai/langchain",
+      "number": 40136,
+      "github_id": 5319929884,
+      "created_at": "2026-09-02T05:00:44Z",
+      "issue_type": "Bug",
+      "body_sha256": "f1c1e9a3aa53759818ec51d5b64e00f45b1fce345004f8912b39929c51e8a7ee",
+      "body_reconstruction": "no-edited-timeline-event"
+    },
+    {
+      "repo": "langchain-ai/langchain",
+      "number": 40139,
+      "github_id": 5321758568,
+      "created_at": "2026-09-02T08:43:50Z",
+      "issue_type": "Bug",
+      "body_sha256": "6705bd1d7351d5ada12b450582fad8201edf8072b3ad98bac202eff23abcc462",
+      "body_reconstruction": "no-edited-timeline-event"
+    },
+    {
+      "repo": "langchain-ai/langchain",
+      "number": 40158,
+      "github_id": 5328405698,
+      "created_at": "2026-09-02T19:39:53Z",
+      "issue_type": "Feature",
+      "body_sha256": "f225f4c5269394570d9ea0882023b52ca1ea1cb7249580efeabaa06c68cd7ec7",
+      "body_reconstruction": "no-edited-timeline-event"
+    },
+    {
+      "repo": "langchain-ai/langchain",
+      "number": 40163,
+      "github_id": 5331533900,
+      "created_at": "2026-09-03T02:39:29Z",
+      "issue_type": "Feature",
+      "body_sha256": "7857ed0da9a5e29f9961e72971e49a0bcbefaaef076838342e02faf1b16ad7db",
+      "body_reconstruction": "no-edited-timeline-event"
+    },
+    {
+      "repo": "langchain-ai/langchain",
+      "number": 40164,
+      "github_id": 5331602967,
+      "created_at": "2026-09-03T02:50:16Z",
+      "issue_type": "Bug",
+      "body_sha256": "a944230130125cba12c1e0ec8bdf1e1afe5ca4c98c193e2c951a8fa7c7c28cf7",
+      "body_reconstruction": "no-edited-timeline-event"
+    },
+    {
+      "repo": "langchain-ai/langchain",
+      "number": 40166,
+      "github_id": 5332079265,
+      "created_at": "2026-09-03T04:03:33Z",
+      "issue_type": "Bug",
+      "body_sha256": "7e47300a4fdd1e9cd5010a9126bb63f2de5e18a8827b89a99966fceec4c7c705",
+      "body_reconstruction": "no-edited-timeline-event"
+    },
+    {
+      "repo": "langchain-ai/langchain",
+      "number": 40178,
+      "github_id": 5336658969,
+      "created_at": "2026-09-03T12:32:44Z",
+      "issue_type": "Feature",
+      "body_sha256": "4a3de05c30563aba49e295ad92c71e0ebd4e2ac86c316324fd6ccfedc45f4b9b",
+      "body_reconstruction": "no-edited-timeline-event"
+    },
+    {
+      "repo": "langchain-ai/langchain",
+      "number": 40184,
+      "github_id": 5339233334,
+      "created_at": "2026-09-03T16:55:59Z",
+      "issue_type": "Feature",
+      "body_sha256": "98d31594bcbb817fa74cdfd042348782276319c57637dcc006e46b5c8655877e",
+      "body_reconstruction": "no-edited-timeline-event"
+    },
+    {
+      "repo": "langchain-ai/langchain",
+      "number": 40191,
+      "github_id": 5344384072,
+      "created_at": "2026-09-04T04:58:17Z",
+      "issue_type": "Feature",
+      "body_sha256": "4e4f5dd6f7d1fad4684d108111ddd9cd18a9be9b74a5f157fedf86019484814c",
+      "body_reconstruction": "no-edited-timeline-event"
+    },
+    {
+      "repo": "langchain-ai/langchain",
+      "number": 40197,
+      "github_id": 5345548935,
+      "created_at": "2026-09-04T07:37:35Z",
+      "issue_type": "Feature",
+      "body_sha256": "2db7c73be282a8e27b08d0ae013cf3d84bb560a1b2bc6401d1906114d9d20983",
+      "body_reconstruction": "no-edited-timeline-event"
+    },
+    {
+      "repo": "langchain-ai/langchain",
+      "number": 40200,
+      "github_id": 5346186849,
+      "created_at": "2026-09-04T08:55:19Z",
+      "issue_type": "Bug",
+      "body_sha256": "1996acd2726820f8aba6fe4b27fbe81bd213cd956b203dcd9a1f47e71162aafb",
+      "body_reconstruction": "no-edited-timeline-event"
+    },
+    {
+      "repo": "langchain-ai/langchain",
+      "number": 40202,
+      "github_id": 5350684511,
+      "created_at": "2026-09-04T16:40:30Z",
+      "issue_type": "Bug",
+      "body_sha256": "cd88e1d4321c3570e0ecda6c61381006f84eabda03ff8925e55415dc728c8c5b",
+      "body_reconstruction": "no-edited-timeline-event"
+    },
+    {
+      "repo": "langchain-ai/langchain",
+      "number": 40205,
+      "github_id": 5351503200,
+      "created_at": "2026-09-04T18:10:37Z",
+      "issue_type": "Feature",
+      "body_sha256": "2eba8e8f90b86f4fa331d2721b1782b2770e285acf7e35f8ac17782ac67ae191",
+      "body_reconstruction": "no-edited-timeline-event"
+    },
+    {
+      "repo": "langchain-ai/langchain",
+      "number": 40206,
+      "github_id": 5351775653,
+      "created_at": "2026-09-04T18:40:01Z",
+      "issue_type": "Feature",
+      "body_sha256": "f8c6f404bfd4a72cf6a06d95aeff2c3649c44863467c9b6288d74cd1288c0c5d",
+      "body_reconstruction": "no-edited-timeline-event"
+    },
+    {
+      "repo": "langchain-ai/langchain",
+      "number": 40216,
+      "github_id": 5356029411,
+      "created_at": "2026-09-05T06:04:18Z",
+      "issue_type": "Bug",
+      "body_sha256": "4d6b28b99b98ec3a1a6ba8b63752e37794090dcb86b44cee823190ec83bc0823",
+      "body_reconstruction": "no-edited-timeline-event"
+    },
+    {
+      "repo": "langchain-ai/langchain",
+      "number": 40219,
+      "github_id": 5357054757,
+      "created_at": "2026-09-05T09:36:35Z",
+      "issue_type": "Bug",
+      "body_sha256": "990ae51e23ec58bbc508fa14f19e48ca3a53237b62319caa1609aae80381a450",
+      "body_reconstruction": "no-edited-timeline-event"
+    },
+    {
+      "repo": "langchain-ai/langchain",
+      "number": 40225,
+      "github_id": 5359465746,
+      "created_at": "2026-09-05T16:54:03Z",
+      "issue_type": "Bug",
+      "body_sha256": "b7a6f08c3618e7f39c5a6cc19e71d821fd668ba5b5f5f9c2cd89764acef36b64",
+      "body_reconstruction": "no-edited-timeline-event"
+    },
+    {
+      "repo": "langchain-ai/langchain",
+      "number": 40226,
+      "github_id": 5359917418,
+      "created_at": "2026-09-05T18:03:07Z",
+      "issue_type": "Bug",
+      "body_sha256": "4f6cf423ba5dd95a32f1dba313efaff9de8ff5a87dd1ec8988b904572c2ec04c",
+      "body_reconstruction": "no-edited-timeline-event"
+    },
+    {
+      "repo": "langchain-ai/langchain",
+      "number": 40227,
+      "github_id": 5360079790,
+      "created_at": "2026-09-05T18:30:24Z",
+      "issue_type": "Bug",
+      "body_sha256": "d9ba58236c55fbc528776b1e1143bd0e9229491a3f26760d7b880223958b1c4d",
+      "body_reconstruction": "no-edited-timeline-event"
+    },
+    {
+      "repo": "langchain-ai/langchain",
+      "number": 40234,
+      "github_id": 5362981418,
+      "created_at": "2026-09-06T04:59:37Z",
+      "issue_type": "Feature",
+      "body_sha256": "ccad4c5ba9c895599af86fcc53498df938127ed5f4961ba3bd5ccff37af48cd6",
+      "body_reconstruction": "no-edited-timeline-event"
+    },
+    {
+      "repo": "langchain-ai/langchain",
+      "number": 40236,
+      "github_id": 5363880035,
+      "created_at": "2026-09-06T08:32:00Z",
+      "issue_type": "Feature",
+      "body_sha256": "7d8f6dd96a31e8c3baf9e6ec379f65b86d8ed6d958e0914236bbe0d653954e1b",
+      "body_reconstruction": "no-edited-timeline-event"
+    },
+    {
+      "repo": "langchain-ai/langchain",
+      "number": 40241,
+      "github_id": 5364375567,
+      "created_at": "2026-09-06T10:21:39Z",
+      "issue_type": "Bug",
+      "body_sha256": "11740710e0962c77afa4d2dbbdb0840bbb30a31dcb4bee5484fdc5e4ff097915",
+      "body_reconstruction": "no-edited-timeline-event"
+    },
+    {
+      "repo": "langchain-ai/langchain",
+      "number": 40247,
+      "github_id": 5366424570,
+      "created_at": "2026-09-06T17:07:15Z",
+      "issue_type": "Bug",
+      "body_sha256": "5effd9827fa1805af671b4568b2ecf58849c2f87f988b28dfe01a257339545c4",
+      "body_reconstruction": "no-edited-timeline-event"
+    },
+    {
+      "repo": "langchain-ai/langchain",
+      "number": 40252,
+      "github_id": 5369480067,
+      "created_at": "2026-09-07T02:57:01Z",
+      "issue_type": "Bug",
+      "body_sha256": "562dff2c98bebfa860fc250d0b78560914aa3310be7c4a1f30672101aa88f002",
+      "body_reconstruction": "no-edited-timeline-event"
+    },
+    {
+      "repo": "langchain-ai/langchain",
+      "number": 40255,
+      "github_id": 5370181175,
+      "created_at": "2026-09-07T04:48:28Z",
+      "issue_type": "Bug",
+      "body_sha256": "fd51378e29f945370ae8a0cba50922be9f03909f14f971dc66e1c311080e3d6c",
+      "body_reconstruction": "no-edited-timeline-event"
+    },
+    {
+      "repo": "langchain-ai/langchain",
+      "number": 40256,
+      "github_id": 5370226770,
+      "created_at": "2026-09-07T04:56:04Z",
+      "issue_type": "Bug",
+      "body_sha256": "de4c2ac7fea29c04ea5ed997ff246244dcbcc9562c90514e5e8ab3a9189bc833",
+      "body_reconstruction": "no-edited-timeline-event"
+    },
+    {
+      "repo": "langchain-ai/langchain",
+      "number": 40259,
+      "github_id": 5372420532,
+      "created_at": "2026-09-07T09:00:26Z",
+      "issue_type": "Bug",
+      "body_sha256": "c9aa5a993307931b09fe3c0c3000365849741e5092ff3901a742fc24920c30b0",
+      "body_reconstruction": "no-edited-timeline-event"
+    },
+    {
+      "repo": "langchain-ai/langchain",
+      "number": 40261,
+      "github_id": 5372789756,
+      "created_at": "2026-09-07T09:32:37Z",
+      "issue_type": "Bug",
+      "body_sha256": "0c0e266f50facbebf0da44dae07d87e091c684fc97a5f721e67cb48337bbe932",
+      "body_reconstruction": "no-edited-timeline-event"
+    },
+    {
+      "repo": "langchain-ai/langchain",
+      "number": 40263,
+      "github_id": 5373015190,
+      "created_at": "2026-09-07T09:54:01Z",
+      "issue_type": "Bug",
+      "body_sha256": "f17314201c28f574172fffe0bd4b2af4cfbdc23e6b00532460a1ad05bff40a7b",
+      "body_reconstruction": "no-edited-timeline-event"
+    },
+    {
+      "repo": "langchain-ai/langchain",
+      "number": 40278,
+      "github_id": 5384459798,
+      "created_at": "2026-09-08T08:48:37Z",
+      "issue_type": "Bug",
+      "body_sha256": "10b5b00dd8f85b1773b6af793b6d603e1a661a9c0bd09e50038abdea4f5f49c9",
+      "body_reconstruction": "no-edited-timeline-event"
+    },
+    {
+      "repo": "langchain-ai/langchain",
+      "number": 40279,
+      "github_id": 5384586321,
+      "created_at": "2026-09-08T08:59:54Z",
+      "issue_type": "Bug",
+      "body_sha256": "a7e8a7855cc712eee4abb057da8f3abdd2beb277a594e6305bdabc522fb46ee9",
+      "body_reconstruction": "no-edited-timeline-event"
+    },
+    {
+      "repo": "langchain-ai/langchain",
+      "number": 40281,
+      "github_id": 5385622049,
+      "created_at": "2026-09-08T10:38:42Z",
+      "issue_type": "Bug",
+      "body_sha256": "afc8d5ce98864e9b1e08c75863b8eb1eedf0fe352807ec0a0d2000d0f3d2b7be",
+      "body_reconstruction": "no-edited-timeline-event"
+    },
+    {
+      "repo": "langchain-ai/langchain",
+      "number": 40297,
+      "github_id": 5389348503,
+      "created_at": "2026-09-08T16:31:29Z",
+      "issue_type": "Bug",
+      "body_sha256": "2ebd60f1501d80f4a516d22283383c55c0ac8c65fca973d630f23382844d9e87",
+      "body_reconstruction": "no-edited-timeline-event"
+    },
+    {
+      "repo": "langchain-ai/langchain",
+      "number": 40298,
+      "github_id": 5389362731,
+      "created_at": "2026-09-08T16:32:56Z",
+      "issue_type": "Bug",
+      "body_sha256": "9bb214ea23369645bcdf997a6a21c9b1271eb9351ee29929933713e6342cf7fc",
+      "body_reconstruction": "no-edited-timeline-event"
+    },
+    {
+      "repo": "langchain-ai/langchain",
+      "number": 40299,
+      "github_id": 5389368649,
+      "created_at": "2026-09-08T16:33:32Z",
+      "issue_type": "Bug",
+      "body_sha256": "32bb02e76e9b7bb41ab79193ed4dd425b1099a84e1f212bdbb69a4d25384460f",
+      "body_reconstruction": "no-edited-timeline-event"
+    },
+    {
+      "repo": "langchain-ai/langchain",
+      "number": 40311,
+      "github_id": 5393704850,
+      "created_at": "2026-09-09T01:18:05Z",
+      "issue_type": "Bug",
+      "body_sha256": "4c8a1461b915ea97cc4bcf8e591bf2c9815b650b9ce5cbf1f09488c1ad683ee9",
+      "body_reconstruction": "no-edited-timeline-event"
+    },
+    {
+      "repo": "langchain-ai/langchain",
+      "number": 40314,
+      "github_id": 5395716182,
+      "created_at": "2026-09-09T06:12:31Z",
+      "issue_type": "Bug",
+      "body_sha256": "28541f816a0fb8f394a91705cb8c63cd15ab9ff8d2a8e6f7ff318bf68c58dbda",
+      "body_reconstruction": "no-edited-timeline-event"
+    },
+    {
+      "repo": "langchain-ai/langchain",
+      "number": 40320,
+      "github_id": 5398723232,
+      "created_at": "2026-09-09T11:20:00Z",
+      "issue_type": "Bug",
+      "body_sha256": "6e7108f917e94649f968545dab3443c8fd3b7ced793bfb0d52ffc387a45e8423",
+      "body_reconstruction": "no-edited-timeline-event"
+    },
+    {
+      "repo": "langchain-ai/langchain",
+      "number": 40332,
+      "github_id": 5401955320,
+      "created_at": "2026-09-09T16:14:58Z",
+      "issue_type": "Bug",
+      "body_sha256": "1a89700026788e12106110bf2d80c74bff2199a4d98bcc8f8fad4977ccc7ec7c",
+      "body_reconstruction": "no-edited-timeline-event"
+    },
+    {
+      "repo": "langchain-ai/langchain",
+      "number": 40333,
+      "github_id": 5402203336,
+      "created_at": "2026-09-09T16:39:30Z",
+      "issue_type": "Feature",
+      "body_sha256": "932ecbc68567a0e3c786e4b62d033cfb9e72d7a7e0dd1ff58c7951a7186a984e",
+      "body_reconstruction": "no-edited-timeline-event"
+    },
+    {
+      "repo": "langchain-ai/langchain",
+      "number": 40334,
+      "github_id": 5402212303,
+      "created_at": "2026-09-09T16:40:31Z",
+      "issue_type": "Feature",
+      "body_sha256": "ed8f047a842f2c842694c1d8d341efbe6d095b6c03df963ccadf017cdde7e213",
+      "body_reconstruction": "no-edited-timeline-event"
+    },
+    {
+      "repo": "langchain-ai/langchain",
+      "number": 40340,
+      "github_id": 5405405621,
+      "created_at": "2026-09-09T22:30:11Z",
+      "issue_type": "Feature",
+      "body_sha256": "2a6560b34ac3d5a961e4387db45cb84cb93e718b82faf761b9787c79d41a5c64",
+      "body_reconstruction": "no-edited-timeline-event"
+    },
+    {
+      "repo": "langchain-ai/langchain",
+      "number": 40341,
+      "github_id": 5405501676,
+      "created_at": "2026-09-09T22:44:10Z",
+      "issue_type": "Bug",
+      "body_sha256": "fc959085d300dcbd885aa6906da6eacdceaa625db7b4e68e7518f787c2a0c778",
+      "body_reconstruction": "no-edited-timeline-event"
+    },
+    {
+      "repo": "langchain-ai/langchain",
+      "number": 40343,
+      "github_id": 5405613648,
+      "created_at": "2026-09-09T22:59:16Z",
+      "issue_type": "Bug",
+      "body_sha256": "f4e2e7336fe5609be2b71f52e72ec553e349b4a211f81e277758a1e39d69f6ca",
+      "body_reconstruction": "no-edited-timeline-event"
+    },
+    {
+      "repo": "langchain-ai/langchain",
+      "number": 40346,
+      "github_id": 5407208195,
+      "created_at": "2026-09-10T03:01:26Z",
+      "issue_type": "Bug",
+      "body_sha256": "ca6b767c90b7b59ebd8d4b96767e17d3005feb08d4c069ebaa649afb7873824d",
+      "body_reconstruction": "no-edited-timeline-event"
+    },
+    {
+      "repo": "langchain-ai/langchain",
+      "number": 40347,
+      "github_id": 5407774756,
+      "created_at": "2026-09-10T04:28:17Z",
+      "issue_type": "Bug",
+      "body_sha256": "650030bad85408e75b90e0501f9627ed7fb1bd893ff127a373e73c7e53a86144",
+      "body_reconstruction": "no-edited-timeline-event"
+    },
+    {
+      "repo": "langchain-ai/langchain",
+      "number": 40348,
+      "github_id": 5407797418,
+      "created_at": "2026-09-10T04:31:39Z",
+      "issue_type": "Bug",
+      "body_sha256": "776173901c912f77b9cbeb63a1e72261f0b82b743f2188688823801fb5daa135",
+      "body_reconstruction": "no-edited-timeline-event"
+    },
+    {
+      "repo": "langchain-ai/langchain",
+      "number": 40349,
+      "github_id": 5407807652,
+      "created_at": "2026-09-10T04:33:09Z",
+      "issue_type": "Bug",
+      "body_sha256": "18453b438d2187314f443b8db9e6d07ec5d917c06c40321fc5f0539049799a2a",
+      "body_reconstruction": "no-edited-timeline-event"
+    },
+    {
+      "repo": "langchain-ai/langchain",
+      "number": 40350,
+      "github_id": 5407820640,
+      "created_at": "2026-09-10T04:35:02Z",
+      "issue_type": "Bug",
+      "body_sha256": "8b20abc1971bcc38a155d8bac2ddcb7915292c7dc6c530a27afb1fccaeb5e174",
+      "body_reconstruction": "no-edited-timeline-event"
+    },
+    {
+      "repo": "langchain-ai/langchain",
+      "number": 40351,
+      "github_id": 5407830794,
+      "created_at": "2026-09-10T04:36:28Z",
+      "issue_type": "Bug",
+      "body_sha256": "11e705c8750c63488bbcfd47979c39e740ed4dd9ec04d09e316dbcd7b7718233",
+      "body_reconstruction": "no-edited-timeline-event"
+    },
+    {
+      "repo": "langchain-ai/langchain",
+      "number": 40354,
+      "github_id": 5409497136,
+      "created_at": "2026-09-10T08:00:20Z",
+      "issue_type": "Bug",
+      "body_sha256": "960a9d4306304459f7923b06e509299bd68b5cb20415fbc12d29ad750e77a95c",
+      "body_reconstruction": "no-edited-timeline-event"
+    },
+    {
+      "repo": "langchain-ai/langchain",
+      "number": 40360,
+      "github_id": 5410100133,
+      "created_at": "2026-09-10T08:57:57Z",
+      "issue_type": "Bug",
+      "body_sha256": "0b9192c3e07a9939831fd62e93fdeaa5bfad8a9aa23d54dbbb8f267a8e1c71f2",
+      "body_reconstruction": "no-edited-timeline-event"
+    },
+    {
+      "repo": "langchain-ai/langchain",
+      "number": 40362,
+      "github_id": 5412212001,
+      "created_at": "2026-09-10T12:33:18Z",
+      "issue_type": "Bug",
+      "body_sha256": "7a2ec0b60555d8a49fbc23b2c3cb8cdce88839b7d02d6d5781d8263fb3502928",
+      "body_reconstruction": "no-edited-timeline-event"
+    },
+    {
+      "repo": "langchain-ai/langchain",
+      "number": 40364,
+      "github_id": 5412590779,
+      "created_at": "2026-09-10T13:09:29Z",
+      "issue_type": "Bug",
+      "body_sha256": "f3e73aac9f221a5b801c3cd0d1018dcf657971a60d944e3d7db6cfd1f7fd1ed8",
+      "body_reconstruction": "no-edited-timeline-event"
+    },
+    {
+      "repo": "langchain-ai/langchain",
+      "number": 40367,
+      "github_id": 5412940703,
+      "created_at": "2026-09-10T13:42:32Z",
+      "issue_type": "Bug",
+      "body_sha256": "8b96f830cf5de4c92a053dc6da47563ba6d6bf6ff2fe1b481f2217f3a26c74d5",
+      "body_reconstruction": "no-edited-timeline-event"
+    },
+    {
+      "repo": "langchain-ai/langchain",
+      "number": 40368,
+      "github_id": 5413286949,
+      "created_at": "2026-09-10T14:12:47Z",
+      "issue_type": "Bug",
+      "body_sha256": "f9c89e2747a68685a5d3646bd5cc0c1a72a76a14aba0824c0fb24eadb3a1813a",
+      "body_reconstruction": "no-edited-timeline-event"
+    },
+    {
+      "repo": "langchain-ai/langchain",
+      "number": 40379,
+      "github_id": 5415188209,
+      "created_at": "2026-09-10T17:11:50Z",
+      "issue_type": "Bug",
+      "body_sha256": "1ffa98b5b16372fd4a024098ee178e173bd238478995f4f66a5204b3aee780ea",
+      "body_reconstruction": "no-edited-timeline-event"
+    },
+    {
+      "repo": "langchain-ai/langchain",
+      "number": 40389,
+      "github_id": 5416506799,
+      "created_at": "2026-09-10T19:33:45Z",
+      "issue_type": "Feature",
+      "body_sha256": "df789fe82b0b6374af0336837feec28c4b05ede9f23e9c9b56d1c3f8f1edb725",
+      "body_reconstruction": "no-edited-timeline-event"
+    },
+    {
+      "repo": "langchain-ai/langchain",
+      "number": 40392,
+      "github_id": 5418908172,
+      "created_at": "2026-09-11T00:45:26Z",
+      "issue_type": "Bug",
+      "body_sha256": "cca8c9b237ec098416cbd1367b0b1252fc79250d7895302fbbb7c339f41f3037",
+      "body_reconstruction": "no-edited-timeline-event"
+    },
+    {
+      "repo": "langchain-ai/langchain",
+      "number": 40396,
+      "github_id": 5420340794,
+      "created_at": "2026-09-11T04:23:49Z",
+      "issue_type": "Bug",
+      "body_sha256": "02d356734d01a3a94ea2dd2498160c2009e5d2228d0694a7a12419d26315791f",
+      "body_reconstruction": "no-edited-timeline-event"
+    },
+    {
+      "repo": "langchain-ai/langchain",
+      "number": 40403,
+      "github_id": 5422290084,
+      "created_at": "2026-09-11T08:46:22Z",
+      "issue_type": "Bug",
+      "body_sha256": "ff1a6190eb351b5d1e723a0bfcf71fe039904b7414149339ff55eec959d89837",
+      "body_reconstruction": "no-edited-timeline-event"
+    },
+    {
+      "repo": "langchain-ai/langchain",
+      "number": 40421,
+      "github_id": 5435919127,
+      "created_at": "2026-09-12T20:46:47Z",
+      "issue_type": "Bug",
+      "body_sha256": "51fc9c6d4e2869d0d01831959130e1452d410ab2afdea67e095bbbcc34d28f25",
+      "body_reconstruction": "no-edited-timeline-event"
+    },
+    {
+      "repo": "langchain-ai/langchain",
+      "number": 40422,
+      "github_id": 5435933277,
+      "created_at": "2026-09-12T20:49:20Z",
+      "issue_type": "Bug",
+      "body_sha256": "7e91b47d62d32906c843f2eafbe011acc5a73cd50fd12f5271f1523fe3e839df",
+      "body_reconstruction": "no-edited-timeline-event"
+    },
+    {
+      "repo": "langchain-ai/langchain",
+      "number": 40423,
+      "github_id": 5435949501,
+      "created_at": "2026-09-12T20:52:20Z",
+      "issue_type": "Bug",
+      "body_sha256": "3e3d6e23539e5c551d3aa4109b0549e89c417c7a4c3be49f161f7024f81b1070",
+      "body_reconstruction": "no-edited-timeline-event"
+    },
+    {
+      "repo": "langchain-ai/langchain",
+      "number": 40424,
+      "github_id": 5436382087,
+      "created_at": "2026-09-12T22:19:08Z",
+      "issue_type": "Bug",
+      "body_sha256": "9a683722c5e169e17af6b4b091c70cba6a95302815a224ecd54595b4c4b09ecb",
+      "body_reconstruction": "no-edited-timeline-event"
+    },
+    {
+      "repo": "langchain-ai/langchain",
+      "number": 40425,
+      "github_id": 5436842810,
+      "created_at": "2026-09-12T23:52:54Z",
+      "issue_type": "Feature",
+      "body_sha256": "6467eb3e3b9a0f0e5799d204e4b48a27473dafe80620363c6f685d625403d40f",
+      "body_reconstruction": "no-edited-timeline-event"
+    },
+    {
+      "repo": "langchain-ai/langchain",
+      "number": 40431,
+      "github_id": 5440554715,
+      "created_at": "2026-09-13T14:11:20Z",
+      "issue_type": "Feature",
+      "body_sha256": "2f8293527d66963cb18c1c93e13c2f6178d3e072e4bd6b7de167d629d7699a8f",
+      "body_reconstruction": "no-edited-timeline-event"
+    },
+    {
+      "repo": "langchain-ai/langchain",
+      "number": 40435,
+      "github_id": 5442353093,
+      "created_at": "2026-09-13T19:44:52Z",
+      "issue_type": "Bug",
+      "body_sha256": "2a250faddc3ec53fb812d23e6b9c44f21f366c73529801f791d58922f2e4ebf2",
+      "body_reconstruction": "no-edited-timeline-event"
+    },
+    {
+      "repo": "langchain-ai/langchain",
+      "number": 40441,
+      "github_id": 5448807048,
+      "created_at": "2026-09-14T11:38:44Z",
+      "issue_type": "Bug",
+      "body_sha256": "76471e5bea2360e79b743211d45f3728f5f8c450a2a48526a92206da19c09d35",
+      "body_reconstruction": "no-edited-timeline-event"
+    },
+    {
+      "repo": "langchain-ai/langchain",
+      "number": 40444,
+      "github_id": 5450589801,
+      "created_at": "2026-09-14T14:24:51Z",
+      "issue_type": "Feature",
+      "body_sha256": "f3755a6ccd6e899d12538814a111a7c3351173e4a2da34ca1dfac1f2d6b02ce7",
+      "body_reconstruction": "no-edited-timeline-event"
+    },
+    {
+      "repo": "langchain-ai/langchain",
+      "number": 40447,
+      "github_id": 5454727211,
+      "created_at": "2026-09-14T21:20:18Z",
+      "issue_type": "Bug",
+      "body_sha256": "74c64845e4873cead4d8ed4a4782f64585c25446b58012f242ce53914b84dbc2",
+      "body_reconstruction": "no-edited-timeline-event"
+    },
+    {
+      "repo": "langchain-ai/langchain",
+      "number": 40460,
+      "github_id": 5465186156,
+      "created_at": "2026-09-15T17:19:14Z",
+      "issue_type": "Bug",
+      "body_sha256": "8123437f51ed2872340575b930743bc86b26591545b316f67c51b37e99eacc2b",
+      "body_reconstruction": "no-edited-timeline-event"
+    },
+    {
+      "repo": "langchain-ai/langchain",
+      "number": 40492,
+      "github_id": 5470420234,
+      "created_at": "2026-09-16T04:59:29Z",
+      "issue_type": "Bug",
+      "body_sha256": "da2002696bd1ef20d634ef745e02548882db621686a04cb7c8a8daaf0c7fe9bd",
+      "body_reconstruction": "no-edited-timeline-event"
+    },
+    {
+      "repo": "langchain-ai/langchain",
+      "number": 40501,
+      "github_id": 5472241887,
+      "created_at": "2026-09-16T08:40:55Z",
+      "issue_type": "Bug",
+      "body_sha256": "00c771cc2157be36397a34cd29987b8047f2fe61c4941a93ec9427c83de81995",
+      "body_reconstruction": "no-edited-timeline-event"
+    },
+    {
+      "repo": "langchain-ai/langchain",
+      "number": 40502,
+      "github_id": 5472244378,
+      "created_at": "2026-09-16T08:41:12Z",
+      "issue_type": "Bug",
+      "body_sha256": "30beae7d984ddd17e5f3196f3b39ddb2ec2ac35e9c9ee455d5911bbf214abbd9",
+      "body_reconstruction": "no-edited-timeline-event"
+    },
+    {
+      "repo": "langchain-ai/langchain",
+      "number": 40503,
+      "github_id": 5472287948,
+      "created_at": "2026-09-16T08:45:46Z",
+      "issue_type": "Bug",
+      "body_sha256": "2fcd06dfa03aa7fecbe1ff752c5d62770f1eddb26a4c036b9f28b794fa37aad6",
+      "body_reconstruction": "no-edited-timeline-event"
+    },
+    {
+      "repo": "langchain-ai/langchain",
+      "number": 40505,
+      "github_id": 5473261019,
+      "created_at": "2026-09-16T10:23:08Z",
+      "issue_type": "Bug",
+      "body_sha256": "e50667f81891430b968e25811a4d9a3e4e41f98b030491b54cc8f0c3551325c6",
+      "body_reconstruction": "no-edited-timeline-event"
+    },
+    {
+      "repo": "langchain-ai/langchain",
+      "number": 40506,
+      "github_id": 5473284213,
+      "created_at": "2026-09-16T10:25:16Z",
+      "issue_type": "Bug",
+      "body_sha256": "f0f590031de2e0730dca74ab4107e4aecca92a4284387df68aa77de79228a6a3",
+      "body_reconstruction": "no-edited-timeline-event"
+    },
+    {
+      "repo": "langchain-ai/langchain",
+      "number": 40507,
+      "github_id": 5473325580,
+      "created_at": "2026-09-16T10:29:13Z",
+      "issue_type": "Bug",
+      "body_sha256": "ba5f1168eafcc59b17dd3efda806502b8a538a4b14124a71ab617e0c4c9cccd7",
+      "body_reconstruction": "no-edited-timeline-event"
+    },
+    {
+      "repo": "langchain-ai/langchain",
+      "number": 40508,
+      "github_id": 5473340060,
+      "created_at": "2026-09-16T10:30:33Z",
+      "issue_type": "Bug",
+      "body_sha256": "a464ff2abb90f4ddf84352d4a085127390b2d2ca58e269248c2ce43897ad614f",
+      "body_reconstruction": "no-edited-timeline-event"
+    },
+    {
+      "repo": "langchain-ai/langchain",
+      "number": 40509,
+      "github_id": 5473363632,
+      "created_at": "2026-09-16T10:32:46Z",
+      "issue_type": "Bug",
+      "body_sha256": "910d4f1e082980e0736f9abab8a7a59a5f49d7f4d2d3edaef4e6afff7af362d4",
+      "body_reconstruction": "no-edited-timeline-event"
+    },
+    {
+      "repo": "langchain-ai/langchain",
+      "number": 40518,
+      "github_id": 5474200704,
+      "created_at": "2026-09-16T11:57:56Z",
+      "issue_type": "Bug",
+      "body_sha256": "43a0729ba1748792fde84db1abc8ee2f4c6796aafd22a2e17e79cac6ec9afe51",
+      "body_reconstruction": "no-edited-timeline-event"
+    },
+    {
+      "repo": "langchain-ai/langchain",
+      "number": 40522,
+      "github_id": 5476431825,
+      "created_at": "2026-09-16T15:18:19Z",
+      "issue_type": "Bug",
+      "body_sha256": "65a7abbefcd07b27626b4cf4ce03255e1a3ff03c40ddd1fcdc381fa5d6017d3e",
+      "body_reconstruction": "no-edited-timeline-event"
+    },
+    {
+      "repo": "langchain-ai/langchain",
+      "number": 40523,
+      "github_id": 5476445088,
+      "created_at": "2026-09-16T15:19:29Z",
+      "issue_type": "Bug",
+      "body_sha256": "528e414cc727e605937c3f018c20164227f4bf8e0b41fcda51c0a55ff920d3e0",
+      "body_reconstruction": "no-edited-timeline-event"
+    },
+    {
+      "repo": "langchain-ai/langchain",
+      "number": 40531,
+      "github_id": 5477731527,
+      "created_at": "2026-09-16T17:22:23Z",
+      "issue_type": "Bug",
+      "body_sha256": "251d90a5bf3c3872c9559b1dd899a3d67858c7be3dbf773bcd19009b6c3eefb2",
+      "body_reconstruction": "no-edited-timeline-event"
+    },
+    {
+      "repo": "langchain-ai/langchain",
+      "number": 40563,
+      "github_id": 5490076526,
+      "created_at": "2026-09-17T16:28:51Z",
+      "issue_type": "Bug",
+      "body_sha256": "7f84d33008e6edf13fabcbd632bf04a0887a5a7dbbd1acd7ab72bcd8fdd3a92f",
+      "body_reconstruction": "no-edited-timeline-event"
+    },
+    {
+      "repo": "langchain-ai/langchain",
+      "number": 40578,
+      "github_id": 5494715268,
+      "created_at": "2026-09-18T01:58:02Z",
+      "issue_type": "Feature",
+      "body_sha256": "925060566abc0b1301dc14a03e29aea01d6f19ddf88fc6efaa6ec7ba97f0c67f",
+      "body_reconstruction": "no-edited-timeline-event"
+    },
+    {
+      "repo": "langchain-ai/langchain",
+      "number": 40588,
+      "github_id": 5495347813,
+      "created_at": "2026-09-18T03:36:25Z",
+      "issue_type": "Bug",
+      "body_sha256": "7aa96f097ce9c0ad148c36b84587c6d148bbab4259e4c8f83c8b93f14233b2ad",
+      "body_reconstruction": "no-edited-timeline-event"
+    },
+    {
+      "repo": "langchain-ai/langchain",
+      "number": 40590,
+      "github_id": 5495600776,
+      "created_at": "2026-09-18T04:18:48Z",
+      "issue_type": "Bug",
+      "body_sha256": "269d13a14cc4ead50a633b5f852684499c755f6fa2db2421ad5aa499f5df771a",
+      "body_reconstruction": "no-edited-timeline-event"
+    },
+    {
+      "repo": "langchain-ai/langchain",
+      "number": 40592,
+      "github_id": 5496063821,
+      "created_at": "2026-09-18T05:36:46Z",
+      "issue_type": "Bug",
+      "body_sha256": "45f6cae0743ee415af8580b19352c147dbaff1359699bba594bdf2e2a5793277",
+      "body_reconstruction": "no-edited-timeline-event"
+    },
+    {
+      "repo": "langchain-ai/langchain",
+      "number": 40609,
+      "github_id": 5497915898,
+      "created_at": "2026-09-18T09:22:00Z",
+      "issue_type": "Bug",
+      "body_sha256": "f340652c4e46b4d92e34683beb1e83886781a743bf0dc68ec2e8a852e0e0013e",
+      "body_reconstruction": "no-edited-timeline-event"
+    },
+    {
+      "repo": "langchain-ai/langchain",
+      "number": 40613,
+      "github_id": 5499035696,
+      "created_at": "2026-09-18T11:31:23Z",
+      "issue_type": "Feature",
+      "body_sha256": "acf08940fe1781ebb58fcab656038addf8bff3a9e656022672def765195a85a4",
+      "body_reconstruction": "no-edited-timeline-event"
+    },
+    {
+      "repo": "langchain-ai/langchain",
+      "number": 40616,
+      "github_id": 5500788909,
+      "created_at": "2026-09-18T14:31:34Z",
+      "issue_type": "Feature",
+      "body_sha256": "03f2aefe616d8894268dc1493cdbf2be0b00e869eb56815d50f050cee8e506a3",
+      "body_reconstruction": "no-edited-timeline-event"
+    },
+    {
+      "repo": "langchain-ai/langchain",
+      "number": 40617,
+      "github_id": 5501108918,
+      "created_at": "2026-09-18T15:02:29Z",
+      "issue_type": "Bug",
+      "body_sha256": "b602bf4845c83907acb7dada3cb8c702ccfc1d68d23da2f5d45d50cc3cc2865b",
+      "body_reconstruction": "no-edited-timeline-event"
+    },
+    {
+      "repo": "langchain-ai/langchain",
+      "number": 40618,
+      "github_id": 5501176625,
+      "created_at": "2026-09-18T15:08:41Z",
+      "issue_type": "Bug",
+      "body_sha256": "d47b05699eb4cf0215d22dc6de2729997035cb03998d3d768e34f682affb6767",
+      "body_reconstruction": "no-edited-timeline-event"
+    },
+    {
+      "repo": "langchain-ai/langchain",
+      "number": 40619,
+      "github_id": 5501200384,
+      "created_at": "2026-09-18T15:10:43Z",
+      "issue_type": "Bug",
+      "body_sha256": "312c4fdd0ef632b4163806961376916d252ed063c00fd8f055eae352a423927b",
+      "body_reconstruction": "no-edited-timeline-event"
+    },
+    {
+      "repo": "langchain-ai/langchain",
+      "number": 40651,
+      "github_id": 5503730985,
+      "created_at": "2026-09-18T19:14:48Z",
+      "issue_type": "Bug",
+      "body_sha256": "35efc61d0b4fad6cb99d1a45343f494164b3faa3ee08df3f79809bcd317cfb13",
+      "body_reconstruction": "no-edited-timeline-event"
+    },
+    {
+      "repo": "langchain-ai/langchain",
+      "number": 40656,
+      "github_id": 5506465545,
+      "created_at": "2026-09-19T00:32:25Z",
+      "issue_type": "Bug",
+      "body_sha256": "bfb229f779ec3627f7e8c3d817b1448c8cf4386589d258d3aff79efce66f6882",
+      "body_reconstruction": "no-edited-timeline-event"
+    },
+    {
+      "repo": "langchain-ai/langchain",
+      "number": 40657,
+      "github_id": 5506503805,
+      "created_at": "2026-09-19T00:38:00Z",
+      "issue_type": "Bug",
+      "body_sha256": "bfb229f779ec3627f7e8c3d817b1448c8cf4386589d258d3aff79efce66f6882",
+      "body_reconstruction": "no-edited-timeline-event"
+    },
+    {
+      "repo": "langchain-ai/langchain",
+      "number": 40664,
+      "github_id": 5508283136,
+      "created_at": "2026-09-19T06:26:19Z",
+      "issue_type": "Bug",
+      "body_sha256": "2794a45c7a000a81614ffa6fe623fbe8a3338312ad57aa983a601ba509cefecb",
+      "body_reconstruction": "no-edited-timeline-event"
+    },
+    {
+      "repo": "langchain-ai/langchain",
+      "number": 40668,
+      "github_id": 5508894266,
+      "created_at": "2026-09-19T08:43:13Z",
+      "issue_type": "Bug",
+      "body_sha256": "d8f0abf276610a2938c7390305b1c04423fc0b796cbbd10c1dbb8dd988cdd61f",
+      "body_reconstruction": "no-edited-timeline-event"
+    },
+    {
+      "repo": "langchain-ai/langchain",
+      "number": 40675,
+      "github_id": 5510655351,
+      "created_at": "2026-09-19T13:53:19Z",
+      "issue_type": "Bug",
+      "body_sha256": "e4b5b90b2fdce05e85fc715295a1b3fe1ad376a74d4baa6841763035901cc512",
+      "body_reconstruction": "no-edited-timeline-event"
+    },
+    {
+      "repo": "langchain-ai/langchain",
+      "number": 40677,
+      "github_id": 5510759715,
+      "created_at": "2026-09-19T14:09:22Z",
+      "issue_type": "Bug",
+      "body_sha256": "b34aaa005a3d2b9790b259ef1f114ad245fbf936078433fd9f04bf0434084260",
+      "body_reconstruction": "no-edited-timeline-event"
+    },
+    {
+      "repo": "langchain-ai/langchain",
+      "number": 40678,
+      "github_id": 5511902951,
+      "created_at": "2026-09-19T16:48:09Z",
+      "issue_type": "Bug",
+      "body_sha256": "00958925e3722e722c9b801c042ad5b6d956ea67e72017539f3fdd62d73d1957",
+      "body_reconstruction": "no-edited-timeline-event"
+    },
+    {
+      "repo": "langchain-ai/langchain",
+      "number": 40688,
+      "github_id": 5516826577,
+      "created_at": "2026-09-20T08:52:50Z",
+      "issue_type": "Bug",
+      "body_sha256": "8ddcda128f057522ad84ee5db1362081bdb91e86d44d8d3bc8d470ca4f4e9b2d",
+      "body_reconstruction": "no-edited-timeline-event"
+    }
+  ]
+}
