@@ -1,0 +1,530 @@
+{
+  "repo": "astral-sh/uv",
+  "snapshot_date": "2026-10-20",
+  "source": "GET /repos/astral-sh/uv/labels (paginated, via gh api)",
+  "family_rule": "intent/workflow/unscored sets from probe (uv-native); all other labels are package/area family",
+  "labels": [
+    {
+      "name": "area:authentication",
+      "description": "Related to credentials, keyrings, tokens, and authentication providers",
+      "color": "C5DEF5",
+      "family": "package"
+    },
+    {
+      "name": "area:benchmarks",
+      "description": "Related to benchmarking",
+      "color": "AC41F9",
+      "family": "package"
+    },
+    {
+      "name": "area:build-backend",
+      "description": "",
+      "color": "630087",
+      "family": "package"
+    },
+    {
+      "name": "area:cache",
+      "description": "Caching of packages and metadata",
+      "color": "BFDADC",
+      "family": "package"
+    },
+    {
+      "name": "area:cli",
+      "description": "Related to the command line interface",
+      "color": "5319E7",
+      "family": "package"
+    },
+    {
+      "name": "area:configuration",
+      "description": "Settings and such",
+      "color": "0E8A16",
+      "family": "package"
+    },
+    {
+      "name": "area:cpython",
+      "description": "Related to CPython support",
+      "color": "23F3F6",
+      "family": "package"
+    },
+    {
+      "name": "area:environments",
+      "description": "Related to virtual environments",
+      "color": "D4C5F9",
+      "family": "package"
+    },
+    {
+      "name": "area:error-messages",
+      "description": "Messaging when something goes wrong",
+      "color": "A14A61",
+      "family": "package"
+    },
+    {
+      "name": "area:installer",
+      "description": "Related to package installation",
+      "color": "C5DEF5",
+      "family": "package"
+    },
+    {
+      "name": "area:integrations",
+      "description": "Integration into another tool",
+      "color": "c2e0c6",
+      "family": "package"
+    },
+    {
+      "name": "area:json-output",
+      "description": "Support for `--output-format=json` in various places",
+      "color": "aaaaaa",
+      "family": "package"
+    },
+    {
+      "name": "area:linux",
+      "description": "Specific to the Linux platform",
+      "color": "1D76DB",
+      "family": "package"
+    },
+    {
+      "name": "area:lock",
+      "description": "Related to universal resolution and locking",
+      "color": "006B75",
+      "family": "package"
+    },
+    {
+      "name": "area:macos",
+      "description": "Specific to the macOS platform",
+      "color": "1D76DB",
+      "family": "package"
+    },
+    {
+      "name": "area:musl",
+      "description": "",
+      "color": "6C4937",
+      "family": "package"
+    },
+    {
+      "name": "area:network",
+      "description": "Network connectivity e.g. proxies, DNS, and SSL",
+      "color": "C5DEF5",
+      "family": "package"
+    },
+    {
+      "name": "area:projects",
+      "description": "Related to project management capabilities",
+      "color": "D4C5F9",
+      "family": "package"
+    },
+    {
+      "name": "area:pypy",
+      "description": "Related to PyPy support",
+      "color": "23F3F6",
+      "family": "package"
+    },
+    {
+      "name": "area:registry",
+      "description": "Related to package indexes and registries",
+      "color": "F9D0C4",
+      "family": "package"
+    },
+    {
+      "name": "area:resolver",
+      "description": "Related to the package resolver",
+      "color": "006b75",
+      "family": "package"
+    },
+    {
+      "name": "area:rustlib",
+      "description": "Related to our Rust library API",
+      "color": "d4c5f9",
+      "family": "package"
+    },
+    {
+      "name": "area:scripts",
+      "description": "Related to inline script metadata, script environments, and script lockfiles",
+      "color": "D4C5F9",
+      "family": "package"
+    },
+    {
+      "name": "area:sources",
+      "description": "Related to Git, direct URL, and local path dependencies",
+      "color": "F9D0C4",
+      "family": "package"
+    },
+    {
+      "name": "area:tracing",
+      "description": "Verbose output and debugging",
+      "color": "FEF2C0",
+      "family": "package"
+    },
+    {
+      "name": "area:uv-audit",
+      "description": "Related to uv audit functionality",
+      "color": "c5def5",
+      "family": "package"
+    },
+    {
+      "name": "area:uv-check",
+      "description": "",
+      "color": "c5def5",
+      "family": "package"
+    },
+    {
+      "name": "area:uv-format",
+      "description": "Related to formatting integration and configuration",
+      "color": "C5DEF5",
+      "family": "package"
+    },
+    {
+      "name": "area:uv-pip",
+      "description": "Related to the uv pip interface",
+      "color": "BFD4F2",
+      "family": "package"
+    },
+    {
+      "name": "area:uv-publish",
+      "description": "Related to package uploads, publishing configuration, and attestations",
+      "color": "C5DEF5",
+      "family": "package"
+    },
+    {
+      "name": "area:uv-python",
+      "description": "Related to the uv python interface",
+      "color": "C5DEF5",
+      "family": "package"
+    },
+    {
+      "name": "area:uv-tool",
+      "description": "Related to the uv tool interface",
+      "color": "C5DEF5",
+      "family": "package"
+    },
+    {
+      "name": "area:windows",
+      "description": "Specific to the Windows platform",
+      "color": "0078d4",
+      "family": "package"
+    },
+    {
+      "name": "area:workspaces",
+      "description": "Related to workspace discovery, members, shared configuration, and metadata",
+      "color": "D4C5F9",
+      "family": "package"
+    },
+    {
+      "name": "bot:ai-policy-close",
+      "description": "",
+      "color": "fbca04",
+      "family": "package"
+    },
+    {
+      "name": "bot:ai-policy-comment",
+      "description": "",
+      "color": "fbca04",
+      "family": "package"
+    },
+    {
+      "name": "bot:needs-mre-comment",
+      "description": "The bot will leave a comment explaining that we need an MRE.",
+      "color": "fbca04",
+      "family": "package"
+    },
+    {
+      "name": "bot:promote",
+      "description": null,
+      "color": "ededed",
+      "family": "package"
+    },
+    {
+      "name": "bot:rebase",
+      "description": "",
+      "color": "fbca04",
+      "family": "package"
+    },
+    {
+      "name": "breaking",
+      "description": "A breaking change",
+      "color": "fc392b",
+      "family": "package"
+    },
+    {
+      "name": "bug",
+      "description": "Something isn't working",
+      "color": "d73a4a",
+      "family": "intent"
+    },
+    {
+      "name": "bugfix",
+      "description": null,
+      "color": "ededed",
+      "family": "package"
+    },
+    {
+      "name": "build:docker",
+      "description": "Enable building Docker images for a pull request",
+      "color": "C5DEF5",
+      "family": "package"
+    },
+    {
+      "name": "build:push-docker",
+      "description": "Enable a test push of Docker images with a SHA tag",
+      "color": "C5DEF5",
+      "family": "package"
+    },
+    {
+      "name": "build:release",
+      "description": "Enable building release binaries for a pull request",
+      "color": "C5DEF5",
+      "family": "package"
+    },
+    {
+      "name": "build:skip",
+      "description": "Disable additional builds for a pull request",
+      "color": "c5def5",
+      "family": "package"
+    },
+    {
+      "name": "build:skip-docker",
+      "description": "Disable building Docker images for a pull request",
+      "color": "C5DEF5",
+      "family": "package"
+    },
+    {
+      "name": "build:skip-release",
+      "description": "Disable building release binaries for a pull request",
+      "color": "C5DEF5",
+      "family": "package"
+    },
+    {
+      "name": "build:windows-trampoline",
+      "description": "",
+      "color": "4E11E6",
+      "family": "package"
+    },
+    {
+      "name": "codex",
+      "description": null,
+      "color": "ededed",
+      "family": "package"
+    },
+    {
+      "name": "compatibility",
+      "description": "Compatibility with a specification or another tool",
+      "color": "C2E0C6",
+      "family": "package"
+    },
+    {
+      "name": "coverage",
+      "description": "Perform a dedicated coverage-instrumented test run",
+      "color": "2E5510",
+      "family": "package"
+    },
+    {
+      "name": "dependencies",
+      "description": null,
+      "color": "aaaaaa",
+      "family": "package"
+    },
+    {
+      "name": "do-not-merge",
+      "description": "Pull request is not ready to merge",
+      "color": "d95a0b",
+      "family": "package"
+    },
+    {
+      "name": "documentation",
+      "description": "Improvements or additions to documentation",
+      "color": "BFD4F2",
+      "family": "intent"
+    },
+    {
+      "name": "duplicate",
+      "description": "This issue or pull request already exists",
+      "color": "cfd3d7",
+      "family": "workflow"
+    },
+    {
+      "name": "enhancement",
+      "description": "New feature or improvement to existing functionality",
+      "color": "D4C5F9",
+      "family": "intent"
+    },
+    {
+      "name": "ep-2026-sprints",
+      "description": null,
+      "color": "aaaaaa",
+      "family": "unscored"
+    },
+    {
+      "name": "external",
+      "description": "The cause of the problem is outside of uv",
+      "color": "F9D0C4",
+      "family": "workflow"
+    },
+    {
+      "name": "good first issue",
+      "description": "Good for newcomers",
+      "color": "7057ff",
+      "family": "package"
+    },
+    {
+      "name": "great writeup",
+      "description": "A wonderful example of a quality contribution \ud83d\udc9c",
+      "color": "C2E0C6",
+      "family": "package"
+    },
+    {
+      "name": "help wanted",
+      "description": "Contribution especially encouraged",
+      "color": "008672",
+      "family": "package"
+    },
+    {
+      "name": "internal",
+      "description": "A refactor or improvement that is not user-facing",
+      "color": "153FC0",
+      "family": "package"
+    },
+    {
+      "name": "internal:automations",
+      "description": "Related to internal automations",
+      "color": "fbca04",
+      "family": "workflow"
+    },
+    {
+      "name": "internal:ci",
+      "description": "Related to continuous integration workflows and infrastructure",
+      "color": "f9d0c4",
+      "family": "unscored"
+    },
+    {
+      "name": "internal:ci-flake",
+      "description": "Related to internal CI flakes",
+      "color": "f9d0c4",
+      "family": "unscored"
+    },
+    {
+      "name": "internal:releases",
+      "description": "Related to building and distributing release artifacts of uv",
+      "color": "5319e7",
+      "family": "unscored"
+    },
+    {
+      "name": "internal:testing",
+      "description": "Internal testing of behavior",
+      "color": "1D76DB",
+      "family": "unscored"
+    },
+    {
+      "name": "needs-decision",
+      "description": "Undecided if this should be done",
+      "color": "f095cd",
+      "family": "workflow"
+    },
+    {
+      "name": "needs-design",
+      "description": "Needs discussion, investigation, or design",
+      "color": "f7e98b",
+      "family": "workflow"
+    },
+    {
+      "name": "needs-mre",
+      "description": "Needs more information for reproduction, see #9452",
+      "color": "FBCA04",
+      "family": "workflow"
+    },
+    {
+      "name": "performance",
+      "description": "",
+      "color": "43D159",
+      "family": "package"
+    },
+    {
+      "name": "preview",
+      "description": "Experimental behavior",
+      "color": "1D76DB",
+      "family": "package"
+    },
+    {
+      "name": "project:maintainer-followups",
+      "description": "Maintainer follow-up work",
+      "color": "5319e7",
+      "family": "unscored"
+    },
+    {
+      "name": "question",
+      "description": "Asking for clarification or support",
+      "color": "BFD4F2",
+      "family": "intent"
+    },
+    {
+      "name": "security",
+      "description": "",
+      "color": "1d76db",
+      "family": "intent"
+    },
+    {
+      "name": "show-and-tell",
+      "description": "Sharing an example of applying uv",
+      "color": "1D76DB",
+      "family": "workflow"
+    },
+    {
+      "name": "test:benchmarks",
+      "description": null,
+      "color": "ededed",
+      "family": "package"
+    },
+    {
+      "name": "test:extended",
+      "description": "Enable extended tests for a pull request",
+      "color": "C5DEF5",
+      "family": "package"
+    },
+    {
+      "name": "test:integration",
+      "description": "Enable integration tests for a pull request",
+      "color": "C5DEF5",
+      "family": "package"
+    },
+    {
+      "name": "test:macos",
+      "description": "Enable macOS tests for a pull request",
+      "color": "C5DEF5",
+      "family": "package"
+    },
+    {
+      "name": "test:skip",
+      "description": "Disable running tests for a pull request",
+      "color": "C5DEF5",
+      "family": "package"
+    },
+    {
+      "name": "test:smoke",
+      "description": "Enable smoke tests for a pull request",
+      "color": "C5DEF5",
+      "family": "package"
+    },
+    {
+      "name": "test:system",
+      "description": "Enable system tests for a pull request",
+      "color": "C5DEF5",
+      "family": "package"
+    },
+    {
+      "name": "tracking",
+      "description": "A \"meta\" issue that tracks completion of a bigger task via a list of smaller scoped issues.",
+      "color": "8A57AE",
+      "family": "intent"
+    },
+    {
+      "name": "wish",
+      "description": "Not on the immediate roadmap",
+      "color": "CDFC48",
+      "family": "intent"
+    },
+    {
+      "name": "wontfix",
+      "description": "This will not be worked on",
+      "color": "ffffff",
+      "family": "package"
+    }
+  ]
+}
