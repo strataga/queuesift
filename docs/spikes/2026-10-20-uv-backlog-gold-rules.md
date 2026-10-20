@@ -46,7 +46,7 @@ freeze:
    - it carries `needs-mre` at the freeze after Tier A/B triage;
    - a Tier A/B maintainer explicitly requested a reproduction, logs,
      environment details, configuration, setup steps, or another missing
-     diagnostic artifact; or
+     diagnostic artifact in a bug-like report; or
    - a Tier C contributor made that explicit request and also applied
      `needs-mre` during triage.
 2. The operator reviewed the surrounding thread and found no reason to reject
@@ -54,7 +54,9 @@ freeze:
 
 A fulfilled follow-up does not erase the positive: the gold question is whether
 maintainer triage needed more evidence, not whether the reporter eventually
-supplied it.
+supplied it. Feature/design/use-case questions without a bug-like report are
+not MRE positives. An issue that is duplicate-positive is scored in the
+duplicate class, even if its thread also contains an information request.
 
 Under design §8.1, these are operator-adjudicated secondary judgments, not
 headline maintainer-accuracy gold. A 30-positive MRE count therefore permits a

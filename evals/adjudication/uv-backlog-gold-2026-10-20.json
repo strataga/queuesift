@@ -5,7 +5,7 @@
   "actors": "evals/actors/uv-actors-2026-10-20.json",
   "gold_rules": "docs/spikes/2026-10-20-uv-backlog-gold-rules.md",
   "as_of": "2026-10-20T00:00:00Z",
-  "method": "Bounded candidate census: all current duplicate labels, all pre-freeze marked_as_duplicate events with GraphQL direction checks, all current needs-mre labels, and code-computed stale set. Single-rater thread review; no model inputs were tuned on these outcomes.",
+  "method": "Bounded candidate census: all current needs-mre labels, all pre-freeze marked_as_duplicate events with GraphQL direction checks, four explicit Tier A/B bug-report reproduction/environment requests found by the non-label negative scan, and code-computed stale set. Single-rater thread review; no model inputs were tuned on these outcomes.",
   "single_rater": true,
   "duplicate": {
     "minimum_positives": 30,
@@ -434,11 +434,28 @@
   },
   "missing_reproduction": {
     "minimum_positives": 30,
-    "candidate_members": 50,
-    "adjudicated_positives": 50,
+    "candidate_members": 54,
+    "adjudicated_positives": 54,
     "verdict": "pass_secondary_judgment_only",
     "headline_maintainer_accuracy_permitted": false,
     "positives": [
+      {
+        "number": 2138,
+        "title": "unexpected end of file when working with Azure Artifacts",
+        "outcome": "positive",
+        "evidence": {
+          "kind": "explicit_bug_report_request_without_label",
+          "request_comment": {
+            "id": 2022966971,
+            "author": "charliermarsh",
+            "tier": "A",
+            "created_at": "2024-03-27T14:49:25Z",
+            "url": "https://github.com/astral-sh/uv/issues/2138#issuecomment-2022966971"
+          },
+          "issue_url": "https://github.com/astral-sh/uv/issues/2138"
+        },
+        "as_of": "2026-10-20T00:00:00Z"
+      },
       {
         "number": 2253,
         "title": "Nexus doesn't return a `Last-Modified` header",
@@ -486,6 +503,40 @@
         "as_of": "2026-10-20T00:00:00Z"
       },
       {
+        "number": 2828,
+        "title": "(\ud83c\udf81) Fail and show an error when an invalid extra is requested",
+        "outcome": "positive",
+        "evidence": {
+          "kind": "explicit_bug_report_request_without_label",
+          "request_comment": {
+            "id": 2185771324,
+            "author": "konstin",
+            "tier": "A",
+            "created_at": "2024-06-24T07:09:43Z",
+            "url": "https://github.com/astral-sh/uv/issues/2828#issuecomment-2185771324"
+          },
+          "issue_url": "https://github.com/astral-sh/uv/issues/2828"
+        },
+        "as_of": "2026-10-20T00:00:00Z"
+      },
+      {
+        "number": 3573,
+        "title": "Unknown operation system: mingw_x86_64_ucrt",
+        "outcome": "positive",
+        "evidence": {
+          "kind": "explicit_bug_report_request_without_label",
+          "request_comment": {
+            "id": 2116537620,
+            "author": "samypr100",
+            "tier": "B",
+            "created_at": "2024-05-17T02:54:23Z",
+            "url": "https://github.com/astral-sh/uv/issues/3573#issuecomment-2116537620"
+          },
+          "issue_url": "https://github.com/astral-sh/uv/issues/3573"
+        },
+        "as_of": "2026-10-20T00:00:00Z"
+      },
+      {
         "number": 3599,
         "title": "Incompatible cached wheels may continue to be used after upgrade",
         "outcome": "positive",
@@ -505,6 +556,23 @@
             "url": "https://github.com/astral-sh/uv/issues/3599#issuecomment-2112747405",
             "role": "explicit_request"
           }
+        },
+        "as_of": "2026-10-20T00:00:00Z"
+      },
+      {
+        "number": 3802,
+        "title": "[perf] differences in pip vs uv when installing package from src",
+        "outcome": "positive",
+        "evidence": {
+          "kind": "explicit_bug_report_request_without_label",
+          "request_comment": {
+            "id": 2132221791,
+            "author": "samypr100",
+            "tier": "B",
+            "created_at": "2024-05-26T13:21:27Z",
+            "url": "https://github.com/astral-sh/uv/issues/3802#issuecomment-2132221791"
+          },
+          "issue_url": "https://github.com/astral-sh/uv/issues/3802"
         },
         "as_of": "2026-10-20T00:00:00Z"
       },

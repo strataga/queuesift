@@ -42,5 +42,5 @@ Selection order was deterministic:
 Gold adjudication is now complete in
 `evals/adjudication/uv-backlog-gold-2026-10-20.json` and summarized in
 `docs/spikes/2026-10-20-uv-backlog-gold-results.md`: duplicate 3/30 (fail),
-missing reproduction 50/50 (secondary judgment only), and stale 145/150
+missing reproduction 54/30 (secondary judgment only), and stale 145/150
 (pass).
