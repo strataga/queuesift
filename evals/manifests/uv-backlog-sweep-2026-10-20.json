@@ -1,0 +1,1568 @@
+{
+  "name": "uv-backlog-sweep",
+  "cohort_date": "2026-10-20",
+  "repo": "astral-sh/uv",
+  "database_filename": "queuesift-uv-backlog.db",
+  "sample_size": 150,
+  "duplicate_labeled_count": 3,
+  "mre_labeled_count": 50,
+  "oldest_created_at": "2023-11-02T19:12:01Z",
+  "members": [
+    {
+      "number": 12630,
+      "title": "completion scripts disables autocompletion of files and folders",
+      "created_at": "2025-04-02T16:44:22Z",
+      "updated_at": "2025-04-02T16:52:10Z",
+      "labels": [
+        "duplicate",
+        "question"
+      ],
+      "source": "current-duplicate-label"
+    },
+    {
+      "number": 13931,
+      "title": "`pyproject.toml` config setting equivalent for `UV_PROJECT_ENVIRONMENT`",
+      "created_at": "2025-06-09T19:12:43Z",
+      "updated_at": "2025-06-09T19:56:22Z",
+      "labels": [
+        "duplicate",
+        "enhancement"
+      ],
+      "source": "current-duplicate-label"
+    },
+    {
+      "number": 18892,
+      "title": "Platform markers in `[tool.uv.sources]` array are ignored for transitive dependencies",
+      "created_at": "2026-04-07T04:26:53Z",
+      "updated_at": "2026-04-08T16:14:49Z",
+      "labels": [
+        "bug",
+        "duplicate"
+      ],
+      "source": "current-duplicate-label"
+    },
+    {
+      "number": 2253,
+      "title": "Nexus doesn't return a `Last-Modified` header",
+      "created_at": "2024-03-06T23:21:58Z",
+      "updated_at": "2024-05-26T00:42:32Z",
+      "labels": [
+        "area:registry",
+        "needs-mre",
+        "area:cache"
+      ],
+      "source": "current-missing-reproduction-label"
+    },
+    {
+      "number": 2670,
+      "title": "uv pip install torch takes forever from asia",
+      "created_at": "2024-03-26T14:43:16Z",
+      "updated_at": "2024-03-26T16:24:30Z",
+      "labels": [
+        "needs-mre"
+      ],
+      "source": "current-missing-reproduction-label"
+    },
+    {
+      "number": 3599,
+      "title": "Incompatible cached wheels may continue to be used after upgrade",
+      "created_at": "2024-05-15T02:56:29Z",
+      "updated_at": "2025-10-07T15:43:13Z",
+      "labels": [
+        "needs-mre"
+      ],
+      "source": "current-missing-reproduction-label"
+    },
+    {
+      "number": 6038,
+      "title": "`uv pip compile` possibly generating an unsatisfiable requirements file",
+      "created_at": "2024-08-12T16:24:33Z",
+      "updated_at": "2024-08-13T15:45:50Z",
+      "labels": [
+        "area:resolver",
+        "needs-mre",
+        "great writeup"
+      ],
+      "source": "current-missing-reproduction-label"
+    },
+    {
+      "number": 6484,
+      "title": "Git operation fails if cache exists in subsequent uv pip compile runs",
+      "created_at": "2024-08-23T02:18:27Z",
+      "updated_at": "2025-07-08T02:28:39Z",
+      "labels": [
+        "needs-mre"
+      ],
+      "source": "current-missing-reproduction-label"
+    },
+    {
+      "number": 6682,
+      "title": "Build pyproject-build.exe not provided",
+      "created_at": "2024-08-27T10:06:00Z",
+      "updated_at": "2024-08-27T14:24:56Z",
+      "labels": [
+        "bug",
+        "needs-mre",
+        "area:uv-tool"
+      ],
+      "source": "current-missing-reproduction-label"
+    },
+    {
+      "number": 6819,
+      "title": "Multiple indexes without ssl verification",
+      "created_at": "2024-08-29T16:12:10Z",
+      "updated_at": "2025-07-31T15:30:06Z",
+      "labels": [
+        "question",
+        "needs-mre"
+      ],
+      "source": "current-missing-reproduction-label"
+    },
+    {
+      "number": 7004,
+      "title": "Running out of memory with uv pip install",
+      "created_at": "2024-09-04T10:39:34Z",
+      "updated_at": "2026-03-24T14:52:01Z",
+      "labels": [
+        "performance",
+        "needs-mre"
+      ],
+      "source": "current-missing-reproduction-label"
+    },
+    {
+      "number": 7622,
+      "title": "ModuleNotFoundError immediately after initializing a project",
+      "created_at": "2024-09-22T16:39:08Z",
+      "updated_at": "2025-01-11T14:30:08Z",
+      "labels": [
+        "needs-mre"
+      ],
+      "source": "current-missing-reproduction-label"
+    },
+    {
+      "number": 8512,
+      "title": "uv installs incorrect versions of dependencies when using Nexus",
+      "created_at": "2024-10-24T04:10:56Z",
+      "updated_at": "2024-10-29T02:34:50Z",
+      "labels": [
+        "needs-mre"
+      ],
+      "source": "current-missing-reproduction-label"
+    },
+    {
+      "number": 8966,
+      "title": "uv doesn't play well with meson-python build backend and pytest",
+      "created_at": "2024-11-09T11:39:11Z",
+      "updated_at": "2024-11-10T00:13:02Z",
+      "labels": [
+        "needs-mre"
+      ],
+      "source": "current-missing-reproduction-label"
+    },
+    {
+      "number": 9191,
+      "title": "Cache invalidation on local dependencies when using docker",
+      "created_at": "2024-11-18T10:11:56Z",
+      "updated_at": "2025-10-18T18:55:29Z",
+      "labels": [
+        "needs-mre"
+      ],
+      "source": "current-missing-reproduction-label"
+    },
+    {
+      "number": 9739,
+      "title": "Don't break on upgrades of externally-managed Pythons",
+      "created_at": "2024-12-09T15:05:47Z",
+      "updated_at": "2025-01-07T19:26:27Z",
+      "labels": [
+        "needs-mre"
+      ],
+      "source": "current-missing-reproduction-label"
+    },
+    {
+      "number": 9765,
+      "title": "unit test / pytest slow down exponentially after migrating from poetry to uv",
+      "created_at": "2024-12-10T07:23:04Z",
+      "updated_at": "2025-07-24T08:25:32Z",
+      "labels": [
+        "needs-mre"
+      ],
+      "source": "current-missing-reproduction-label"
+    },
+    {
+      "number": 9902,
+      "title": "Bug: ModuleNotFoundError related to venv uv_cache.json when store in iCloud",
+      "created_at": "2024-12-15T02:53:09Z",
+      "updated_at": "2026-08-19T17:52:40Z",
+      "labels": [
+        "help wanted",
+        "needs-mre"
+      ],
+      "source": "current-missing-reproduction-label"
+    },
+    {
+      "number": 9909,
+      "title": "Docker and snap-7",
+      "created_at": "2024-12-15T12:19:09Z",
+      "updated_at": "2025-01-13T19:03:12Z",
+      "labels": [
+        "needs-mre"
+      ],
+      "source": "current-missing-reproduction-label"
+    },
+    {
+      "number": 9923,
+      "title": "uv.lock does not stay synced with pyproject.toml requirements",
+      "created_at": "2024-12-15T23:44:56Z",
+      "updated_at": "2025-01-01T01:11:00Z",
+      "labels": [
+        "needs-mre"
+      ],
+      "source": "current-missing-reproduction-label"
+    },
+    {
+      "number": 9929,
+      "title": "Termux cannot install from git+https url",
+      "created_at": "2024-12-16T03:45:36Z",
+      "updated_at": "2025-06-22T02:27:06Z",
+      "labels": [
+        "needs-mre"
+      ],
+      "source": "current-missing-reproduction-label"
+    },
+    {
+      "number": 10004,
+      "title": "How can I override a uv install (via uv sync) with an editable package that will stay up to date in running docker container",
+      "created_at": "2024-12-18T15:32:08Z",
+      "updated_at": "2024-12-18T20:35:45Z",
+      "labels": [
+        "question",
+        "needs-mre"
+      ],
+      "source": "current-missing-reproduction-label"
+    },
+    {
+      "number": 10711,
+      "title": "`No interpreter found in search path` on nixOS",
+      "created_at": "2025-01-17T14:28:01Z",
+      "updated_at": "2025-06-17T14:10:22Z",
+      "labels": [
+        "needs-mre"
+      ],
+      "source": "current-missing-reproduction-label"
+    },
+    {
+      "number": 11018,
+      "title": "failed to rename file [...] Permission denied (os error 13)",
+      "created_at": "2025-01-28T12:49:19Z",
+      "updated_at": "2025-11-05T15:19:16Z",
+      "labels": [
+        "bug",
+        "area:windows",
+        "needs-mre"
+      ],
+      "source": "current-missing-reproduction-label"
+    },
+    {
+      "number": 11409,
+      "title": "Windows distribution cache access denied in CI",
+      "created_at": "2025-02-10T21:58:18Z",
+      "updated_at": "2025-02-20T03:55:45Z",
+      "labels": [
+        "needs-mre"
+      ],
+      "source": "current-missing-reproduction-label"
+    },
+    {
+      "number": 11452,
+      "title": "False Positive conflicting URLs for Git Package Dependencies with private packages",
+      "created_at": "2025-02-12T16:15:40Z",
+      "updated_at": "2025-05-28T13:04:55Z",
+      "labels": [
+        "needs-mre"
+      ],
+      "source": "current-missing-reproduction-label"
+    },
+    {
+      "number": 11480,
+      "title": "uv is taking longer to install pytorch than pip",
+      "created_at": "2025-02-13T15:07:54Z",
+      "updated_at": "2025-02-13T15:43:34Z",
+      "labels": [
+        "needs-mre"
+      ],
+      "source": "current-missing-reproduction-label"
+    },
+    {
+      "number": 11554,
+      "title": "uv does not seem to install so files of coremltools",
+      "created_at": "2025-02-16T14:33:59Z",
+      "updated_at": "2025-06-22T02:26:16Z",
+      "labels": [
+        "needs-mre"
+      ],
+      "source": "current-missing-reproduction-label"
+    },
+    {
+      "number": 11636,
+      "title": "`uv pip install -r requirements.txt` flakiness with `datashader` and `llvmlite` packages",
+      "created_at": "2025-02-19T20:01:16Z",
+      "updated_at": "2025-09-11T23:01:42Z",
+      "labels": [
+        "needs-mre",
+        "area:network"
+      ],
+      "source": "current-missing-reproduction-label"
+    },
+    {
+      "number": 11651,
+      "title": "I encountered a bug when using \"uv add tensorrt\" to install TensorRT",
+      "created_at": "2025-02-20T01:37:48Z",
+      "updated_at": "2025-02-20T19:59:44Z",
+      "labels": [
+        "needs-mre"
+      ],
+      "source": "current-missing-reproduction-label"
+    },
+    {
+      "number": 11975,
+      "title": "uv freezes while downloading",
+      "created_at": "2025-03-05T13:45:48Z",
+      "updated_at": "2025-03-11T21:11:32Z",
+      "labels": [
+        "bug",
+        "needs-mre"
+      ],
+      "source": "current-missing-reproduction-label"
+    },
+    {
+      "number": 12036,
+      "title": "Build intermittently fails when uv cache is on NFS mount",
+      "created_at": "2025-03-07T09:35:20Z",
+      "updated_at": "2026-01-11T14:23:45Z",
+      "labels": [
+        "bug",
+        "needs-mre"
+      ],
+      "source": "current-missing-reproduction-label"
+    },
+    {
+      "number": 12325,
+      "title": "uv doesn't respect workspace dependences when defined as extras",
+      "created_at": "2025-03-19T23:50:05Z",
+      "updated_at": "2025-03-20T00:28:09Z",
+      "labels": [
+        "needs-mre"
+      ],
+      "source": "current-missing-reproduction-label"
+    },
+    {
+      "number": 12635,
+      "title": "irm connection forcibly closed when installing on windows",
+      "created_at": "2025-04-02T18:51:07Z",
+      "updated_at": "2026-01-30T11:57:50Z",
+      "labels": [
+        "needs-mre",
+        "external"
+      ],
+      "source": "current-missing-reproduction-label"
+    },
+    {
+      "number": 12658,
+      "title": "`uv run` not running to completion",
+      "created_at": "2025-04-03T19:10:18Z",
+      "updated_at": "2025-05-09T14:49:19Z",
+      "labels": [
+        "bug",
+        "needs-mre"
+      ],
+      "source": "current-missing-reproduction-label"
+    },
+    {
+      "number": 12666,
+      "title": "Strange behavior with tools.uv.sources and tools.uv.index",
+      "created_at": "2025-04-04T09:43:22Z",
+      "updated_at": "2025-04-04T19:15:40Z",
+      "labels": [
+        "needs-mre"
+      ],
+      "source": "current-missing-reproduction-label"
+    },
+    {
+      "number": 12849,
+      "title": "uv add fails with error : The file cannot be accessed by the system. (os error 1920)",
+      "created_at": "2025-04-12T02:27:25Z",
+      "updated_at": "2026-03-26T05:09:31Z",
+      "labels": [
+        "needs-mre"
+      ],
+      "source": "current-missing-reproduction-label"
+    },
+    {
+      "number": 13198,
+      "title": "uv pip puts the wrong interpreter in shebangs installed under bin",
+      "created_at": "2025-04-29T17:59:10Z",
+      "updated_at": "2026-03-11T12:59:24Z",
+      "labels": [
+        "bug",
+        "needs-mre"
+      ],
+      "source": "current-missing-reproduction-label"
+    },
+    {
+      "number": 13288,
+      "title": "uv installing for incorrect architecture (raspberry pi)",
+      "created_at": "2025-05-04T23:33:11Z",
+      "updated_at": "2025-06-10T20:50:36Z",
+      "labels": [
+        "needs-mre"
+      ],
+      "source": "current-missing-reproduction-label"
+    },
+    {
+      "number": 13358,
+      "title": "uv add tries checks for package in both public and private package registry, then fails with private registry error despite the package being available in public registry",
+      "created_at": "2025-05-09T00:05:59Z",
+      "updated_at": "2025-10-24T22:35:44Z",
+      "labels": [
+        "needs-mre"
+      ],
+      "source": "current-missing-reproduction-label"
+    },
+    {
+      "number": 13418,
+      "title": "`uv tool install` failing to install due to 'Permission denied'",
+      "created_at": "2025-05-13T00:32:25Z",
+      "updated_at": "2026-01-15T08:51:43Z",
+      "labels": [
+        "needs-mre"
+      ],
+      "source": "current-missing-reproduction-label"
+    },
+    {
+      "number": 13427,
+      "title": "`uv init` cannot create `.git`",
+      "created_at": "2025-05-13T08:55:16Z",
+      "updated_at": "2025-05-27T13:11:28Z",
+      "labels": [
+        "needs-mre"
+      ],
+      "source": "current-missing-reproduction-label"
+    },
+    {
+      "number": 13515,
+      "title": "Entrypoint creation isn't targeting the direct dependency, instead is built through third-party dependency",
+      "created_at": "2025-05-18T21:42:30Z",
+      "updated_at": "2025-05-18T22:05:03Z",
+      "labels": [
+        "needs-mre"
+      ],
+      "source": "current-missing-reproduction-label"
+    },
+    {
+      "number": 13823,
+      "title": "Credentials in direct URLs are not propagated to transitive URL dependencies",
+      "created_at": "2025-06-03T16:12:06Z",
+      "updated_at": "2025-06-09T00:27:43Z",
+      "labels": [
+        "needs-mre"
+      ],
+      "source": "current-missing-reproduction-label"
+    },
+    {
+      "number": 14017,
+      "title": "uv sync failed to bytecode-compile Python file because it failed to create temporary script file",
+      "created_at": "2025-06-13T09:38:21Z",
+      "updated_at": "2025-08-03T08:43:54Z",
+      "labels": [
+        "needs-mre"
+      ],
+      "source": "current-missing-reproduction-label"
+    },
+    {
+      "number": 14209,
+      "title": "uvx in tmux - dependency check has new line issue",
+      "created_at": "2025-06-23T05:39:42Z",
+      "updated_at": "2025-06-26T22:59:18Z",
+      "labels": [
+        "needs-mre"
+      ],
+      "source": "current-missing-reproduction-label"
+    },
+    {
+      "number": 14395,
+      "title": "uv pip install -f(--find-links) doesn't work, cause 'error decoding response body.'",
+      "created_at": "2025-07-01T14:38:30Z",
+      "updated_at": "2025-07-08T02:13:13Z",
+      "labels": [
+        "bug",
+        "needs-mre"
+      ],
+      "source": "current-missing-reproduction-label"
+    },
+    {
+      "number": 14414,
+      "title": "Fail to download python(3.11) on Windows platform",
+      "created_at": "2025-07-02T10:10:21Z",
+      "updated_at": "2025-08-04T01:36:55Z",
+      "labels": [
+        "bug",
+        "needs-mre"
+      ],
+      "source": "current-missing-reproduction-label"
+    },
+    {
+      "number": 14462,
+      "title": "Threadpool initialization fails during basic builds on HPC cluster unless low `concurrent-builds` limit set",
+      "created_at": "2025-07-04T19:40:33Z",
+      "updated_at": "2025-07-07T16:25:02Z",
+      "labels": [
+        "needs-mre"
+      ],
+      "source": "current-missing-reproduction-label"
+    },
+    {
+      "number": 14857,
+      "title": "Reference docs sidebar can't be scrolled",
+      "created_at": "2025-07-23T20:36:51Z",
+      "updated_at": "2025-12-18T07:49:10Z",
+      "labels": [
+        "needs-mre"
+      ],
+      "source": "current-missing-reproduction-label"
+    },
+    {
+      "number": 15108,
+      "title": "Installing platform dependent wheel files results in distribution cache error",
+      "created_at": "2025-08-06T13:33:06Z",
+      "updated_at": "2026-09-16T13:14:39Z",
+      "labels": [
+        "area:windows",
+        "needs-mre"
+      ],
+      "source": "current-missing-reproduction-label"
+    },
+    {
+      "number": 15164,
+      "title": "Deleting .venv of Project B fails when running Project A due to locked files",
+      "created_at": "2025-08-08T10:41:29Z",
+      "updated_at": "2025-08-08T20:05:16Z",
+      "labels": [
+        "bug",
+        "needs-mre"
+      ],
+      "source": "current-missing-reproduction-label"
+    },
+    {
+      "number": 15246,
+      "title": "uv cannot spawn gunicorn in uv project",
+      "created_at": "2025-08-12T22:10:03Z",
+      "updated_at": "2026-05-03T15:24:13Z",
+      "labels": [
+        "bug",
+        "needs-mre"
+      ],
+      "source": "current-missing-reproduction-label"
+    },
+    {
+      "number": 298,
+      "title": "Consider branch or tag precedence in ambiguous git references",
+      "created_at": "2023-11-02T19:12:01Z",
+      "updated_at": "2025-12-02T09:43:23Z",
+      "labels": [
+        "enhancement",
+        "needs-decision"
+      ],
+      "source": "oldest-eligible-open-issue"
+    },
+    {
+      "number": 311,
+      "title": "Track and report the sources of requirements",
+      "created_at": "2023-11-03T15:39:52Z",
+      "updated_at": "2024-02-29T16:22:40Z",
+      "labels": [
+        "area:error-messages",
+        "area:tracing"
+      ],
+      "source": "oldest-eligible-open-issue"
+    },
+    {
+      "number": 1061,
+      "title": "Store symlinked directories under their SHA",
+      "created_at": "2024-01-23T14:31:14Z",
+      "updated_at": "2024-04-04T04:00:53Z",
+      "labels": [
+        "enhancement"
+      ],
+      "source": "oldest-eligible-open-issue"
+    },
+    {
+      "number": 1235,
+      "title": "Improve display of conclusions after enumerating available versions",
+      "created_at": "2024-02-02T18:02:57Z",
+      "updated_at": "2026-08-05T09:54:40Z",
+      "labels": [
+        "area:error-messages"
+      ],
+      "source": "oldest-eligible-open-issue"
+    },
+    {
+      "number": 1369,
+      "title": "allow auth with headers",
+      "created_at": "2024-02-15T22:08:49Z",
+      "updated_at": "2025-11-22T09:41:07Z",
+      "labels": [
+        "enhancement",
+        "needs-design"
+      ],
+      "source": "oldest-eligible-open-issue"
+    },
+    {
+      "number": 1404,
+      "title": "Use settings from the pip configuration file (`pip.conf`)",
+      "created_at": "2024-02-16T00:54:00Z",
+      "updated_at": "2026-03-12T17:09:14Z",
+      "labels": [
+        "compatibility",
+        "area:configuration"
+      ],
+      "source": "oldest-eligible-open-issue"
+    },
+    {
+      "number": 1419,
+      "title": "Add option to upgrade all packages in the environment, e.g., `upgrade --all`",
+      "created_at": "2024-02-16T03:48:14Z",
+      "updated_at": "2026-10-20T04:50:18Z",
+      "labels": [
+        "enhancement",
+        "needs-design",
+        "area:uv-pip"
+      ],
+      "source": "oldest-eligible-open-issue"
+    },
+    {
+      "number": 1442,
+      "title": "Implement `--report` for `uv pip install`",
+      "created_at": "2024-02-16T06:16:55Z",
+      "updated_at": "2026-09-18T19:10:43Z",
+      "labels": [
+        "enhancement",
+        "area:cli",
+        "area:json-output"
+      ],
+      "source": "oldest-eligible-open-issue"
+    },
+    {
+      "number": 1516,
+      "title": "Feature request: add a way to install only build dependencies",
+      "created_at": "2024-02-16T17:14:21Z",
+      "updated_at": "2025-03-24T07:03:27Z",
+      "labels": [
+        "enhancement"
+      ],
+      "source": "oldest-eligible-open-issue"
+    },
+    {
+      "number": 1566,
+      "title": "Machine-readable progress output",
+      "created_at": "2024-02-17T03:08:58Z",
+      "updated_at": "2026-08-05T09:58:22Z",
+      "labels": [
+        "enhancement"
+      ],
+      "source": "oldest-eligible-open-issue"
+    },
+    {
+      "number": 1620,
+      "title": "Allow sparse checkouts/path exclusion for git dependencies",
+      "created_at": "2024-02-18T01:06:45Z",
+      "updated_at": "2024-07-04T12:35:45Z",
+      "labels": [
+        "enhancement",
+        "needs-design"
+      ],
+      "source": "oldest-eligible-open-issue"
+    },
+    {
+      "number": 1632,
+      "title": "Create stub for `uv` in virtual environments",
+      "created_at": "2024-02-18T08:06:33Z",
+      "updated_at": "2025-02-25T08:06:38Z",
+      "labels": [
+        "enhancement",
+        "needs-design",
+        "area:environments"
+      ],
+      "source": "oldest-eligible-open-issue"
+    },
+    {
+      "number": 1655,
+      "title": "Add `pip cache info` and `pip cache list`",
+      "created_at": "2024-02-18T15:45:44Z",
+      "updated_at": "2024-09-27T04:13:36Z",
+      "labels": [
+        "enhancement",
+        "area:cache"
+      ],
+      "source": "oldest-eligible-open-issue"
+    },
+    {
+      "number": 1681,
+      "title": "Support `pip wheel` subcommand",
+      "created_at": "2024-02-19T08:42:57Z",
+      "updated_at": "2026-04-20T16:38:01Z",
+      "labels": [
+        "enhancement",
+        "compatibility"
+      ],
+      "source": "oldest-eligible-open-issue"
+    },
+    {
+      "number": 1703,
+      "title": "Add support for managing Conda environments and packages",
+      "created_at": "2024-02-19T16:20:06Z",
+      "updated_at": "2026-01-29T00:56:31Z",
+      "labels": [
+        "wish"
+      ],
+      "source": "oldest-eligible-open-issue"
+    },
+    {
+      "number": 1737,
+      "title": "Performance with large git repos",
+      "created_at": "2024-02-20T07:21:17Z",
+      "updated_at": "2026-04-08T20:39:01Z",
+      "labels": [
+        "performance"
+      ],
+      "source": "oldest-eligible-open-issue"
+    },
+    {
+      "number": 1760,
+      "title": "Question about space efficiency of the git cache",
+      "created_at": "2024-02-20T15:10:28Z",
+      "updated_at": "2025-01-09T18:21:04Z",
+      "labels": [
+        "performance",
+        "area:cache"
+      ],
+      "source": "oldest-eligible-open-issue"
+    },
+    {
+      "number": 1784,
+      "title": "Any way to create a stdlib style venv instead of virtualenv style?",
+      "created_at": "2024-02-20T21:27:27Z",
+      "updated_at": "2024-02-21T00:21:56Z",
+      "labels": [
+        "enhancement",
+        "needs-decision"
+      ],
+      "source": "oldest-eligible-open-issue"
+    },
+    {
+      "number": 1794,
+      "title": "Support ` --prefer-binary` in `requirements.txt` files",
+      "created_at": "2024-02-21T04:44:52Z",
+      "updated_at": "2026-07-10T01:03:39Z",
+      "labels": [
+        "compatibility"
+      ],
+      "source": "oldest-eligible-open-issue"
+    },
+    {
+      "number": 1807,
+      "title": "Dependency resolution output",
+      "created_at": "2024-02-21T13:48:07Z",
+      "updated_at": "2024-02-22T13:10:44Z",
+      "labels": [
+        "enhancement"
+      ],
+      "source": "oldest-eligible-open-issue"
+    },
+    {
+      "number": 1854,
+      "title": "Show the source of conflicting dependencies",
+      "created_at": "2024-02-22T04:20:07Z",
+      "updated_at": "2024-08-02T22:13:32Z",
+      "labels": [
+        "area:error-messages"
+      ],
+      "source": "oldest-eligible-open-issue"
+    },
+    {
+      "number": 1910,
+      "title": "Add a command to activate the virtual environment, e.g., `uv shell`",
+      "created_at": "2024-02-23T12:26:49Z",
+      "updated_at": "2026-04-10T00:50:46Z",
+      "labels": [
+        "area:environments",
+        "area:cli"
+      ],
+      "source": "oldest-eligible-open-issue"
+    },
+    {
+      "number": 2006,
+      "title": "`PackageName` include non-normalized name",
+      "created_at": "2024-02-27T08:35:43Z",
+      "updated_at": "2024-02-28T17:48:06Z",
+      "labels": [
+        "compatibility",
+        "needs-decision",
+        "area:rustlib"
+      ],
+      "source": "oldest-eligible-open-issue"
+    },
+    {
+      "number": 2014,
+      "title": "[Feature request] A way to see which packages took long to resolve",
+      "created_at": "2024-02-27T13:53:23Z",
+      "updated_at": "2026-05-31T02:25:04Z",
+      "labels": [
+        "enhancement",
+        "area:resolver"
+      ],
+      "source": "oldest-eligible-open-issue"
+    },
+    {
+      "number": 2052,
+      "title": "Improve error message layout for wheel-build failures",
+      "created_at": "2024-02-28T20:31:31Z",
+      "updated_at": "2024-04-12T19:50:14Z",
+      "labels": [
+        "help wanted",
+        "area:error-messages"
+      ],
+      "source": "oldest-eligible-open-issue"
+    },
+    {
+      "number": 2059,
+      "title": "`uv pip install --system` cannot create directory",
+      "created_at": "2024-02-28T22:03:08Z",
+      "updated_at": "2024-07-14T16:20:49Z",
+      "labels": [
+        "compatibility"
+      ],
+      "source": "oldest-eligible-open-issue"
+    },
+    {
+      "number": 2065,
+      "title": "Confusing error message when a constraint is the cause of not finding a version",
+      "created_at": "2024-02-29T00:31:17Z",
+      "updated_at": "2024-03-04T23:51:30Z",
+      "labels": [
+        "area:error-messages"
+      ],
+      "source": "oldest-eligible-open-issue"
+    },
+    {
+      "number": 2103,
+      "title": "venv: --copies?",
+      "created_at": "2024-03-01T06:41:20Z",
+      "updated_at": "2025-03-06T15:10:19Z",
+      "labels": [
+        "enhancement"
+      ],
+      "source": "oldest-eligible-open-issue"
+    },
+    {
+      "number": 2111,
+      "title": "Feature request: show available package versions (equivalent of `pip index versions`)",
+      "created_at": "2024-03-01T14:03:01Z",
+      "updated_at": "2026-09-10T12:10:08Z",
+      "labels": [
+        "wish"
+      ],
+      "source": "oldest-eligible-open-issue"
+    },
+    {
+      "number": 2138,
+      "title": "unexpected end of file when working with Azure Artifacts",
+      "created_at": "2024-03-03T16:13:02Z",
+      "updated_at": "2024-07-09T09:15:10Z",
+      "labels": [
+        "area:network"
+      ],
+      "source": "oldest-eligible-open-issue"
+    },
+    {
+      "number": 2210,
+      "title": "Large package fails to download on Windows when paging file is small",
+      "created_at": "2024-03-05T18:07:55Z",
+      "updated_at": "2024-07-02T09:37:45Z",
+      "labels": [
+        "bug",
+        "area:windows"
+      ],
+      "source": "oldest-eligible-open-issue"
+    },
+    {
+      "number": 2252,
+      "title": "Packages that fail to install under PEP 517 with build isolation",
+      "created_at": "2024-03-06T22:34:28Z",
+      "updated_at": "2025-07-31T13:58:30Z",
+      "labels": [
+        "documentation"
+      ],
+      "source": "oldest-eligible-open-issue"
+    },
+    {
+      "number": 2327,
+      "title": "`uv venv` reports using a different interpreter path than it uses",
+      "created_at": "2024-03-10T06:46:26Z",
+      "updated_at": "2024-03-11T08:42:17Z",
+      "labels": [],
+      "source": "oldest-eligible-open-issue"
+    },
+    {
+      "number": 2361,
+      "title": "Expose package metadata in a way that can be reused by other tools",
+      "created_at": "2024-03-11T19:31:07Z",
+      "updated_at": "2024-03-11T20:28:59Z",
+      "labels": [
+        "enhancement",
+        "wish"
+      ],
+      "source": "oldest-eligible-open-issue"
+    },
+    {
+      "number": 2389,
+      "title": "Generating distributable python environments (e.g. for use in PySpark)",
+      "created_at": "2024-03-12T18:52:17Z",
+      "updated_at": "2025-06-11T11:23:52Z",
+      "labels": [
+        "enhancement"
+      ],
+      "source": "oldest-eligible-open-issue"
+    },
+    {
+      "number": 2476,
+      "title": "GUI Desktop App for uv",
+      "created_at": "2024-03-15T16:34:40Z",
+      "updated_at": "2024-03-17T21:37:31Z",
+      "labels": [
+        "wish"
+      ],
+      "source": "oldest-eligible-open-issue"
+    },
+    {
+      "number": 2478,
+      "title": "Enabling local version constraints with dependency range",
+      "created_at": "2024-03-15T17:45:48Z",
+      "updated_at": "2025-10-10T20:52:30Z",
+      "labels": [],
+      "source": "oldest-eligible-open-issue"
+    },
+    {
+      "number": 2491,
+      "title": "Don't pull foreign cargo packages into workspace",
+      "created_at": "2024-03-16T18:24:23Z",
+      "updated_at": "2024-09-06T01:46:26Z",
+      "labels": [
+        "external"
+      ],
+      "source": "oldest-eligible-open-issue"
+    },
+    {
+      "number": 2500,
+      "title": "`uv pip list` does not read all system packages in `sys.path` and ignores `system-site-packages`",
+      "created_at": "2024-03-17T21:18:44Z",
+      "updated_at": "2025-10-15T13:00:22Z",
+      "labels": [
+        "bug",
+        "compatibility"
+      ],
+      "source": "oldest-eligible-open-issue"
+    },
+    {
+      "number": 2526,
+      "title": "Remaining work on `uv pip show`",
+      "created_at": "2024-03-18T21:50:39Z",
+      "updated_at": "2026-10-13T11:52:13Z",
+      "labels": [
+        "compatibility"
+      ],
+      "source": "oldest-eligible-open-issue"
+    },
+    {
+      "number": 2625,
+      "title": "Use terminal colors to improve readability of requirements",
+      "created_at": "2024-03-22T21:37:35Z",
+      "updated_at": "2024-03-22T21:37:49Z",
+      "labels": [
+        "area:tracing",
+        "needs-design",
+        "area:cli"
+      ],
+      "source": "oldest-eligible-open-issue"
+    },
+    {
+      "number": 2637,
+      "title": "Speed up pyc compilation",
+      "created_at": "2024-03-24T03:54:41Z",
+      "updated_at": "2025-09-02T13:11:24Z",
+      "labels": [
+        "performance"
+      ],
+      "source": "oldest-eligible-open-issue"
+    },
+    {
+      "number": 2703,
+      "title": "Proactively build wheels for source distributions during `pip install` resolution",
+      "created_at": "2024-03-28T02:07:00Z",
+      "updated_at": "2024-03-31T18:05:09Z",
+      "labels": [
+        "performance"
+      ],
+      "source": "oldest-eligible-open-issue"
+    },
+    {
+      "number": 2731,
+      "title": "Relaxed git dependencies",
+      "created_at": "2024-03-30T11:55:20Z",
+      "updated_at": "2024-05-16T13:23:00Z",
+      "labels": [
+        "needs-decision"
+      ],
+      "source": "oldest-eligible-open-issue"
+    },
+    {
+      "number": 2743,
+      "title": "uv pip compile: add optional --skip-if-newer (or similar) optimisation",
+      "created_at": "2024-03-31T19:22:06Z",
+      "updated_at": "2024-04-01T14:44:56Z",
+      "labels": [
+        "needs-decision"
+      ],
+      "source": "oldest-eligible-open-issue"
+    },
+    {
+      "number": 2745,
+      "title": "Extended support for semver filtering during version resolution",
+      "created_at": "2024-04-01T01:12:55Z",
+      "updated_at": "2024-11-14T16:32:35Z",
+      "labels": [
+        "enhancement"
+      ],
+      "source": "oldest-eligible-open-issue"
+    },
+    {
+      "number": 2799,
+      "title": "feature request : shiv/pyinstaller like functionality?",
+      "created_at": "2024-04-03T07:23:45Z",
+      "updated_at": "2024-04-07T00:29:45Z",
+      "labels": [
+        "wish"
+      ],
+      "source": "oldest-eligible-open-issue"
+    },
+    {
+      "number": 2807,
+      "title": "Feedback wanted: wrapper for pixi+uv for local and containerized python",
+      "created_at": "2024-04-03T14:35:36Z",
+      "updated_at": "2024-04-03T14:37:19Z",
+      "labels": [],
+      "source": "oldest-eligible-open-issue"
+    },
+    {
+      "number": 2810,
+      "title": "Random errors on accessing cache with simultaneous installs on Windows",
+      "created_at": "2024-04-03T15:17:03Z",
+      "updated_at": "2025-05-23T08:50:18Z",
+      "labels": [
+        "area:windows"
+      ],
+      "source": "oldest-eligible-open-issue"
+    },
+    {
+      "number": 2828,
+      "title": "(🎁) Fail and show an error when an invalid extra is requested",
+      "created_at": "2024-04-05T02:09:40Z",
+      "updated_at": "2026-10-05T21:06:14Z",
+      "labels": [
+        "needs-decision"
+      ],
+      "source": "oldest-eligible-open-issue"
+    },
+    {
+      "number": 2831,
+      "title": "missing --symlinks",
+      "created_at": "2024-04-05T12:11:15Z",
+      "updated_at": "2024-06-25T12:22:27Z",
+      "labels": [
+        "compatibility"
+      ],
+      "source": "oldest-eligible-open-issue"
+    },
+    {
+      "number": 3021,
+      "title": "FR: add `--check-only` flag to `pip sync` command",
+      "created_at": "2024-04-14T21:13:04Z",
+      "updated_at": "2024-08-09T09:42:34Z",
+      "labels": [
+        "enhancement"
+      ],
+      "source": "oldest-eligible-open-issue"
+    },
+    {
+      "number": 3034,
+      "title": "Feature request: add annotation for dependency artifact URL",
+      "created_at": "2024-04-15T10:23:24Z",
+      "updated_at": "2024-04-20T01:27:22Z",
+      "labels": [
+        "wish"
+      ],
+      "source": "oldest-eligible-open-issue"
+    },
+    {
+      "number": 3052,
+      "title": "`install --require-hashes`'s \"must be pinned upfront\" error should say where the requirement comes from",
+      "created_at": "2024-04-16T07:12:45Z",
+      "updated_at": "2024-04-16T13:20:01Z",
+      "labels": [
+        "area:error-messages"
+      ],
+      "source": "oldest-eligible-open-issue"
+    },
+    {
+      "number": 3054,
+      "title": "`install --require-hashes`'s \"all requirement must have a hash\" error can be better",
+      "created_at": "2024-04-16T07:26:01Z",
+      "updated_at": "2024-04-16T16:25:03Z",
+      "labels": [
+        "area:error-messages"
+      ],
+      "source": "oldest-eligible-open-issue"
+    },
+    {
+      "number": 3059,
+      "title": "uv venv does not support choosing 32/64 bit Python versions",
+      "created_at": "2024-04-16T09:39:19Z",
+      "updated_at": "2024-04-16T14:57:12Z",
+      "labels": [
+        "enhancement",
+        "area:windows"
+      ],
+      "source": "oldest-eligible-open-issue"
+    },
+    {
+      "number": 3095,
+      "title": "Consider `execv` for `uv run` on Unix",
+      "created_at": "2024-04-17T16:20:17Z",
+      "updated_at": "2025-09-17T13:12:54Z",
+      "labels": [
+        "enhancement"
+      ],
+      "source": "oldest-eligible-open-issue"
+    },
+    {
+      "number": 3097,
+      "title": "Add strict command mode to `uv run`",
+      "created_at": "2024-04-17T16:44:28Z",
+      "updated_at": "2025-02-18T15:20:36Z",
+      "labels": [
+        "enhancement",
+        "help wanted",
+        "needs-design"
+      ],
+      "source": "oldest-eligible-open-issue"
+    },
+    {
+      "number": 3141,
+      "title": "Improve `pip freeze`",
+      "created_at": "2024-04-19T14:46:09Z",
+      "updated_at": "2024-04-19T14:53:23Z",
+      "labels": [
+        "enhancement",
+        "compatibility",
+        "area:cli"
+      ],
+      "source": "oldest-eligible-open-issue"
+    },
+    {
+      "number": 3149,
+      "title": "Add \"package depth\" to prioritization",
+      "created_at": "2024-04-19T23:17:29Z",
+      "updated_at": "2024-11-07T14:49:30Z",
+      "labels": [
+        "performance"
+      ],
+      "source": "oldest-eligible-open-issue"
+    },
+    {
+      "number": 3163,
+      "title": "Support `pip download`",
+      "created_at": "2024-04-20T16:09:23Z",
+      "updated_at": "2026-04-17T19:16:56Z",
+      "labels": [
+        "compatibility",
+        "area:cli"
+      ],
+      "source": "oldest-eligible-open-issue"
+    },
+    {
+      "number": 3190,
+      "title": "Provide an API that client programs can use",
+      "created_at": "2024-04-22T17:04:47Z",
+      "updated_at": "2024-04-22T21:09:48Z",
+      "labels": [
+        "wish",
+        "area:rustlib"
+      ],
+      "source": "oldest-eligible-open-issue"
+    },
+    {
+      "number": 3248,
+      "title": "Request: Allow --output-file, --annotation-style, etc. multiple times, only use right-most",
+      "created_at": "2024-04-24T16:02:50Z",
+      "updated_at": "2025-11-13T05:04:25Z",
+      "labels": [
+        "area:cli"
+      ],
+      "source": "oldest-eligible-open-issue"
+    },
+    {
+      "number": 3249,
+      "title": "Zsh completion: Options and flags are not completed when they come after ordered arguments",
+      "created_at": "2024-04-24T16:07:08Z",
+      "updated_at": "2024-11-12T20:20:39Z",
+      "labels": [
+        "bug",
+        "external"
+      ],
+      "source": "oldest-eligible-open-issue"
+    },
+    {
+      "number": 3271,
+      "title": "`PROJECT_ROOT` in `requirements` uses the working directory",
+      "created_at": "2024-04-25T20:34:22Z",
+      "updated_at": "2026-06-23T11:53:31Z",
+      "labels": [
+        "needs-design"
+      ],
+      "source": "oldest-eligible-open-issue"
+    },
+    {
+      "number": 3287,
+      "title": "[perf] uv pip install resolution is slow when installing from VCS",
+      "created_at": "2024-04-27T09:11:33Z",
+      "updated_at": "2025-06-06T19:11:19Z",
+      "labels": [
+        "performance"
+      ],
+      "source": "oldest-eligible-open-issue"
+    },
+    {
+      "number": 3516,
+      "title": "Feature Request: Remove Unused Generated Hashes ",
+      "created_at": "2024-05-10T20:11:03Z",
+      "updated_at": "2024-05-11T03:32:00Z",
+      "labels": [
+        "enhancement"
+      ],
+      "source": "oldest-eligible-open-issue"
+    },
+    {
+      "number": 3518,
+      "title": "Invalidate cache entries for same-version packages that have newer timestamps when also found externally (via --find-links)",
+      "created_at": "2024-05-10T21:12:01Z",
+      "updated_at": "2025-01-07T19:21:35Z",
+      "labels": [
+        "bug",
+        "area:cache"
+      ],
+      "source": "oldest-eligible-open-issue"
+    },
+    {
+      "number": 3573,
+      "title": "Unknown operation system: mingw_x86_64_ucrt",
+      "created_at": "2024-05-14T11:24:56Z",
+      "updated_at": "2026-02-19T08:25:01Z",
+      "labels": [
+        "enhancement",
+        "area:windows"
+      ],
+      "source": "oldest-eligible-open-issue"
+    },
+    {
+      "number": 3588,
+      "title": "Header of locked requirements does not include Python version",
+      "created_at": "2024-05-14T19:10:57Z",
+      "updated_at": "2024-07-14T14:03:28Z",
+      "labels": [
+        "needs-decision"
+      ],
+      "source": "oldest-eligible-open-issue"
+    },
+    {
+      "number": 3602,
+      "title": "`uv pip compile --upgrade` can fail when `uv pip compile` succeeds if `requirements.txt` contains pre-release",
+      "created_at": "2024-05-15T08:15:01Z",
+      "updated_at": "2024-05-17T21:20:39Z",
+      "labels": [
+        "enhancement"
+      ],
+      "source": "oldest-eligible-open-issue"
+    },
+    {
+      "number": 3621,
+      "title": "`requirements.txt` allows editable paths to be quoted",
+      "created_at": "2024-05-15T19:20:16Z",
+      "updated_at": "2025-11-27T09:47:43Z",
+      "labels": [
+        "compatibility"
+      ],
+      "source": "oldest-eligible-open-issue"
+    },
+    {
+      "number": 3636,
+      "title": "Add support for config_settings in requirements.txt / requirements.in",
+      "created_at": "2024-05-17T11:41:15Z",
+      "updated_at": "2026-03-19T11:48:30Z",
+      "labels": [
+        "enhancement",
+        "compatibility",
+        "great writeup",
+        "needs-design"
+      ],
+      "source": "oldest-eligible-open-issue"
+    },
+    {
+      "number": 3644,
+      "title": "`pip compile --upgrade` behavior with yanked packages",
+      "created_at": "2024-05-17T18:39:01Z",
+      "updated_at": "2024-08-16T14:52:46Z",
+      "labels": [
+        "help wanted"
+      ],
+      "source": "oldest-eligible-open-issue"
+    },
+    {
+      "number": 3669,
+      "title": "Add installation option for portable entry points",
+      "created_at": "2024-05-20T05:08:08Z",
+      "updated_at": "2025-06-26T12:37:27Z",
+      "labels": [
+        "enhancement",
+        "area:configuration"
+      ],
+      "source": "oldest-eligible-open-issue"
+    },
+    {
+      "number": 3684,
+      "title": "Don't use the cache dir for build venvs?",
+      "created_at": "2024-05-21T01:22:04Z",
+      "updated_at": "2024-05-21T11:56:35Z",
+      "labels": [
+        "area:configuration",
+        "needs-decision"
+      ],
+      "source": "oldest-eligible-open-issue"
+    },
+    {
+      "number": 3704,
+      "title": "`--python` should be allowed before command",
+      "created_at": "2024-05-21T17:00:07Z",
+      "updated_at": "2026-06-23T12:07:12Z",
+      "labels": [
+        "compatibility",
+        "needs-decision",
+        "area:cli"
+      ],
+      "source": "oldest-eligible-open-issue"
+    },
+    {
+      "number": 3716,
+      "title": "Avoid reference to root when pinned requirements are incompatible",
+      "created_at": "2024-05-21T18:51:29Z",
+      "updated_at": "2024-05-21T18:52:17Z",
+      "labels": [
+        "area:error-messages"
+      ],
+      "source": "oldest-eligible-open-issue"
+    },
+    {
+      "number": 3783,
+      "title": "SSH authentication skips password check, hangs",
+      "created_at": "2024-05-23T02:27:27Z",
+      "updated_at": "2025-12-10T18:21:56Z",
+      "labels": [
+        "bug"
+      ],
+      "source": "oldest-eligible-open-issue"
+    },
+    {
+      "number": 3793,
+      "title": "Reduce verbosity of output in \"Comparing installed with source\" log",
+      "created_at": "2024-05-23T14:04:26Z",
+      "updated_at": "2024-05-23T15:08:02Z",
+      "labels": [
+        "area:tracing"
+      ],
+      "source": "oldest-eligible-open-issue"
+    },
+    {
+      "number": 3796,
+      "title": "`uv` is caching installs based on config, even if build-backend is in-tree",
+      "created_at": "2024-05-23T14:48:50Z",
+      "updated_at": "2026-01-16T10:22:40Z",
+      "labels": [
+        "needs-decision"
+      ],
+      "source": "oldest-eligible-open-issue"
+    },
+    {
+      "number": 3802,
+      "title": "[perf] differences in pip vs uv when installing package from src",
+      "created_at": "2024-05-23T20:49:48Z",
+      "updated_at": "2024-05-27T00:15:14Z",
+      "labels": [
+        "performance"
+      ],
+      "source": "oldest-eligible-open-issue"
+    },
+    {
+      "number": 3878,
+      "title": "Support custom tool entrypoints",
+      "created_at": "2024-05-28T13:29:22Z",
+      "updated_at": "2024-08-20T18:23:33Z",
+      "labels": [],
+      "source": "oldest-eligible-open-issue"
+    },
+    {
+      "number": 3883,
+      "title": "Configure pip compile via pyproject.toml or uv.toml",
+      "created_at": "2024-05-28T14:55:50Z",
+      "updated_at": "2025-01-30T16:58:02Z",
+      "labels": [
+        "area:configuration"
+      ],
+      "source": "oldest-eligible-open-issue"
+    },
+    {
+      "number": 3952,
+      "title": "Avoid taking GitHub fast path for git clones",
+      "created_at": "2024-05-31T22:22:56Z",
+      "updated_at": "2024-06-04T00:34:27Z",
+      "labels": [
+        "performance"
+      ],
+      "source": "oldest-eligible-open-issue"
+    },
+    {
+      "number": 3978,
+      "title": "Write out full PEP 508 requirements for relative paths and editables",
+      "created_at": "2024-06-03T02:00:20Z",
+      "updated_at": "2024-06-03T02:01:10Z",
+      "labels": [
+        "compatibility"
+      ],
+      "source": "oldest-eligible-open-issue"
+    },
+    {
+      "number": 4056,
+      "title": "Keyring cli calls differ from pip",
+      "created_at": "2024-06-05T17:34:55Z",
+      "updated_at": "2025-04-03T14:09:37Z",
+      "labels": [
+        "compatibility"
+      ],
+      "source": "oldest-eligible-open-issue"
+    },
+    {
+      "number": 4071,
+      "title": "Determine Python requirement boundary based on supported `Requires-Python` range",
+      "created_at": "2024-06-05T20:28:58Z",
+      "updated_at": "2024-08-20T18:23:36Z",
+      "labels": [],
+      "source": "oldest-eligible-open-issue"
+    },
+    {
+      "number": 4079,
+      "title": "Track `Requires-Python` at the distribution level in lockfile",
+      "created_at": "2024-06-05T22:39:51Z",
+      "updated_at": "2024-08-20T18:23:37Z",
+      "labels": [],
+      "source": "oldest-eligible-open-issue"
+    },
+    {
+      "number": 4087,
+      "title": "Allow user to specify \"Python range to lock\" separate from `Requires-Python`",
+      "created_at": "2024-06-06T04:06:22Z",
+      "updated_at": "2024-08-20T18:23:37Z",
+      "labels": [],
+      "source": "oldest-eligible-open-issue"
+    },
+    {
+      "number": 4109,
+      "title": "Add a download link for a minor uv version",
+      "created_at": "2024-06-06T19:01:01Z",
+      "updated_at": "2025-08-30T07:35:21Z",
+      "labels": [
+        "enhancement",
+        "area:installer"
+      ],
+      "source": "oldest-eligible-open-issue"
+    },
+    {
+      "number": 4130,
+      "title": "Add uv script to pyenv's pip-rehash",
+      "created_at": "2024-06-07T13:47:06Z",
+      "updated_at": "2026-09-19T13:18:23Z",
+      "labels": [
+        "help wanted",
+        "compatibility"
+      ],
+      "source": "oldest-eligible-open-issue"
+    },
+    {
+      "number": 4238,
+      "title": "`uv pip compile --resolution lowest-direct` treats transitive dependencies of file dependencies as direct.",
+      "created_at": "2024-06-11T16:27:08Z",
+      "updated_at": "2024-06-11T19:22:24Z",
+      "labels": [],
+      "source": "oldest-eligible-open-issue"
+    },
+    {
+      "number": 4245,
+      "title": "Activate project automatically via shell integration",
+      "created_at": "2024-06-11T17:57:32Z",
+      "updated_at": "2024-06-11T17:57:37Z",
+      "labels": [
+        "enhancement"
+      ],
+      "source": "oldest-eligible-open-issue"
+    },
+    {
+      "number": 4291,
+      "title": "Support `UV_ONLY_BINARY` and `UV_NO_BINARY` environment variables",
+      "created_at": "2024-06-12T22:09:38Z",
+      "updated_at": "2026-07-09T22:59:43Z",
+      "labels": [
+        "help wanted",
+        "area:configuration"
+      ],
+      "source": "oldest-eligible-open-issue"
+    },
+    {
+      "number": 4359,
+      "title": "Support reading Python versions from `tool.uv` ",
+      "created_at": "2024-06-17T16:34:26Z",
+      "updated_at": "2024-08-24T08:26:23Z",
+      "labels": [
+        "area:configuration"
+      ],
+      "source": "oldest-eligible-open-issue"
+    },
+    {
+      "number": 4389,
+      "title": "Clearer output on index strategy, determined source index and indexes being queried for uv pip install <package>",
+      "created_at": "2024-06-18T17:05:42Z",
+      "updated_at": "2024-06-21T09:53:46Z",
+      "labels": [
+        "help wanted",
+        "area:error-messages"
+      ],
+      "source": "oldest-eligible-open-issue"
+    }
+  ]
+}

@@ -14,6 +14,7 @@ from app.db import init_db, make_engine, snapshot_from_github, store_proposal
 from app.github_client import fetch_issue
 from app.providers import check_providers
 from app.triage import propose, render_digest
+from app.uv_backlog import run_uv_backlog_cohort
 
 
 def main(argv: list[str] | None = None) -> int:
@@ -38,6 +39,28 @@ def main(argv: list[str] | None = None) -> int:
     )
     source.add_argument(
         "--analyze-backfill", action="store_true", help="Print feasibility analysis JSON"
+    )
+    source.add_argument(
+        "--uv-backlog-sample",
+        type=int,
+        help="Build a deterministic uv stale/duplicate backlog sample of N eligible issues",
+    )
+    parser.add_argument(
+        "--uv-backlog-db",
+        default="queuesift-uv-backlog.db",
+        help="SQLite file for the uv backlog campaign (gitignored *.db)",
+    )
+    parser.add_argument(
+        "--uv-backlog-manifest",
+        type=Path,
+        default=Path("evals/manifests/uv-backlog-sweep-2026-10-20.json"),
+        help="Manifest destination for the uv backlog sample",
+    )
+    parser.add_argument(
+        "--mre-cap",
+        type=int,
+        default=50,
+        help="Maximum currently needs-mre-labelled issues in the backlog sample",
     )
     parser.add_argument("--repo", default="langchain-ai/langchain")
     parser.add_argument("--database-url", default=None, help="Override DATABASE_URL")
@@ -65,10 +88,21 @@ def main(argv: list[str] | None = None) -> int:
         init_db(engine)
         sys.stdout.write(json.dumps(analyze_backfill(engine, repo=args.repo), indent=2) + "\n")
         return 0
+    if args.uv_backlog_sample is not None:
+        manifest = run_uv_backlog_cohort(
+            client=GitHubBackfillClient(args.repo),
+            database_path=args.uv_backlog_db,
+            manifest_path=args.uv_backlog_manifest,
+            sample_size=args.uv_backlog_sample,
+            mre_cap=args.mre_cap,
+            cohort_date="2026-10-20",
+        )
+        sys.stdout.write(manifest.model_dump_json(indent=2) + "\n")
+        return 0
     if args.issue_json is None and args.issue is None:
         parser.error(
             "one of --issue-json, --issue, --check-providers, --backfill-days, "
-            "or --analyze-backfill is required"
+            "--analyze-backfill, or --uv-backlog-sample is required"
         )
 
     payload = (

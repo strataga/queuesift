@@ -42,6 +42,23 @@ SPARSE_BODY = """### Package (Required)
 It broke.
 """
 
+UV_BODY = """### Summary
+
+uv fails on one platform but not another.
+
+### Platform
+
+Windows Server 2025
+
+### Version
+
+0.13.0
+
+### Python version
+
+Python 3.15.0
+"""
+
 
 def test_parser_extracts_declared_package_and_sections() -> None:
     parsed = parse_template(BUG_BODY)
@@ -56,6 +73,15 @@ def test_parser_marks_unsure_package() -> None:
     assert parsed.declared_packages == []
     assert parsed.package_unsure is True
     assert parsed.has_reproduction is False
+
+
+def test_parser_extracts_uv_summary_and_form_sections() -> None:
+    parsed = parse_template(UV_BODY)
+    assert parsed.summary == "uv fails on one platform but not another."
+    assert parsed.sections["platform"] == "Windows Server 2025"
+    assert parsed.sections["version"] == "0.13.0"
+    assert parsed.sections["python version"] == "Python 3.15.0"
+    assert parsed.has_description is True
 
 
 def _issue(body: str) -> IssueSnapshot:

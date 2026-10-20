@@ -24,6 +24,12 @@ class BackfillResult:
     since: str
 
 
+@dataclass
+class IssueDetail:
+    payload: dict
+    timeline: list
+
+
 class GitHubBackfillClient:
     def __init__(
         self,
@@ -54,14 +60,75 @@ class GitHubBackfillClient:
             return data
         raise RuntimeError(f"rate limited repeatedly at {path}")
 
-    def iter_issues_since(self, since: date, limit: int | None = None):
+    def _new_client(self) -> httpx.Client:
         headers = {"Accept": "application/vnd.github+json", "X-GitHub-Api-Version": "2022-11-28"}
         if self.token:
             headers["Authorization"] = f"Bearer {self.token}"
-        yielded = 0
-        with httpx.Client(
+        return httpx.Client(
             base_url=API, headers=headers, timeout=self.timeout, transport=self.transport
-        ) as client:
+        )
+
+    def _fetch_all_timeline(self, client: httpx.Client, number: int) -> list:
+        timeline: list = []
+        timeline_page = 1
+        while True:
+            events = self._get(
+                client,
+                f"/repos/{self.repo}/issues/{number}/timeline",
+                {"per_page": 100, "page": timeline_page},
+            )
+            timeline.extend(events)
+            if len(events) < 100:
+                break
+            timeline_page += 1
+        return timeline
+
+    def iter_open_issues(
+        self,
+        *,
+        labels: str | None = None,
+        sort: str = "created",
+        direction: str = "asc",
+    ):
+        """Yield open backlog issues oldest-first by default without timelines."""
+        with self._new_client() as client:
+            page = 1
+            while True:
+                params = {
+                    "state": "open",
+                    "per_page": 100,
+                    "page": page,
+                    "sort": sort,
+                    "direction": direction,
+                }
+                if labels:
+                    params["labels"] = labels
+                batch = self._get(client, f"/repos/{self.repo}/issues", params)
+                if not batch:
+                    return
+                for payload in batch:
+                    if "pull_request" in payload:
+                        continue
+                    yield payload
+                if len(batch) < 100:
+                    return
+                page += 1
+
+    def fetch_issue_detail(self, number: int) -> IssueDetail:
+        """Fetch one issue payload and its complete timeline."""
+        with self._new_client() as client:
+            response_path = f"/repos/{self.repo}/issues/{number}"
+            self.requests += 1
+            response = client.get(response_path)
+            response.raise_for_status()
+            payload = response.json()
+            if "pull_request" in payload:
+                raise ValueError(f"{self.repo}#{number} is a pull request, not an issue")
+            return IssueDetail(payload=payload, timeline=self._fetch_all_timeline(client, number))
+
+    def iter_issues_since(self, since: date, limit: int | None = None):
+        yielded = 0
+        with self._new_client() as client:
             page = 1
             while True:
                 batch = self._get(
@@ -95,18 +162,7 @@ class GitHubBackfillClient:
                         # fetched on an earlier pass and left stored.
                         yield payload, []
                         continue
-                    timeline: list = []
-                    timeline_page = 1
-                    while True:
-                        events = self._get(
-                            client,
-                            f"/repos/{self.repo}/issues/{payload['number']}/timeline",
-                            {"per_page": 100, "page": timeline_page},
-                        )
-                        timeline.extend(events)
-                        if len(events) < 100:
-                            break
-                        timeline_page += 1
+                    timeline = self._fetch_all_timeline(client, payload["number"])
                     yielded += 1
                     yield payload, timeline
                     if limit is not None and yielded >= limit:

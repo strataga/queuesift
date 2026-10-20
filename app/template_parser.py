@@ -55,13 +55,17 @@ def parse_template(body: str) -> ParsedTemplate:
                 return text
         return ""
 
+    summary = sections.get("summary", "")
+    has_description = _nonempty(section_containing("description")) or _nonempty(summary)
+
     return ParsedTemplate(
         declared_packages=declared,
         package_unsure=package_unsure,
         checklist_checked=checklist_checked,
         checklist_total=checklist_total,
         sections={k: v for k, v in sections.items()},
+        summary=summary or None,
         has_reproduction=_nonempty(section_containing("reproduction")),
         has_error_text=_nonempty(section_containing("error message")),
-        has_description=_nonempty(section_containing("description")),
+        has_description=has_description,
     )

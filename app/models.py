@@ -31,6 +31,7 @@ class ParsedTemplate(BaseModel):
     checklist_checked: int = 0
     checklist_total: int = 0
     sections: dict[str, str] = Field(default_factory=dict)
+    summary: str | None = None
     has_reproduction: bool = False
     has_error_text: bool = False
     has_description: bool = False
