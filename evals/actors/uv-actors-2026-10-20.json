@@ -1,0 +1,34 @@
+{
+  "repo": "astral-sh/uv",
+  "snapshot_date": "2026-10-20",
+  "sources": [
+    "author_association MEMBER on sampled issue records in queuesift-uv-backlog.db",
+    "MEMBER/COLLABORATOR author_association on sampled timeline/comment records in queuesift-uv-backlog.db",
+    "docs/spikes/2026-10-20-uv-switch-verdict.md observation of active human maintainers",
+    "public GitHub user profile affiliation for woodruffw (@astral-sh)"
+  ],
+  "maintainers_tier_a": [
+    "BurntSushi",
+    "charliermarsh",
+    "ibraheemdev",
+    "konstin",
+    "woodruffw",
+    "zanieb"
+  ],
+  "maintainers_tier_b": [
+    "notatallshaw",
+    "samypr100"
+  ],
+  "triage_contributors_tier_c_candidate_only": [
+    "jtfmumm"
+  ],
+  "bots": [
+    "astral-automations-bot[bot]",
+    "coderabbitai[bot]",
+    "github-actions[bot]",
+    "qodo-code-review[bot]",
+    "spdk-bot",
+    "zaniebot"
+  ],
+  "limits": "Repository collaborators endpoint returns 403 for this token, so private collaborator coverage may be incomplete. Tier C can support an explicitly worded request but cannot create gold by itself. A current label or event actor with no recorded MEMBER/COLLABORATOR association is not automatically Tier A/B, except woodruffw for the reason above."
+}

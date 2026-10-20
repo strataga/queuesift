@@ -170,7 +170,11 @@ def store_issue_with_events(
             event_key = str(event.get("id") or f"idx-{index}-{event.get('event')}-{event.get('created_at')}")
             actor = (event.get("actor") or event.get("user") or {}).get("login")
             label = event.get("label") or {}
-            source_issue = ((event.get("source") or {}).get("issue") or {}).get("number")
+            source = event.get("source")
+            if isinstance(source, dict):
+                source_issue = (source.get("issue") or {}).get("number")
+            else:
+                source_issue = source if isinstance(source, int) else None
             existing = session.get(IssueEventRow, (issue.repo, issue.number, event_key))
             event_values = {
                 "event": str(event.get("event") or "unknown"),

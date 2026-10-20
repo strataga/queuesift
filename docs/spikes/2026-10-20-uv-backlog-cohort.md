@@ -37,9 +37,10 @@ Selection order was deterministic:
 4. Excluded internal, bot-policy, tracking/epic, security, and
    maintainer-follow-up labels.
 
-## Current limitation
+## Gold follow-up
 
-Current labels are selection signals only. The count above does **not**
-satisfy the minimum-30 evaluated-positive rule. Duplicate and
-missing-reproduction status still needs timeline-backed gold rules and bounded
-adjudication before Slice 2.
+Gold adjudication is now complete in
+`evals/adjudication/uv-backlog-gold-2026-10-20.json` and summarized in
+`docs/spikes/2026-10-20-uv-backlog-gold-results.md`: duplicate 3/30 (fail),
+missing reproduction 50/50 (secondary judgment only), and stale 145/150
+(pass).

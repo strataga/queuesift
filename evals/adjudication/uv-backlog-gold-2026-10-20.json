@@ -1,0 +1,1754 @@
+{
+  "repo": "astral-sh/uv",
+  "cohort": "uv-backlog-sweep",
+  "cohort_manifest": "evals/manifests/uv-backlog-sweep-2026-10-20.json",
+  "actors": "evals/actors/uv-actors-2026-10-20.json",
+  "gold_rules": "docs/spikes/2026-10-20-uv-backlog-gold-rules.md",
+  "as_of": "2026-10-20T00:00:00Z",
+  "method": "Bounded candidate census: all current duplicate labels, all pre-freeze marked_as_duplicate events with GraphQL direction checks, all current needs-mre labels, and code-computed stale set. Single-rater thread review; no model inputs were tuned on these outcomes.",
+  "single_rater": true,
+  "duplicate": {
+    "minimum_positives": 30,
+    "candidate_members": 17,
+    "adjudicated_positives": 3,
+    "verdict": "fail",
+    "positives": [
+      {
+        "number": 12630,
+        "title": "completion scripts disables autocompletion of files and folders",
+        "outcome": "positive",
+        "canonical_targets": [
+          8432
+        ],
+        "evidence": {
+          "kind": "tier_a_duplicate_label_and_canonical_comment",
+          "comment": {
+            "id": 2773175716,
+            "author": "zanieb",
+            "tier": "A",
+            "created_at": "2025-04-02T16:52:06Z",
+            "url": "https://github.com/astral-sh/uv/issues/12630#issuecomment-2773175716"
+          },
+          "issue_url": "https://github.com/astral-sh/uv/issues/12630"
+        },
+        "as_of": "2026-10-20T00:00:00Z"
+      },
+      {
+        "number": 13931,
+        "title": "`pyproject.toml` config setting equivalent for `UV_PROJECT_ENVIRONMENT`",
+        "outcome": "positive",
+        "canonical_targets": [
+          12587
+        ],
+        "evidence": {
+          "kind": "tier_a_duplicate_label_and_canonical_comment",
+          "comment": {
+            "id": 2956862070,
+            "author": "zanieb",
+            "tier": "A",
+            "created_at": "2025-06-09T19:56:17Z",
+            "url": "https://github.com/astral-sh/uv/issues/13931#issuecomment-2956862070"
+          },
+          "issue_url": "https://github.com/astral-sh/uv/issues/13931"
+        },
+        "as_of": "2026-10-20T00:00:00Z"
+      },
+      {
+        "number": 18892,
+        "title": "Platform markers in `[tool.uv.sources]` array are ignored for transitive dependencies",
+        "outcome": "positive",
+        "canonical_targets": [
+          8253,
+          9446
+        ],
+        "evidence": {
+          "kind": "tier_a_duplicate_label_and_canonical_comment",
+          "comment": {
+            "id": 4201481318,
+            "author": "zanieb",
+            "tier": "A",
+            "created_at": "2026-04-07T18:57:16Z",
+            "url": "https://github.com/astral-sh/uv/issues/18892#issuecomment-4201481318"
+          },
+          "issue_url": "https://github.com/astral-sh/uv/issues/18892"
+        },
+        "as_of": "2026-10-20T00:00:00Z"
+      }
+    ],
+    "canonical_hubs_not_counted": [
+      {
+        "number": 1419,
+        "title": "Add option to upgrade all packages in the environment, e.g., `upgrade --all`",
+        "outcome": "canonical_hub_not_duplicate_positive",
+        "marks": [
+          {
+            "actor": "zanieb",
+            "tier": "A",
+            "created_at": "2025-01-26T16:27:35Z",
+            "nominated_duplicate": {
+              "number": 10965,
+              "title": "can you implement a full update command",
+              "url": "https://github.com/astral-sh/uv/issues/10965"
+            },
+            "direction": "another_issue_marked_duplicate_of_sample"
+          }
+        ],
+        "issue_url": "https://github.com/astral-sh/uv/issues/1419"
+      },
+      {
+        "number": 1703,
+        "title": "Add support for managing Conda environments and packages",
+        "outcome": "canonical_hub_not_duplicate_positive",
+        "marks": [
+          {
+            "actor": "konstin",
+            "tier": "A",
+            "created_at": "2024-12-16T10:14:52Z",
+            "nominated_duplicate": {
+              "number": 9930,
+              "title": "Pulling packages from different Channels: bioconda, conda-forge",
+              "url": "https://github.com/astral-sh/uv/issues/9930"
+            },
+            "direction": "another_issue_marked_duplicate_of_sample"
+          },
+          {
+            "actor": "konstin",
+            "tier": "A",
+            "created_at": "2025-10-20T11:56:46Z",
+            "nominated_duplicate": {
+              "number": 16373,
+              "title": "Will you consider supporting conda-forge?",
+              "url": "https://github.com/astral-sh/uv/issues/16373"
+            },
+            "direction": "another_issue_marked_duplicate_of_sample"
+          }
+        ],
+        "issue_url": "https://github.com/astral-sh/uv/issues/1703"
+      },
+      {
+        "number": 1910,
+        "title": "Add a command to activate the virtual environment, e.g., `uv shell`",
+        "outcome": "canonical_hub_not_duplicate_positive",
+        "marks": [
+          {
+            "actor": "charliermarsh",
+            "tier": "A",
+            "created_at": "2025-03-14T01:05:29Z",
+            "nominated_duplicate": {
+              "number": 12147,
+              "title": "Some places that could be optimized",
+              "url": "https://github.com/astral-sh/uv/issues/12147"
+            },
+            "direction": "another_issue_marked_duplicate_of_sample"
+          },
+          {
+            "actor": "zanieb",
+            "tier": "A",
+            "created_at": "2025-05-03T15:54:58Z",
+            "nominated_duplicate": {
+              "number": 13275,
+              "title": "venv management",
+              "url": "https://github.com/astral-sh/uv/issues/13275"
+            },
+            "direction": "another_issue_marked_duplicate_of_sample"
+          },
+          {
+            "actor": "zanieb",
+            "tier": "A",
+            "created_at": "2025-05-29T23:46:44Z",
+            "nominated_duplicate": {
+              "number": 13725,
+              "title": "uv shell",
+              "url": "https://github.com/astral-sh/uv/issues/13725"
+            },
+            "direction": "another_issue_marked_duplicate_of_sample"
+          },
+          {
+            "actor": "charliermarsh",
+            "tier": "A",
+            "created_at": "2025-07-15T19:23:25Z",
+            "nominated_duplicate": {
+              "number": 14635,
+              "title": "Active venv using uv",
+              "url": "https://github.com/astral-sh/uv/issues/14635"
+            },
+            "direction": "another_issue_marked_duplicate_of_sample"
+          },
+          {
+            "actor": "konstin",
+            "tier": "A",
+            "created_at": "2026-02-22T22:55:05Z",
+            "nominated_duplicate": {
+              "number": 18128,
+              "title": "The command to activate a virtual environment [uv activate]",
+              "url": "https://github.com/astral-sh/uv/issues/18128"
+            },
+            "direction": "another_issue_marked_duplicate_of_sample"
+          }
+        ],
+        "issue_url": "https://github.com/astral-sh/uv/issues/1910"
+      },
+      {
+        "number": 2103,
+        "title": "venv: --copies?",
+        "outcome": "canonical_hub_not_duplicate_positive",
+        "marks": [
+          {
+            "actor": "charliermarsh",
+            "tier": "A",
+            "created_at": "2025-08-31T14:17:24Z",
+            "nominated_duplicate": {
+              "number": 15607,
+              "title": "uv trying to symlink on exfat drive",
+              "url": "https://github.com/astral-sh/uv/issues/15607"
+            },
+            "direction": "another_issue_marked_duplicate_of_sample"
+          }
+        ],
+        "issue_url": "https://github.com/astral-sh/uv/issues/2103"
+      },
+      {
+        "number": 2500,
+        "title": "`uv pip list` does not read all system packages in `sys.path` and ignores `system-site-packages`",
+        "outcome": "canonical_hub_not_duplicate_positive",
+        "marks": [
+          {
+            "actor": "NSPC911",
+            "tier": "unknown",
+            "created_at": "2025-10-06T10:34:52Z",
+            "nominated_duplicate": {
+              "number": 16122,
+              "title": "uv does not use system site packages like `tree-sitter-*`",
+              "url": "https://github.com/astral-sh/uv/issues/16122"
+            },
+            "direction": "another_issue_marked_duplicate_of_sample"
+          },
+          {
+            "actor": "konstin",
+            "tier": "A",
+            "created_at": "2025-12-18T15:20:30Z",
+            "nominated_duplicate": {
+              "number": 16541,
+              "title": "Why uv does not seems to see python packages installed in a different site-packages",
+              "url": "https://github.com/astral-sh/uv/issues/16541"
+            },
+            "direction": "another_issue_marked_duplicate_of_sample"
+          }
+        ],
+        "issue_url": "https://github.com/astral-sh/uv/issues/2500"
+      },
+      {
+        "number": 2526,
+        "title": "Remaining work on `uv pip show`",
+        "outcome": "canonical_hub_not_duplicate_positive",
+        "marks": [
+          {
+            "actor": "charliermarsh",
+            "tier": "A",
+            "created_at": "2025-08-25T16:43:37Z",
+            "nominated_duplicate": {
+              "number": 15516,
+              "title": "\ud83d\udc1b Possible metadata mismatch between uv pip show and pip show",
+              "url": "https://github.com/astral-sh/uv/issues/15516"
+            },
+            "direction": "another_issue_marked_duplicate_of_sample"
+          }
+        ],
+        "issue_url": "https://github.com/astral-sh/uv/issues/2526"
+      },
+      {
+        "number": 2810,
+        "title": "Random errors on accessing cache with simultaneous installs on Windows",
+        "outcome": "canonical_hub_not_duplicate_positive",
+        "marks": [
+          {
+            "actor": "woodruffw",
+            "tier": "A",
+            "created_at": "2026-05-07T23:04:03Z",
+            "nominated_duplicate": {
+              "number": 11002,
+              "title": "Concurrent cache access causes errors on Windows",
+              "url": "https://github.com/astral-sh/uv/issues/11002"
+            },
+            "direction": "another_issue_marked_duplicate_of_sample"
+          },
+          {
+            "actor": "woodruffw",
+            "tier": "A",
+            "created_at": "2026-05-07T23:12:12Z",
+            "nominated_duplicate": {
+              "number": 4328,
+              "title": "Error when trying to install packages from multiple directories from monorepo",
+              "url": "https://github.com/astral-sh/uv/issues/4328"
+            },
+            "direction": "another_issue_marked_duplicate_of_sample"
+          }
+        ],
+        "issue_url": "https://github.com/astral-sh/uv/issues/2810"
+      },
+      {
+        "number": 3163,
+        "title": "Support `pip download`",
+        "outcome": "canonical_hub_not_duplicate_positive",
+        "marks": [
+          {
+            "actor": "zanieb",
+            "tier": "A",
+            "created_at": "2025-03-06T15:37:06Z",
+            "nominated_duplicate": {
+              "number": 12009,
+              "title": "uv equivalent of `pip download`",
+              "url": "https://github.com/astral-sh/uv/issues/12009"
+            },
+            "direction": "another_issue_marked_duplicate_of_sample"
+          },
+          {
+            "actor": "konstin",
+            "tier": "A",
+            "created_at": "2025-05-02T10:44:23Z",
+            "nominated_duplicate": {
+              "number": 13263,
+              "title": "Create a wheelhouse with only runtime wheels",
+              "url": "https://github.com/astral-sh/uv/issues/13263"
+            },
+            "direction": "another_issue_marked_duplicate_of_sample"
+          }
+        ],
+        "issue_url": "https://github.com/astral-sh/uv/issues/3163"
+      },
+      {
+        "number": 3516,
+        "title": "Feature Request: Remove Unused Generated Hashes ",
+        "outcome": "canonical_hub_not_duplicate_positive",
+        "marks": [
+          {
+            "actor": "gary-wall-hpe",
+            "tier": "unknown",
+            "created_at": "2025-08-01T03:13:03Z",
+            "nominated_duplicate": {
+              "number": 3334,
+              "title": "Feature request: single hash pinning for containerized python environments",
+              "url": "https://github.com/astral-sh/uv/issues/3334"
+            },
+            "direction": "another_issue_marked_duplicate_of_sample"
+          }
+        ],
+        "issue_url": "https://github.com/astral-sh/uv/issues/3516"
+      },
+      {
+        "number": 3588,
+        "title": "Header of locked requirements does not include Python version",
+        "outcome": "canonical_hub_not_duplicate_positive",
+        "marks": [
+          {
+            "actor": "charliermarsh",
+            "tier": "A",
+            "created_at": "2024-12-26T14:36:37Z",
+            "nominated_duplicate": {
+              "number": 10168,
+              "title": "Feature Request: Include Python version in the requirements.txt header when using uv pip compile",
+              "url": "https://github.com/astral-sh/uv/issues/10168"
+            },
+            "direction": "another_issue_marked_duplicate_of_sample"
+          }
+        ],
+        "issue_url": "https://github.com/astral-sh/uv/issues/3588"
+      },
+      {
+        "number": 3621,
+        "title": "`requirements.txt` allows editable paths to be quoted",
+        "outcome": "canonical_hub_not_duplicate_positive",
+        "marks": [
+          {
+            "actor": "charliermarsh",
+            "tier": "A",
+            "created_at": "2025-01-08T23:18:29Z",
+            "nominated_duplicate": {
+              "number": 10417,
+              "title": "`uv pip install -r requirements.txt` Fails to Parse Requirements",
+              "url": "https://github.com/astral-sh/uv/issues/10417"
+            },
+            "direction": "another_issue_marked_duplicate_of_sample"
+          }
+        ],
+        "issue_url": "https://github.com/astral-sh/uv/issues/3621"
+      },
+      {
+        "number": 3636,
+        "title": "Add support for config_settings in requirements.txt / requirements.in",
+        "outcome": "canonical_hub_not_duplicate_positive",
+        "marks": [
+          {
+            "actor": "charliermarsh",
+            "tier": "A",
+            "created_at": "2025-05-10T14:29:37Z",
+            "nominated_duplicate": {
+              "number": 13375,
+              "title": "Support flags in requirements.in for `uv pip compile`",
+              "url": "https://github.com/astral-sh/uv/issues/13375"
+            },
+            "direction": "another_issue_marked_duplicate_of_sample"
+          }
+        ],
+        "issue_url": "https://github.com/astral-sh/uv/issues/3636"
+      },
+      {
+        "number": 3783,
+        "title": "SSH authentication skips password check, hangs",
+        "outcome": "canonical_hub_not_duplicate_positive",
+        "marks": [
+          {
+            "actor": "jtfmumm",
+            "tier": "C",
+            "created_at": "2025-07-16T12:37:41Z",
+            "nominated_duplicate": {
+              "number": 14648,
+              "title": "`uv pip install` of ssh dependency only prompts to enter the passkey in verbose mode",
+              "url": "https://github.com/astral-sh/uv/issues/14648"
+            },
+            "direction": "another_issue_marked_duplicate_of_sample"
+          }
+        ],
+        "issue_url": "https://github.com/astral-sh/uv/issues/3783"
+      },
+      {
+        "number": 4109,
+        "title": "Add a download link for a minor uv version",
+        "outcome": "canonical_hub_not_duplicate_positive",
+        "marks": [
+          {
+            "actor": "zanieb",
+            "tier": "A",
+            "created_at": "2025-01-08T18:38:46Z",
+            "nominated_duplicate": {
+              "number": 10404,
+              "title": "Minor version install links at astral.sh/uv/0.x/install.sh",
+              "url": "https://github.com/astral-sh/uv/issues/10404"
+            },
+            "direction": "another_issue_marked_duplicate_of_sample"
+          }
+        ],
+        "issue_url": "https://github.com/astral-sh/uv/issues/4109"
+      }
+    ]
+  },
+  "missing_reproduction": {
+    "minimum_positives": 30,
+    "candidate_members": 50,
+    "adjudicated_positives": 50,
+    "verdict": "pass_secondary_judgment_only",
+    "headline_maintainer_accuracy_permitted": false,
+    "positives": [
+      {
+        "number": 2253,
+        "title": "Nexus doesn't return a `Last-Modified` header",
+        "outcome": "positive",
+        "evidence": {
+          "kind": "current_maintainer_label_plus_thread_review",
+          "label": {
+            "actor": "BurntSushi",
+            "tier": "A",
+            "applied_at": "2024-03-07T16:25:05Z"
+          },
+          "issue_url": "https://github.com/astral-sh/uv/issues/2253",
+          "comment": {
+            "id": 1983915222,
+            "author": "BurntSushi",
+            "tier": "A",
+            "created_at": "2024-03-07T16:24:39Z",
+            "url": "https://github.com/astral-sh/uv/issues/2253#issuecomment-1983915222",
+            "role": "explicit_request"
+          }
+        },
+        "as_of": "2026-10-20T00:00:00Z"
+      },
+      {
+        "number": 2670,
+        "title": "uv pip install torch takes forever from asia",
+        "outcome": "positive",
+        "evidence": {
+          "kind": "current_maintainer_label_plus_thread_review",
+          "label": {
+            "actor": "konstin",
+            "tier": "A",
+            "applied_at": "2024-03-26T14:58:01Z"
+          },
+          "issue_url": "https://github.com/astral-sh/uv/issues/2670",
+          "comment": {
+            "id": 2020666051,
+            "author": "zanieb",
+            "tier": "A",
+            "created_at": "2024-03-26T14:58:22Z",
+            "url": "https://github.com/astral-sh/uv/issues/2670#issuecomment-2020666051",
+            "role": "explicit_request"
+          }
+        },
+        "as_of": "2026-10-20T00:00:00Z"
+      },
+      {
+        "number": 3599,
+        "title": "Incompatible cached wheels may continue to be used after upgrade",
+        "outcome": "positive",
+        "evidence": {
+          "kind": "current_maintainer_label_plus_thread_review",
+          "label": {
+            "actor": "zanieb",
+            "tier": "A",
+            "applied_at": "2024-05-15T03:43:29Z"
+          },
+          "issue_url": "https://github.com/astral-sh/uv/issues/3599",
+          "comment": {
+            "id": 2112747405,
+            "author": "charliermarsh",
+            "tier": "A",
+            "created_at": "2024-05-15T14:46:21Z",
+            "url": "https://github.com/astral-sh/uv/issues/3599#issuecomment-2112747405",
+            "role": "explicit_request"
+          }
+        },
+        "as_of": "2026-10-20T00:00:00Z"
+      },
+      {
+        "number": 6038,
+        "title": "`uv pip compile` possibly generating an unsatisfiable requirements file",
+        "outcome": "positive",
+        "evidence": {
+          "kind": "current_maintainer_label_plus_thread_review",
+          "label": {
+            "actor": "charliermarsh",
+            "tier": "A",
+            "applied_at": "2024-08-12T19:22:50Z"
+          },
+          "issue_url": "https://github.com/astral-sh/uv/issues/6038",
+          "comment": {
+            "id": 2284747628,
+            "author": "charliermarsh",
+            "tier": "A",
+            "created_at": "2024-08-12T19:22:43Z",
+            "url": "https://github.com/astral-sh/uv/issues/6038#issuecomment-2284747628",
+            "role": "explicit_request"
+          }
+        },
+        "as_of": "2026-10-20T00:00:00Z"
+      },
+      {
+        "number": 6484,
+        "title": "Git operation fails if cache exists in subsequent uv pip compile runs",
+        "outcome": "positive",
+        "evidence": {
+          "kind": "current_maintainer_label_plus_thread_review",
+          "label": {
+            "actor": "charliermarsh",
+            "tier": "A",
+            "applied_at": "2024-08-23T02:23:08Z"
+          },
+          "issue_url": "https://github.com/astral-sh/uv/issues/6484",
+          "comment": {
+            "id": 2306063744,
+            "author": "charliermarsh",
+            "tier": "A",
+            "created_at": "2024-08-23T02:21:58Z",
+            "url": "https://github.com/astral-sh/uv/issues/6484#issuecomment-2306063744",
+            "role": "explicit_request"
+          }
+        },
+        "as_of": "2026-10-20T00:00:00Z"
+      },
+      {
+        "number": 6682,
+        "title": "Build pyproject-build.exe not provided",
+        "outcome": "positive",
+        "evidence": {
+          "kind": "current_maintainer_label_plus_thread_review",
+          "label": {
+            "actor": "konstin",
+            "tier": "A",
+            "applied_at": "2024-08-27T13:24:07Z"
+          },
+          "issue_url": "https://github.com/astral-sh/uv/issues/6682",
+          "comment": {
+            "id": 2312561234,
+            "author": "konstin",
+            "tier": "A",
+            "created_at": "2024-08-27T13:26:25Z",
+            "url": "https://github.com/astral-sh/uv/issues/6682#issuecomment-2312561234",
+            "role": "explicit_request"
+          }
+        },
+        "as_of": "2026-10-20T00:00:00Z"
+      },
+      {
+        "number": 6819,
+        "title": "Multiple indexes without ssl verification",
+        "outcome": "positive",
+        "evidence": {
+          "kind": "current_maintainer_label_plus_thread_review",
+          "label": {
+            "actor": "zanieb",
+            "tier": "A",
+            "applied_at": "2024-10-21T21:39:23Z"
+          },
+          "issue_url": "https://github.com/astral-sh/uv/issues/6819",
+          "comment": {
+            "id": 2779305566,
+            "author": "zanieb",
+            "tier": "A",
+            "created_at": "2025-04-04T17:04:09Z",
+            "url": "https://github.com/astral-sh/uv/issues/6819#issuecomment-2779305566",
+            "role": "explicit_request"
+          }
+        },
+        "as_of": "2026-10-20T00:00:00Z"
+      },
+      {
+        "number": 7004,
+        "title": "Running out of memory with uv pip install",
+        "outcome": "positive",
+        "evidence": {
+          "kind": "current_maintainer_label_plus_thread_review",
+          "label": {
+            "actor": "zanieb",
+            "tier": "A",
+            "applied_at": "2024-10-21T21:41:59Z"
+          },
+          "issue_url": "https://github.com/astral-sh/uv/issues/7004",
+          "comment": {
+            "id": 3198600210,
+            "author": "zanieb",
+            "tier": "A",
+            "created_at": "2025-08-18T22:23:51Z",
+            "url": "https://github.com/astral-sh/uv/issues/7004#issuecomment-3198600210",
+            "role": "explicit_request"
+          }
+        },
+        "as_of": "2026-10-20T00:00:00Z"
+      },
+      {
+        "number": 7622,
+        "title": "ModuleNotFoundError immediately after initializing a project",
+        "outcome": "positive",
+        "evidence": {
+          "kind": "current_maintainer_label_plus_thread_review",
+          "label": {
+            "actor": "charliermarsh",
+            "tier": "A",
+            "applied_at": "2024-09-22T19:02:25Z"
+          },
+          "issue_url": "https://github.com/astral-sh/uv/issues/7622",
+          "comment": {
+            "id": 2366918711,
+            "author": "charliermarsh",
+            "tier": "A",
+            "created_at": "2024-09-22T19:02:21Z",
+            "url": "https://github.com/astral-sh/uv/issues/7622#issuecomment-2366918711",
+            "role": "explicit_request"
+          }
+        },
+        "as_of": "2026-10-20T00:00:00Z"
+      },
+      {
+        "number": 8512,
+        "title": "uv installs incorrect versions of dependencies when using Nexus",
+        "outcome": "positive",
+        "evidence": {
+          "kind": "current_maintainer_label_plus_thread_review",
+          "label": {
+            "actor": "charliermarsh",
+            "tier": "A",
+            "applied_at": "2024-10-24T23:50:51Z"
+          },
+          "issue_url": "https://github.com/astral-sh/uv/issues/8512",
+          "comment": {
+            "id": 2436531249,
+            "author": "charliermarsh",
+            "tier": "A",
+            "created_at": "2024-10-24T23:50:48Z",
+            "url": "https://github.com/astral-sh/uv/issues/8512#issuecomment-2436531249",
+            "role": "maintainer_thread_context"
+          }
+        },
+        "as_of": "2026-10-20T00:00:00Z"
+      },
+      {
+        "number": 8966,
+        "title": "uv doesn't play well with meson-python build backend and pytest",
+        "outcome": "positive",
+        "evidence": {
+          "kind": "current_maintainer_label_plus_thread_review",
+          "label": {
+            "actor": "charliermarsh",
+            "tier": "A",
+            "applied_at": "2024-11-09T13:39:22Z"
+          },
+          "issue_url": "https://github.com/astral-sh/uv/issues/8966",
+          "comment": {
+            "id": 2466219468,
+            "author": "charliermarsh",
+            "tier": "A",
+            "created_at": "2024-11-09T13:39:18Z",
+            "url": "https://github.com/astral-sh/uv/issues/8966#issuecomment-2466219468",
+            "role": "explicit_request"
+          }
+        },
+        "as_of": "2026-10-20T00:00:00Z"
+      },
+      {
+        "number": 9191,
+        "title": "Cache invalidation on local dependencies when using docker",
+        "outcome": "positive",
+        "evidence": {
+          "kind": "current_maintainer_label_plus_thread_review",
+          "label": {
+            "actor": "charliermarsh",
+            "tier": "A",
+            "applied_at": "2024-11-18T13:36:08Z"
+          },
+          "issue_url": "https://github.com/astral-sh/uv/issues/9191",
+          "comment": {
+            "id": 2483999400,
+            "author": "charliermarsh",
+            "tier": "A",
+            "created_at": "2024-11-18T20:03:53Z",
+            "url": "https://github.com/astral-sh/uv/issues/9191#issuecomment-2483999400",
+            "role": "explicit_request"
+          }
+        },
+        "as_of": "2026-10-20T00:00:00Z"
+      },
+      {
+        "number": 9739,
+        "title": "Don't break on upgrades of externally-managed Pythons",
+        "outcome": "positive",
+        "evidence": {
+          "kind": "current_maintainer_label_plus_thread_review",
+          "label": {
+            "actor": "zanieb",
+            "tier": "A",
+            "applied_at": "2025-01-07T19:26:27Z"
+          },
+          "issue_url": "https://github.com/astral-sh/uv/issues/9739",
+          "comment": {
+            "id": 2528296798,
+            "author": "zanieb",
+            "tier": "A",
+            "created_at": "2024-12-09T15:14:36Z",
+            "url": "https://github.com/astral-sh/uv/issues/9739#issuecomment-2528296798",
+            "role": "explicit_request"
+          }
+        },
+        "as_of": "2026-10-20T00:00:00Z"
+      },
+      {
+        "number": 9765,
+        "title": "unit test / pytest slow down exponentially after migrating from poetry to uv",
+        "outcome": "positive",
+        "evidence": {
+          "kind": "current_maintainer_label_plus_thread_review",
+          "label": {
+            "actor": "konstin",
+            "tier": "A",
+            "applied_at": "2024-12-10T09:36:01Z"
+          },
+          "issue_url": "https://github.com/astral-sh/uv/issues/9765",
+          "comment": {
+            "id": 2531009218,
+            "author": "konstin",
+            "tier": "A",
+            "created_at": "2024-12-10T09:35:57Z",
+            "url": "https://github.com/astral-sh/uv/issues/9765#issuecomment-2531009218",
+            "role": "maintainer_thread_context"
+          }
+        },
+        "as_of": "2026-10-20T00:00:00Z"
+      },
+      {
+        "number": 9902,
+        "title": "Bug: ModuleNotFoundError related to venv uv_cache.json when store in iCloud",
+        "outcome": "positive",
+        "evidence": {
+          "kind": "current_maintainer_label_plus_thread_review",
+          "label": {
+            "actor": "charliermarsh",
+            "tier": "A",
+            "applied_at": "2024-12-15T02:56:27Z"
+          },
+          "issue_url": "https://github.com/astral-sh/uv/issues/9902",
+          "comment": {
+            "id": 2543423634,
+            "author": "charliermarsh",
+            "tier": "A",
+            "created_at": "2024-12-15T02:56:20Z",
+            "url": "https://github.com/astral-sh/uv/issues/9902#issuecomment-2543423634",
+            "role": "explicit_request"
+          }
+        },
+        "as_of": "2026-10-20T00:00:00Z"
+      },
+      {
+        "number": 9909,
+        "title": "Docker and snap-7",
+        "outcome": "positive",
+        "evidence": {
+          "kind": "current_maintainer_label_plus_thread_review",
+          "label": {
+            "actor": "samypr100",
+            "tier": "B",
+            "applied_at": "2024-12-15T19:49:32Z"
+          },
+          "issue_url": "https://github.com/astral-sh/uv/issues/9909",
+          "comment": {
+            "id": 2544028569,
+            "author": "samypr100",
+            "tier": "B",
+            "created_at": "2024-12-15T19:49:17Z",
+            "url": "https://github.com/astral-sh/uv/issues/9909#issuecomment-2544028569",
+            "role": "explicit_request"
+          }
+        },
+        "as_of": "2026-10-20T00:00:00Z"
+      },
+      {
+        "number": 9923,
+        "title": "uv.lock does not stay synced with pyproject.toml requirements",
+        "outcome": "positive",
+        "evidence": {
+          "kind": "current_maintainer_label_plus_thread_review",
+          "label": {
+            "actor": "zanieb",
+            "tier": "A",
+            "applied_at": "2024-12-17T05:40:18Z"
+          },
+          "issue_url": "https://github.com/astral-sh/uv/issues/9923",
+          "comment": {
+            "id": 2544263680,
+            "author": "zanieb",
+            "tier": "A",
+            "created_at": "2024-12-16T01:03:20Z",
+            "url": "https://github.com/astral-sh/uv/issues/9923#issuecomment-2544263680",
+            "role": "explicit_request"
+          }
+        },
+        "as_of": "2026-10-20T00:00:00Z"
+      },
+      {
+        "number": 9929,
+        "title": "Termux cannot install from git+https url",
+        "outcome": "positive",
+        "evidence": {
+          "kind": "current_maintainer_label_plus_thread_review",
+          "label": {
+            "actor": "charliermarsh",
+            "tier": "A",
+            "applied_at": "2025-06-22T02:27:02Z"
+          },
+          "issue_url": "https://github.com/astral-sh/uv/issues/9929",
+          "comment": {
+            "id": 2573898221,
+            "author": "zanieb",
+            "tier": "A",
+            "created_at": "2025-01-06T20:47:09Z",
+            "url": "https://github.com/astral-sh/uv/issues/9929#issuecomment-2573898221",
+            "role": "explicit_request"
+          }
+        },
+        "as_of": "2026-10-20T00:00:00Z"
+      },
+      {
+        "number": 10004,
+        "title": "How can I override a uv install (via uv sync) with an editable package that will stay up to date in running docker container",
+        "outcome": "positive",
+        "evidence": {
+          "kind": "current_maintainer_label_plus_thread_review",
+          "label": {
+            "actor": "zanieb",
+            "tier": "A",
+            "applied_at": "2024-12-18T20:35:45Z"
+          },
+          "issue_url": "https://github.com/astral-sh/uv/issues/10004",
+          "comment": {
+            "id": 2552221340,
+            "author": "zanieb",
+            "tier": "A",
+            "created_at": "2024-12-18T20:35:41Z",
+            "url": "https://github.com/astral-sh/uv/issues/10004#issuecomment-2552221340",
+            "role": "explicit_request"
+          }
+        },
+        "as_of": "2026-10-20T00:00:00Z"
+      },
+      {
+        "number": 10711,
+        "title": "`No interpreter found in search path` on nixOS",
+        "outcome": "positive",
+        "evidence": {
+          "kind": "current_maintainer_label_plus_thread_review",
+          "label": {
+            "actor": "charliermarsh",
+            "tier": "A",
+            "applied_at": "2025-01-17T15:18:24Z"
+          },
+          "issue_url": "https://github.com/astral-sh/uv/issues/10711",
+          "comment": {
+            "id": 2598592056,
+            "author": "charliermarsh",
+            "tier": "A",
+            "created_at": "2025-01-17T15:18:18Z",
+            "url": "https://github.com/astral-sh/uv/issues/10711#issuecomment-2598592056",
+            "role": "explicit_request"
+          }
+        },
+        "as_of": "2026-10-20T00:00:00Z"
+      },
+      {
+        "number": 11018,
+        "title": "failed to rename file [...] Permission denied (os error 13)",
+        "outcome": "positive",
+        "evidence": {
+          "kind": "current_maintainer_label_plus_thread_review",
+          "label": {
+            "actor": "konstin",
+            "tier": "A",
+            "applied_at": "2025-08-07T11:03:07Z"
+          },
+          "issue_url": "https://github.com/astral-sh/uv/issues/11018",
+          "comment": {
+            "id": 2618960607,
+            "author": "konstin",
+            "tier": "A",
+            "created_at": "2025-01-28T13:11:20Z",
+            "url": "https://github.com/astral-sh/uv/issues/11018#issuecomment-2618960607",
+            "role": "explicit_request"
+          }
+        },
+        "as_of": "2026-10-20T00:00:00Z"
+      },
+      {
+        "number": 11409,
+        "title": "Windows distribution cache access denied in CI",
+        "outcome": "positive",
+        "evidence": {
+          "kind": "current_maintainer_label_plus_thread_review",
+          "label": {
+            "actor": "charliermarsh",
+            "tier": "A",
+            "applied_at": "2025-02-10T22:34:29Z"
+          },
+          "issue_url": "https://github.com/astral-sh/uv/issues/11409",
+          "comment": {
+            "id": 2649409598,
+            "author": "charliermarsh",
+            "tier": "A",
+            "created_at": "2025-02-10T22:34:27Z",
+            "url": "https://github.com/astral-sh/uv/issues/11409#issuecomment-2649409598",
+            "role": "explicit_request"
+          }
+        },
+        "as_of": "2026-10-20T00:00:00Z"
+      },
+      {
+        "number": 11452,
+        "title": "False Positive conflicting URLs for Git Package Dependencies with private packages",
+        "outcome": "positive",
+        "evidence": {
+          "kind": "current_maintainer_label_plus_thread_review",
+          "label": {
+            "actor": "charliermarsh",
+            "tier": "A",
+            "applied_at": "2025-02-12T17:16:55Z"
+          },
+          "issue_url": "https://github.com/astral-sh/uv/issues/11452",
+          "comment": {
+            "id": 2654370952,
+            "author": "charliermarsh",
+            "tier": "A",
+            "created_at": "2025-02-12T17:16:50Z",
+            "url": "https://github.com/astral-sh/uv/issues/11452#issuecomment-2654370952",
+            "role": "explicit_request"
+          }
+        },
+        "as_of": "2026-10-20T00:00:00Z"
+      },
+      {
+        "number": 11480,
+        "title": "uv is taking longer to install pytorch than pip",
+        "outcome": "positive",
+        "evidence": {
+          "kind": "current_maintainer_label_plus_thread_review",
+          "label": {
+            "actor": "charliermarsh",
+            "tier": "A",
+            "applied_at": "2025-02-13T15:12:17Z"
+          },
+          "issue_url": "https://github.com/astral-sh/uv/issues/11480",
+          "comment": {
+            "id": 2656910948,
+            "author": "charliermarsh",
+            "tier": "A",
+            "created_at": "2025-02-13T15:12:11Z",
+            "url": "https://github.com/astral-sh/uv/issues/11480#issuecomment-2656910948",
+            "role": "explicit_request"
+          }
+        },
+        "as_of": "2026-10-20T00:00:00Z"
+      },
+      {
+        "number": 11554,
+        "title": "uv does not seem to install so files of coremltools",
+        "outcome": "positive",
+        "evidence": {
+          "kind": "current_maintainer_label_plus_thread_review",
+          "label": {
+            "actor": "charliermarsh",
+            "tier": "A",
+            "applied_at": "2025-06-22T02:26:16Z"
+          },
+          "issue_url": "https://github.com/astral-sh/uv/issues/11554",
+          "comment": {
+            "id": 2663308734,
+            "author": "zanieb",
+            "tier": "A",
+            "created_at": "2025-02-17T14:35:23Z",
+            "url": "https://github.com/astral-sh/uv/issues/11554#issuecomment-2663308734",
+            "role": "explicit_request"
+          }
+        },
+        "as_of": "2026-10-20T00:00:00Z"
+      },
+      {
+        "number": 11636,
+        "title": "`uv pip install -r requirements.txt` flakiness with `datashader` and `llvmlite` packages",
+        "outcome": "positive",
+        "evidence": {
+          "kind": "current_maintainer_label_plus_thread_review",
+          "label": {
+            "actor": "konstin",
+            "tier": "A",
+            "applied_at": "2025-08-21T08:09:49Z"
+          },
+          "issue_url": "https://github.com/astral-sh/uv/issues/11636",
+          "comment": {
+            "id": 3200868569,
+            "author": "konstin",
+            "tier": "A",
+            "created_at": "2025-08-19T13:54:12Z",
+            "url": "https://github.com/astral-sh/uv/issues/11636#issuecomment-3200868569",
+            "role": "explicit_request"
+          }
+        },
+        "as_of": "2026-10-20T00:00:00Z"
+      },
+      {
+        "number": 11651,
+        "title": "I encountered a bug when using \"uv add tensorrt\" to install TensorRT",
+        "outcome": "positive",
+        "evidence": {
+          "kind": "current_maintainer_label_plus_thread_review",
+          "label": {
+            "actor": "zanieb",
+            "tier": "A",
+            "applied_at": "2025-02-20T01:44:49Z"
+          },
+          "issue_url": "https://github.com/astral-sh/uv/issues/11651",
+          "comment": {
+            "id": 2670201753,
+            "author": "zanieb",
+            "tier": "A",
+            "created_at": "2025-02-20T01:44:45Z",
+            "url": "https://github.com/astral-sh/uv/issues/11651#issuecomment-2670201753",
+            "role": "explicit_request"
+          }
+        },
+        "as_of": "2026-10-20T00:00:00Z"
+      },
+      {
+        "number": 11975,
+        "title": "uv freezes while downloading",
+        "outcome": "positive",
+        "evidence": {
+          "kind": "current_maintainer_label_plus_thread_review",
+          "label": {
+            "actor": "zanieb",
+            "tier": "A",
+            "applied_at": "2025-03-05T18:48:40Z"
+          },
+          "issue_url": "https://github.com/astral-sh/uv/issues/11975",
+          "comment": {
+            "id": 2701791621,
+            "author": "zanieb",
+            "tier": "A",
+            "created_at": "2025-03-05T18:48:34Z",
+            "url": "https://github.com/astral-sh/uv/issues/11975#issuecomment-2701791621",
+            "role": "explicit_request"
+          }
+        },
+        "as_of": "2026-10-20T00:00:00Z"
+      },
+      {
+        "number": 12036,
+        "title": "Build intermittently fails when uv cache is on NFS mount",
+        "outcome": "positive",
+        "evidence": {
+          "kind": "current_maintainer_label_plus_thread_review",
+          "label": {
+            "actor": "konstin",
+            "tier": "A",
+            "applied_at": "2025-11-05T18:16:17Z"
+          },
+          "issue_url": "https://github.com/astral-sh/uv/issues/12036",
+          "comment": {
+            "id": 3492896991,
+            "author": "konstin",
+            "tier": "A",
+            "created_at": "2025-11-05T19:10:52Z",
+            "url": "https://github.com/astral-sh/uv/issues/12036#issuecomment-3492896991",
+            "role": "maintainer_thread_context"
+          }
+        },
+        "as_of": "2026-10-20T00:00:00Z"
+      },
+      {
+        "number": 12325,
+        "title": "uv doesn't respect workspace dependences when defined as extras",
+        "outcome": "positive",
+        "evidence": {
+          "kind": "current_maintainer_label_plus_thread_review",
+          "label": {
+            "actor": "charliermarsh",
+            "tier": "A",
+            "applied_at": "2025-03-19T23:52:46Z"
+          },
+          "issue_url": "https://github.com/astral-sh/uv/issues/12325",
+          "comment": {
+            "id": 2738555595,
+            "author": "charliermarsh",
+            "tier": "A",
+            "created_at": "2025-03-19T23:52:43Z",
+            "url": "https://github.com/astral-sh/uv/issues/12325#issuecomment-2738555595",
+            "role": "explicit_request"
+          }
+        },
+        "as_of": "2026-10-20T00:00:00Z"
+      },
+      {
+        "number": 12635,
+        "title": "irm connection forcibly closed when installing on windows",
+        "outcome": "positive",
+        "evidence": {
+          "kind": "current_maintainer_label_plus_thread_review",
+          "label": {
+            "actor": "konstin",
+            "tier": "A",
+            "applied_at": "2026-01-30T11:57:50Z"
+          },
+          "issue_url": "https://github.com/astral-sh/uv/issues/12635",
+          "comment": {
+            "id": 3749252698,
+            "author": "konstin",
+            "tier": "A",
+            "created_at": "2026-01-14T12:04:33Z",
+            "url": "https://github.com/astral-sh/uv/issues/12635#issuecomment-3749252698",
+            "role": "explicit_request"
+          }
+        },
+        "as_of": "2026-10-20T00:00:00Z"
+      },
+      {
+        "number": 12658,
+        "title": "`uv run` not running to completion",
+        "outcome": "positive",
+        "evidence": {
+          "kind": "current_maintainer_label_plus_thread_review",
+          "label": {
+            "actor": "zanieb",
+            "tier": "A",
+            "applied_at": "2025-05-09T14:49:19Z"
+          },
+          "issue_url": "https://github.com/astral-sh/uv/issues/12658",
+          "comment": {
+            "id": 2776949367,
+            "author": "zanieb",
+            "tier": "A",
+            "created_at": "2025-04-03T21:23:54Z",
+            "url": "https://github.com/astral-sh/uv/issues/12658#issuecomment-2776949367",
+            "role": "explicit_request"
+          }
+        },
+        "as_of": "2026-10-20T00:00:00Z"
+      },
+      {
+        "number": 12666,
+        "title": "Strange behavior with tools.uv.sources and tools.uv.index",
+        "outcome": "positive",
+        "evidence": {
+          "kind": "current_maintainer_label_plus_thread_review",
+          "label": {
+            "actor": "charliermarsh",
+            "tier": "A",
+            "applied_at": "2025-04-04T12:43:34Z"
+          },
+          "issue_url": "https://github.com/astral-sh/uv/issues/12666",
+          "comment": {
+            "id": 2778633815,
+            "author": "charliermarsh",
+            "tier": "A",
+            "created_at": "2025-04-04T12:43:30Z",
+            "url": "https://github.com/astral-sh/uv/issues/12666#issuecomment-2778633815",
+            "role": "explicit_request"
+          }
+        },
+        "as_of": "2026-10-20T00:00:00Z"
+      },
+      {
+        "number": 12849,
+        "title": "uv add fails with error : The file cannot be accessed by the system. (os error 1920)",
+        "outcome": "positive",
+        "evidence": {
+          "kind": "current_maintainer_label_plus_thread_review",
+          "label": {
+            "actor": "konstin",
+            "tier": "A",
+            "applied_at": "2026-03-25T14:27:41Z"
+          },
+          "issue_url": "https://github.com/astral-sh/uv/issues/12849",
+          "comment": {
+            "id": 4127531934,
+            "author": "konstin",
+            "tier": "A",
+            "created_at": "2026-03-25T15:28:41Z",
+            "url": "https://github.com/astral-sh/uv/issues/12849#issuecomment-4127531934",
+            "role": "explicit_request"
+          }
+        },
+        "as_of": "2026-10-20T00:00:00Z"
+      },
+      {
+        "number": 13198,
+        "title": "uv pip puts the wrong interpreter in shebangs installed under bin",
+        "outcome": "positive",
+        "evidence": {
+          "kind": "current_maintainer_label_plus_thread_review",
+          "label": {
+            "actor": "charliermarsh",
+            "tier": "A",
+            "applied_at": "2026-03-11T12:59:24Z"
+          },
+          "issue_url": "https://github.com/astral-sh/uv/issues/13198",
+          "comment": {
+            "id": 2839751484,
+            "author": "charliermarsh",
+            "tier": "A",
+            "created_at": "2025-04-29T18:02:48Z",
+            "url": "https://github.com/astral-sh/uv/issues/13198#issuecomment-2839751484",
+            "role": "maintainer_thread_context"
+          }
+        },
+        "as_of": "2026-10-20T00:00:00Z"
+      },
+      {
+        "number": 13288,
+        "title": "uv installing for incorrect architecture (raspberry pi)",
+        "outcome": "positive",
+        "evidence": {
+          "kind": "current_maintainer_label_plus_thread_review",
+          "label": {
+            "actor": "konstin",
+            "tier": "A",
+            "applied_at": "2025-05-19T08:01:21Z"
+          },
+          "issue_url": "https://github.com/astral-sh/uv/issues/13288",
+          "comment": {
+            "id": 2850564497,
+            "author": "konstin",
+            "tier": "A",
+            "created_at": "2025-05-05T10:27:28Z",
+            "url": "https://github.com/astral-sh/uv/issues/13288#issuecomment-2850564497",
+            "role": "explicit_request"
+          }
+        },
+        "as_of": "2026-10-20T00:00:00Z"
+      },
+      {
+        "number": 13358,
+        "title": "uv add tries checks for package in both public and private package registry, then fails with private registry error despite the package being available in public registry",
+        "outcome": "positive",
+        "evidence": {
+          "kind": "current_maintainer_label_plus_thread_review",
+          "label": {
+            "actor": "konstin",
+            "tier": "A",
+            "applied_at": "2025-05-09T07:04:32Z"
+          },
+          "issue_url": "https://github.com/astral-sh/uv/issues/13358",
+          "comment": {
+            "id": 2865379758,
+            "author": "konstin",
+            "tier": "A",
+            "created_at": "2025-05-09T07:04:22Z",
+            "url": "https://github.com/astral-sh/uv/issues/13358#issuecomment-2865379758",
+            "role": "explicit_request"
+          }
+        },
+        "as_of": "2026-10-20T00:00:00Z"
+      },
+      {
+        "number": 13418,
+        "title": "`uv tool install` failing to install due to 'Permission denied'",
+        "outcome": "positive",
+        "evidence": {
+          "kind": "current_maintainer_label_plus_thread_review",
+          "label": {
+            "actor": "konstin",
+            "tier": "A",
+            "applied_at": "2025-05-13T06:53:10Z"
+          },
+          "issue_url": "https://github.com/astral-sh/uv/issues/13418",
+          "comment": {
+            "id": 2875259593,
+            "author": "konstin",
+            "tier": "A",
+            "created_at": "2025-05-13T06:53:04Z",
+            "url": "https://github.com/astral-sh/uv/issues/13418#issuecomment-2875259593",
+            "role": "explicit_request"
+          }
+        },
+        "as_of": "2026-10-20T00:00:00Z"
+      },
+      {
+        "number": 13427,
+        "title": "`uv init` cannot create `.git`",
+        "outcome": "positive",
+        "evidence": {
+          "kind": "current_maintainer_label_plus_thread_review",
+          "label": {
+            "actor": "konstin",
+            "tier": "A",
+            "applied_at": "2025-05-13T09:25:48Z"
+          },
+          "issue_url": "https://github.com/astral-sh/uv/issues/13427",
+          "comment": {
+            "id": 2875716862,
+            "author": "konstin",
+            "tier": "A",
+            "created_at": "2025-05-13T09:27:30Z",
+            "url": "https://github.com/astral-sh/uv/issues/13427#issuecomment-2875716862",
+            "role": "explicit_request"
+          }
+        },
+        "as_of": "2026-10-20T00:00:00Z"
+      },
+      {
+        "number": 13515,
+        "title": "Entrypoint creation isn't targeting the direct dependency, instead is built through third-party dependency",
+        "outcome": "positive",
+        "evidence": {
+          "kind": "current_maintainer_label_plus_thread_review",
+          "label": {
+            "actor": "charliermarsh",
+            "tier": "A",
+            "applied_at": "2025-05-18T21:45:53Z"
+          },
+          "issue_url": "https://github.com/astral-sh/uv/issues/13515",
+          "comment": {
+            "id": 2889227718,
+            "author": "charliermarsh",
+            "tier": "A",
+            "created_at": "2025-05-18T21:45:50Z",
+            "url": "https://github.com/astral-sh/uv/issues/13515#issuecomment-2889227718",
+            "role": "explicit_request"
+          }
+        },
+        "as_of": "2026-10-20T00:00:00Z"
+      },
+      {
+        "number": 13823,
+        "title": "Credentials in direct URLs are not propagated to transitive URL dependencies",
+        "outcome": "positive",
+        "evidence": {
+          "kind": "current_maintainer_label_plus_thread_review",
+          "label": {
+            "actor": "zanieb",
+            "tier": "A",
+            "applied_at": "2025-06-03T16:13:50Z"
+          },
+          "issue_url": "https://github.com/astral-sh/uv/issues/13823",
+          "comment": {
+            "id": 2936169707,
+            "author": "zanieb",
+            "tier": "A",
+            "created_at": "2025-06-03T16:13:44Z",
+            "url": "https://github.com/astral-sh/uv/issues/13823#issuecomment-2936169707",
+            "role": "maintainer_thread_context"
+          }
+        },
+        "as_of": "2026-10-20T00:00:00Z"
+      },
+      {
+        "number": 14017,
+        "title": "uv sync failed to bytecode-compile Python file because it failed to create temporary script file",
+        "outcome": "positive",
+        "evidence": {
+          "kind": "current_maintainer_label_plus_thread_review",
+          "label": {
+            "actor": "konstin",
+            "tier": "A",
+            "applied_at": "2025-06-13T10:38:40Z"
+          },
+          "issue_url": "https://github.com/astral-sh/uv/issues/14017",
+          "comment": {
+            "id": 2969910289,
+            "author": "konstin",
+            "tier": "A",
+            "created_at": "2025-06-13T10:39:46Z",
+            "url": "https://github.com/astral-sh/uv/issues/14017#issuecomment-2969910289",
+            "role": "maintainer_thread_context"
+          }
+        },
+        "as_of": "2026-10-20T00:00:00Z"
+      },
+      {
+        "number": 14209,
+        "title": "uvx in tmux - dependency check has new line issue",
+        "outcome": "positive",
+        "evidence": {
+          "kind": "current_maintainer_label_plus_thread_review",
+          "label": {
+            "actor": "konstin",
+            "tier": "A",
+            "applied_at": "2025-06-24T08:31:25Z"
+          },
+          "issue_url": "https://github.com/astral-sh/uv/issues/14209",
+          "comment": {
+            "id": 2995836882,
+            "author": "konstin",
+            "tier": "A",
+            "created_at": "2025-06-23T10:20:04Z",
+            "url": "https://github.com/astral-sh/uv/issues/14209#issuecomment-2995836882",
+            "role": "maintainer_thread_context"
+          }
+        },
+        "as_of": "2026-10-20T00:00:00Z"
+      },
+      {
+        "number": 14395,
+        "title": "uv pip install -f(--find-links) doesn't work, cause 'error decoding response body.'",
+        "outcome": "positive",
+        "evidence": {
+          "kind": "current_maintainer_label_plus_thread_review",
+          "label": {
+            "actor": "charliermarsh",
+            "tier": "A",
+            "applied_at": "2025-07-03T13:11:52Z"
+          },
+          "issue_url": "https://github.com/astral-sh/uv/issues/14395",
+          "comment": {
+            "id": 3032217337,
+            "author": "charliermarsh",
+            "tier": "A",
+            "created_at": "2025-07-03T13:11:49Z",
+            "url": "https://github.com/astral-sh/uv/issues/14395#issuecomment-3032217337",
+            "role": "maintainer_thread_context"
+          }
+        },
+        "as_of": "2026-10-20T00:00:00Z"
+      },
+      {
+        "number": 14414,
+        "title": "Fail to download python(3.11) on Windows platform",
+        "outcome": "positive",
+        "evidence": {
+          "kind": "current_maintainer_label_plus_thread_review",
+          "label": {
+            "actor": "zanieb",
+            "tier": "A",
+            "applied_at": "2025-08-01T16:56:55Z"
+          },
+          "issue_url": "https://github.com/astral-sh/uv/issues/14414",
+          "comment": {
+            "id": 3028174166,
+            "author": "zanieb",
+            "tier": "A",
+            "created_at": "2025-07-02T14:51:09Z",
+            "url": "https://github.com/astral-sh/uv/issues/14414#issuecomment-3028174166",
+            "role": "maintainer_thread_context"
+          }
+        },
+        "as_of": "2026-10-20T00:00:00Z"
+      },
+      {
+        "number": 14462,
+        "title": "Threadpool initialization fails during basic builds on HPC cluster unless low `concurrent-builds` limit set",
+        "outcome": "positive",
+        "evidence": {
+          "kind": "current_maintainer_label_plus_thread_review",
+          "label": {
+            "actor": "konstin",
+            "tier": "A",
+            "applied_at": "2025-07-07T12:38:45Z"
+          },
+          "issue_url": "https://github.com/astral-sh/uv/issues/14462",
+          "comment": {
+            "id": 3044907464,
+            "author": "konstin",
+            "tier": "A",
+            "created_at": "2025-07-07T12:42:56Z",
+            "url": "https://github.com/astral-sh/uv/issues/14462#issuecomment-3044907464",
+            "role": "maintainer_thread_context"
+          }
+        },
+        "as_of": "2026-10-20T00:00:00Z"
+      },
+      {
+        "number": 14857,
+        "title": "Reference docs sidebar can't be scrolled",
+        "outcome": "positive",
+        "evidence": {
+          "kind": "current_maintainer_label_plus_thread_review",
+          "label": {
+            "actor": "zanieb",
+            "tier": "A",
+            "applied_at": "2025-07-24T21:20:17Z"
+          },
+          "issue_url": "https://github.com/astral-sh/uv/issues/14857",
+          "comment": {
+            "id": 3110165246,
+            "author": "zanieb",
+            "tier": "A",
+            "created_at": "2025-07-23T21:03:07Z",
+            "url": "https://github.com/astral-sh/uv/issues/14857#issuecomment-3110165246",
+            "role": "maintainer_thread_context"
+          }
+        },
+        "as_of": "2026-10-20T00:00:00Z"
+      },
+      {
+        "number": 15108,
+        "title": "Installing platform dependent wheel files results in distribution cache error",
+        "outcome": "positive",
+        "evidence": {
+          "kind": "current_maintainer_label_plus_thread_review",
+          "label": {
+            "actor": "charliermarsh",
+            "tier": "A",
+            "applied_at": "2025-08-26T02:23:13Z"
+          },
+          "issue_url": "https://github.com/astral-sh/uv/issues/15108",
+          "comment": {
+            "id": 3222340567,
+            "author": "charliermarsh",
+            "tier": "A",
+            "created_at": "2025-08-26T02:23:09Z",
+            "url": "https://github.com/astral-sh/uv/issues/15108#issuecomment-3222340567",
+            "role": "explicit_request"
+          }
+        },
+        "as_of": "2026-10-20T00:00:00Z"
+      },
+      {
+        "number": 15164,
+        "title": "Deleting .venv of Project B fails when running Project A due to locked files",
+        "outcome": "positive",
+        "evidence": {
+          "kind": "current_maintainer_label_plus_thread_review",
+          "label": {
+            "actor": "jtfmumm",
+            "tier": "C",
+            "applied_at": "2025-08-08T12:39:47Z"
+          },
+          "issue_url": "https://github.com/astral-sh/uv/issues/15164",
+          "comment": {
+            "id": 3167750717,
+            "author": "jtfmumm",
+            "tier": "C",
+            "created_at": "2025-08-08T12:39:40Z",
+            "url": "https://github.com/astral-sh/uv/issues/15164#issuecomment-3167750717",
+            "role": "explicit_request"
+          }
+        },
+        "as_of": "2026-10-20T00:00:00Z"
+      },
+      {
+        "number": 15246,
+        "title": "uv cannot spawn gunicorn in uv project",
+        "outcome": "positive",
+        "evidence": {
+          "kind": "current_maintainer_label_plus_thread_review",
+          "label": {
+            "actor": "zanieb",
+            "tier": "A",
+            "applied_at": "2025-08-22T22:09:22Z"
+          },
+          "issue_url": "https://github.com/astral-sh/uv/issues/15246",
+          "comment": {
+            "id": 3181188694,
+            "author": "zanieb",
+            "tier": "A",
+            "created_at": "2025-08-12T22:12:53Z",
+            "url": "https://github.com/astral-sh/uv/issues/15246#issuecomment-3181188694",
+            "role": "explicit_request"
+          }
+        },
+        "as_of": "2026-10-20T00:00:00Z"
+      }
+    ]
+  },
+  "stale": {
+    "minimum_positives": 30,
+    "candidate_members": 150,
+    "adjudicated_positives": 145,
+    "verdict": "pass",
+    "positive_members": [
+      298,
+      311,
+      1061,
+      1369,
+      1404,
+      1419,
+      1516,
+      1620,
+      1632,
+      1655,
+      1681,
+      1703,
+      1737,
+      1760,
+      1784,
+      1794,
+      1807,
+      1854,
+      1910,
+      2006,
+      2014,
+      2052,
+      2059,
+      2065,
+      2103,
+      2111,
+      2138,
+      2210,
+      2252,
+      2253,
+      2327,
+      2361,
+      2389,
+      2476,
+      2478,
+      2491,
+      2500,
+      2526,
+      2625,
+      2637,
+      2670,
+      2703,
+      2731,
+      2743,
+      2745,
+      2799,
+      2807,
+      2810,
+      2828,
+      2831,
+      3021,
+      3034,
+      3052,
+      3054,
+      3059,
+      3095,
+      3097,
+      3141,
+      3149,
+      3163,
+      3190,
+      3248,
+      3249,
+      3287,
+      3516,
+      3518,
+      3573,
+      3588,
+      3599,
+      3602,
+      3621,
+      3636,
+      3644,
+      3669,
+      3684,
+      3716,
+      3783,
+      3793,
+      3796,
+      3802,
+      3878,
+      3883,
+      3952,
+      3978,
+      4056,
+      4071,
+      4079,
+      4087,
+      4109,
+      4130,
+      4238,
+      4245,
+      4291,
+      4359,
+      4389,
+      6038,
+      6484,
+      6682,
+      6819,
+      7004,
+      7622,
+      8512,
+      8966,
+      9191,
+      9739,
+      9765,
+      9902,
+      9909,
+      9923,
+      9929,
+      10004,
+      10711,
+      11018,
+      11409,
+      11452,
+      11480,
+      11554,
+      11636,
+      11651,
+      11975,
+      12036,
+      12325,
+      12630,
+      12635,
+      12658,
+      12666,
+      12849,
+      13198,
+      13288,
+      13358,
+      13418,
+      13427,
+      13515,
+      13823,
+      13931,
+      14017,
+      14209,
+      14395,
+      14414,
+      14462,
+      14857,
+      15108,
+      15164,
+      15246,
+      18892
+    ],
+    "non_positive_members": [
+      1235,
+      1442,
+      1566,
+      3271,
+      3704
+    ]
+  }
+}

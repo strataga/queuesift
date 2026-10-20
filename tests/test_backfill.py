@@ -1,10 +1,11 @@
 import json
 
 import httpx
+from sqlalchemy.orm import Session
 
 from app.analysis import analyze_backfill
 from app.backfill import GitHubBackfillClient, run_backfill
-from app.db import init_db, make_engine
+from app.db import IssueEventRow, init_db, make_engine
 
 ISSUE = {
     "id": 101,
@@ -43,6 +44,13 @@ TIMELINE = [
         "created_at": "2026-09-01T03:00:00Z",
         "source": {"issue": {"number": 99}},
     },
+    {
+        "id": 4,
+        "event": "cross-referenced",
+        "actor": {"login": "maintainer1"},
+        "created_at": "2026-09-01T04:00:00Z",
+        "source": 100,
+    },
 ]
 
 
@@ -74,7 +82,7 @@ def test_resume_skips_stored_timelines_but_refreshes_metadata() -> None:
     init_db(engine)
     first = run_backfill(engine, client, days=90, today="2026-10-20", reuse_stored=True)
     issue_calls = {c for c in transport.paths if c.endswith("/timeline")}
-    assert first.issues_stored == 1 and first.events_stored == 3 and issue_calls
+    assert first.issues_stored == 1 and first.events_stored == 4 and issue_calls
     # Second run: one timeline fetch total would mean a full re-read of the
     # only stored issue; with reuse_stored it must be skipped.
     transport.paths.clear()
@@ -93,7 +101,13 @@ def test_backfill_is_idempotent_and_analysis_measures_actors() -> None:
 
     report = analyze_backfill(engine, repo="langchain-ai/langchain")
     assert report["issues_total"] == 1
-    assert report["events_total"] == 3
+    assert report["events_total"] == 4
+    with Session(engine) as session:
+        integer_source = session.get(
+            IssueEventRow, ("langchain-ai/langchain", 7, "4")
+        )
+        assert integer_source is not None
+        assert integer_source.source_issue_number == 100
     assert report["bot_actors"] == ["github-actions[bot]"]
     assert report["maintainer_actors"] == ["maintainer1"]
     assert report["eligible_bug_feature"] == 1
