@@ -46,16 +46,41 @@ TIMELINE = [
 ]
 
 
-def _client() -> GitHubBackfillClient:
-    def handler(request: httpx.Request) -> httpx.Response:
+class TrackingTransport(httpx.MockTransport):
+    def __init__(self) -> None:
+        self.paths: list[str] = []
+        super().__init__(self._handle)
+
+    def _handle(self, request: httpx.Request) -> httpx.Response:
+        self.paths.append(request.url.path)
         if request.url.path.endswith("/timeline"):
             return httpx.Response(200, json=TIMELINE)
         page = request.url.params.get("page")
         return httpx.Response(200, json=[ISSUE] if page == "1" else [])
 
+
+def _client() -> GitHubBackfillClient:
     return GitHubBackfillClient(
-        "langchain-ai/langchain", token="test", transport=httpx.MockTransport(handler)
+        "langchain-ai/langchain", token="test", transport=TrackingTransport()
     )
+
+
+def test_resume_skips_stored_timelines_but_refreshes_metadata() -> None:
+    transport = TrackingTransport()
+    client = GitHubBackfillClient(
+        "langchain-ai/langchain", token="test", transport=transport
+    )
+    engine = make_engine("sqlite+pysqlite:///:memory:")
+    init_db(engine)
+    first = run_backfill(engine, client, days=90, today="2026-10-20", reuse_stored=True)
+    issue_calls = {c for c in transport.paths if c.endswith("/timeline")}
+    assert first.issues_stored == 1 and first.events_stored == 3 and issue_calls
+    # Second run: one timeline fetch total would mean a full re-read of the
+    # only stored issue; with reuse_stored it must be skipped.
+    transport.paths.clear()
+    second = run_backfill(engine, client, days=90, today="2026-10-20", reuse_stored=True)
+    assert not [c for c in transport.paths if c.endswith("/timeline")]
+    assert second.issues_stored == 1 and second.events_stored == 0
 
 
 def test_backfill_is_idempotent_and_analysis_measures_actors() -> None:

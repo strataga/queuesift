@@ -8,8 +8,9 @@ from dataclasses import dataclass
 from datetime import UTC, date, datetime, timedelta
 
 import httpx
+from sqlalchemy.orm import Session
 
-from app.db import snapshot_from_github, store_issue_with_events
+from app.db import IssueRow, snapshot_from_github, store_issue_with_events
 from app.template_parser import parse_template
 
 API = "https://api.github.com"
@@ -36,6 +37,7 @@ class GitHubBackfillClient:
         self.transport = transport
         self.timeout = timeout
         self.requests = 0
+        self._stored_issue_numbers: set[int] | None = None
 
     def _get(self, client: httpx.Client, path: str, params: dict) -> list:
         for attempt in range(4):
@@ -76,6 +78,7 @@ class GitHubBackfillClient:
                 if not batch:
                     return
                 stop = False
+                stored_numbers = self._stored_issue_numbers or set()
                 for payload in batch:
                     created = str(payload.get("created_at") or "")[:10]
                     try:
@@ -86,6 +89,11 @@ class GitHubBackfillClient:
                         stop = True
                         continue
                     if "pull_request" in payload:
+                        continue
+                    if payload["number"] in stored_numbers:
+                        # Campaign resume: metadata refresh only; timeline
+                        # fetched on an earlier pass and left stored.
+                        yield payload, []
                         continue
                     timeline: list = []
                     timeline_page = 1
@@ -115,9 +123,24 @@ def run_backfill(
     days: int = 90,
     today: str | None = None,
     limit: int | None = None,
+    reuse_stored: bool = False,
 ) -> BackfillResult:
+    """Resume semantics: with reuse_stored, previously stored issues contribute
+    metadata refreshes only; their timeline fetches are skipped and previously
+    stored events are left untouched. Use only within one backfill campaign;
+    do not rely on it across days of live queue movement, since new events on
+    already-stored issues would be missed.
+    """
     end = date.fromisoformat(today) if today else datetime.now(UTC).date()
     since = end - timedelta(days=days)
+    if reuse_stored:
+        with Session(engine) as session:
+            client._stored_issue_numbers = {
+                row[0]
+                for row in session.query(IssueRow.number)
+                .filter_by(repo=client.repo)
+                .all()
+            }
     issues_stored = 0
     events_stored = 0
     for payload, timeline in client.iter_issues_since(since, limit=limit):

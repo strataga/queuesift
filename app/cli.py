@@ -26,7 +26,16 @@ def main(argv: list[str] | None = None) -> int:
         action="store_true",
         help="Verify configured draft/embedding models and print JSON evidence",
     )
-    source.add_argument("--backfill-days", type=int, help="Backfill issues/timelines created in last N days")
+    source.add_argument(
+        "--backfill-days",
+        type=int,
+        help="Backfill issues/timelines created in last N days",
+    )
+    parser.add_argument(
+        "--resume",
+        action="store_true",
+        help="Resume a same-day backfill: skip timelines already stored",
+    )
     source.add_argument(
         "--analyze-backfill", action="store_true", help="Print feasibility analysis JSON"
     )
@@ -43,7 +52,11 @@ def main(argv: list[str] | None = None) -> int:
         engine = make_engine(args.database_url)
         init_db(engine)
         result = run_backfill(
-            engine, GitHubBackfillClient(args.repo), days=args.backfill_days, limit=args.limit
+            engine,
+            GitHubBackfillClient(args.repo),
+            days=args.backfill_days,
+            limit=args.limit,
+            reuse_stored=args.resume,
         )
         sys.stdout.write(json.dumps(result.__dict__, indent=2) + "\n")
         return 0
