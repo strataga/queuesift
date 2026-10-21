@@ -15,6 +15,8 @@ from app.drafter import run_draft_spot_check
 from app.eval_harness import run_qualified_baselines
 from app.eval_sweep import run_threshold_sweep
 from app.github_client import fetch_issue
+from app.outcomes import score_outcomes, write_digest_artifact
+from app.poll import DEFAULT_LIMIT, run_poll
 from app.providers import OllamaProvider, check_providers
 from app.triage import propose, render_digest
 from app.uv_backlog import run_uv_backlog_cohort
@@ -97,6 +99,54 @@ def main(argv: list[str] | None = None) -> int:
         "--seed-deterministic-proposals",
         action="store_true",
         help="Store Slice 0 deterministic proposals for issues already in the uv-backlog DB (local only)",
+    )
+    source.add_argument(
+        "--poll",
+        action="store_true",
+        help="Incrementally poll issues updated since the last poll (read-only, bounded)",
+    )
+    parser.add_argument(
+        "--shadow-db",
+        default="queuesift-shadow-poll.db",
+        help="SQLite file for live shadow polling (gitignored *.db; never the frozen cohort)",
+    )
+    parser.add_argument(
+        "--poll-since",
+        default=None,
+        help="ISO timestamp lower bound for one poll (default: last poll, else 7 days)",
+    )
+    parser.add_argument(
+        "--poll-limit",
+        type=int,
+        default=DEFAULT_LIMIT,
+        help="Maximum issues to detail-fetch in one poll (default 30)",
+    )
+    source.add_argument(
+        "--score-outcomes",
+        action="store_true",
+        help="Snapshot stored proposals against locally stored maintainer actuals (descriptive)",
+    )
+    parser.add_argument(
+        "--outcomes-report",
+        type=Path,
+        default=Path("evals/reports/uv-outcome-snapshot.json"),
+        help="Destination for the outcome snapshot report",
+    )
+    source.add_argument(
+        "--write-digest",
+        action="store_true",
+        help="Write the daily Markdown shadow digest artifact (local file only)",
+    )
+    parser.add_argument(
+        "--digest-date",
+        default=None,
+        help="Digest date label (default: today UTC)",
+    )
+    parser.add_argument(
+        "--digest-path",
+        type=Path,
+        default=None,
+        help="Digest artifact path (default: digests/<date>.md)",
     )
     parser.add_argument(
         "--sweep-report",
@@ -189,12 +239,68 @@ def main(argv: list[str] | None = None) -> int:
         seeded = seed_deterministic_proposals(engine, args.repo)
         sys.stdout.write(json.dumps({"seeded": seeded, "db": args.uv_backlog_db}) + "\n")
         return 0
+    if args.poll:
+        engine = make_engine(f"sqlite+pysqlite:///{args.shadow_db}")
+        init_db(engine)
+        result = run_poll(
+            engine,
+            GitHubBackfillClient(args.repo),
+            since=args.poll_since,
+            limit=args.poll_limit,
+        )
+        sys.stdout.write(
+            json.dumps(
+                {
+                    "new_issues": result.new_issues,
+                    "refreshed_issues": result.refreshed_issues,
+                    "requests": result.requests,
+                    "since": result.since,
+                    "ran_at": result.ran_at,
+                    "db": args.shadow_db,
+                },
+                indent=2,
+            )
+            + "\n"
+        )
+        return 0
+    if args.score_outcomes:
+        engine = make_engine(f"sqlite+pysqlite:///{args.shadow_db}")
+        init_db(engine)
+        report = score_outcomes(engine, args.repo)
+        args.outcomes_report.parent.mkdir(parents=True, exist_ok=True)
+        args.outcomes_report.write_text(json.dumps(report, indent=2) + "\n")
+        sys.stdout.write(
+            json.dumps(
+                {
+                    "issues": len(report["issues"]),
+                    "with_maintainer_action": sum(
+                        1 for row in report["issues"] if row["has_maintainer_action"]
+                    ),
+                    "report": str(args.outcomes_report),
+                },
+                indent=2,
+            )
+            + "\n"
+        )
+        return 0
+    if args.write_digest:
+        from datetime import UTC, datetime
+
+        engine = make_engine(f"sqlite+pysqlite:///{args.shadow_db}")
+        init_db(engine)
+        report = score_outcomes(engine, args.repo)
+        date_str = args.digest_date or datetime.now(UTC).date().isoformat()
+        path = args.digest_path or Path("digests") / f"{date_str}.md"
+        write_digest_artifact(engine, args.repo, report, path, date_str)
+        sys.stdout.write(json.dumps({"digest": str(path), "date": date_str}) + "\n")
+        return 0
     if args.issue_json is None and args.issue is None:
         parser.error(
             "one of --issue-json, --issue, --check-providers, --backfill-days, "
             "--analyze-backfill, --uv-backlog-sample, --run-qualified-baselines, "
             "--draft-spot-check, --run-threshold-sweep, "
-            "or --seed-deterministic-proposals is required"
+            "--seed-deterministic-proposals, --poll, --score-outcomes, "
+            "or --write-digest is required"
         )
 
     payload = (

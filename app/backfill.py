@@ -114,6 +114,42 @@ class GitHubBackfillClient:
                     return
                 page += 1
 
+    def iter_updated_since(self, since_iso: str, limit: int):
+        """Yield issue payloads updated since an ISO timestamp, newest first.
+
+        Pull requests are skipped without counting toward limit, so a queue
+        with heavy PR traffic cannot eat the poll budget. Read-only; timeline
+        fetches happen per issue in the poll step, not here.
+        """
+        with self._new_client() as client:
+            page = 1
+            yielded = 0
+            while yielded < limit:
+                batch = self._get(
+                    client,
+                    f"/repos/{self.repo}/issues",
+                    {
+                        "state": "all",
+                        "per_page": 100,
+                        "page": page,
+                        "sort": "updated",
+                        "direction": "desc",
+                        "since": since_iso,
+                    },
+                )
+                if not batch:
+                    return
+                for payload in batch:
+                    if "pull_request" in payload:
+                        continue
+                    yield payload
+                    yielded += 1
+                    if yielded >= limit:
+                        return
+                if len(batch) < 100:
+                    return
+                page += 1
+
     def fetch_issue_detail(self, number: int) -> IssueDetail:
         """Fetch one issue payload and its complete timeline."""
         with self._new_client() as client:

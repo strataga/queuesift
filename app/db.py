@@ -61,6 +61,59 @@ class ProposalRow(Base):
     payload: Mapped[str] = mapped_column(Text)
 
 
+class PollRunRow(Base):
+    """One incremental poll pass per repo (read-only sync bookkeeping)."""
+
+    __tablename__ = "poll_runs"
+
+    repo: Mapped[str] = mapped_column(String, primary_key=True)
+    ran_at: Mapped[str] = mapped_column(String, primary_key=True)
+    since: Mapped[str | None] = mapped_column(String, nullable=True)
+    new_issues: Mapped[int] = mapped_column(default=0)
+    refreshed_issues: Mapped[int] = mapped_column(default=0)
+    requests: Mapped[int] = mapped_column(default=0)
+
+
+def record_poll_run(
+    engine,
+    *,
+    repo: str,
+    ran_at: str,
+    since: str | None,
+    new_issues: int,
+    refreshed_issues: int,
+    requests: int,
+) -> None:
+    with Session(engine) as session:
+        session.add(
+            PollRunRow(
+                repo=repo,
+                ran_at=ran_at,
+                since=since,
+                new_issues=new_issues,
+                refreshed_issues=refreshed_issues,
+                requests=requests,
+            )
+        )
+        session.commit()
+
+
+def last_poll_at(engine, repo: str) -> str | None:
+    from sqlalchemy.exc import OperationalError
+
+    try:
+        with Session(engine) as session:
+            row = (
+                session.query(PollRunRow)
+                .filter(PollRunRow.repo == repo)
+                .order_by(PollRunRow.ran_at.desc())
+                .first()
+            )
+            return row.ran_at if row else None
+    except OperationalError:
+        return None
+
+
 def make_engine(database_url: str | None = None):
     # Read at call time so CLI-loaded .env.local values take effect.
     return create_engine(database_url or os.environ.get("DATABASE_URL") or DATABASE_URL)

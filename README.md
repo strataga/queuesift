@@ -13,6 +13,9 @@ Non-paid Slice 2 offline evaluation is complete on the frozen 150-issue
 `evals/reports/README.md`. Slice 3a adds a read-only shadow digest UI
 (`GET /`, `/digest`, `/proposals/{n}`, `/evals`) over locally stored
 deterministic proposals; see `docs/spikes/2026-10-21-slice3-plan.md`.
+Slice 3b adds incremental read-only polling, outcome snapshots, and a daily
+Markdown digest artifact; see
+`docs/spikes/2026-10-21-slice3b-poll-outcomes.md`.
 Shadow mode only — no GitHub writes anywhere.
 Local Ollama models are used behind the provider interface while OpenAI is
 postponed until final validation; local results are always labelled with
