@@ -30,3 +30,18 @@ docker compose exec -T app sh -c \
   into `queuesift_restore`; counts matched 2/2/1; scratch database dropped.
 - No writes to GitHub, no model calls, no outreach. Clock started; day 2 due
   2026-10-22.
+
+## Run status — 2026-10-21 01:54 UTC (day-2 window not yet open)
+
+- Stack re-checked: `/healthz` 200, `/digest` 200; Postgres still holds
+  issues=2, proposals=2, poll_runs=1 with last `ran_at` 01:53 UTC. Day-1
+  evidence is intact, nothing re-polled (a second poll now would not be a
+  daily pass).
+- Missing terminal evidence for §11.2: day-2 through day-7 entries (one poll
+  plus outcome snapshot plus digest artifact per calendar day, each within
+  the daily recipe above), then the sampled agreement scoring against later
+  maintainer actuals, the final-week harmful/spammy review (must be zero),
+  and the no-public-writes attestation. No §11.2 verdict can be claimed
+  until those seven entries exist.
+- Next action: day-2 poll on 2026-10-22. Until a long-lived host takes over,
+  each day is one manual run of the daily recipe.
