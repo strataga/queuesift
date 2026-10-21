@@ -1,0 +1,13 @@
+.venv/
+__pycache__/
+*.pyc
+*.db
+.git/
+.gitignore
+.env.local
+.env
+docs/
+digests/
+.pytest_cache/
+.ruff_cache/
+uv.lock

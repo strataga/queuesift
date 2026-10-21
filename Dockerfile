@@ -5,6 +5,7 @@ WORKDIR /srv/queuesift
 
 COPY pyproject.toml README.md ./
 COPY app ./app
+COPY evals/reports ./evals/reports
 RUN pip install --upgrade pip && pip install .
 
 EXPOSE 8000

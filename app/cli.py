@@ -239,8 +239,18 @@ def main(argv: list[str] | None = None) -> int:
         seeded = seed_deterministic_proposals(engine, args.repo)
         sys.stdout.write(json.dumps({"seeded": seeded, "db": args.uv_backlog_db}) + "\n")
         return 0
+    def shadow_engine() -> tuple:
+        """Shadow commands default to the SQLite shadow file.
+
+        Only an explicit --database-url flag redirects them, so a repo-local
+        DATABASE_URL can never silently reroute poll/outcome/digest data.
+        """
+        if args.database_url:
+            return make_engine(args.database_url), "DATABASE_URL"
+        return make_engine(f"sqlite+pysqlite:///{args.shadow_db}"), args.shadow_db
+
     if args.poll:
-        engine = make_engine(f"sqlite+pysqlite:///{args.shadow_db}")
+        engine, store = shadow_engine()
         init_db(engine)
         result = run_poll(
             engine,
@@ -256,7 +266,7 @@ def main(argv: list[str] | None = None) -> int:
                     "requests": result.requests,
                     "since": result.since,
                     "ran_at": result.ran_at,
-                    "db": args.shadow_db,
+                    "db": store,
                 },
                 indent=2,
             )
@@ -264,7 +274,7 @@ def main(argv: list[str] | None = None) -> int:
         )
         return 0
     if args.score_outcomes:
-        engine = make_engine(f"sqlite+pysqlite:///{args.shadow_db}")
+        engine, _ = shadow_engine()
         init_db(engine)
         report = score_outcomes(engine, args.repo)
         args.outcomes_report.parent.mkdir(parents=True, exist_ok=True)
@@ -286,7 +296,7 @@ def main(argv: list[str] | None = None) -> int:
     if args.write_digest:
         from datetime import UTC, datetime
 
-        engine = make_engine(f"sqlite+pysqlite:///{args.shadow_db}")
+        engine, _ = shadow_engine()
         init_db(engine)
         report = score_outcomes(engine, args.repo)
         date_str = args.digest_date or datetime.now(UTC).date().isoformat()

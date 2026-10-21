@@ -5,7 +5,7 @@ from __future__ import annotations
 import json
 import os
 
-from sqlalchemy import Boolean, String, Text, create_engine
+from sqlalchemy import BigInteger, Boolean, String, Text, create_engine
 from sqlalchemy.orm import DeclarativeBase, Mapped, Session, mapped_column
 
 from app.models import IssueSnapshot, Proposal
@@ -21,7 +21,7 @@ class IssueRow(Base):
     __tablename__ = "issues"
 
     repo: Mapped[str] = mapped_column(String, primary_key=True)
-    github_id: Mapped[int] = mapped_column(primary_key=True)
+    github_id: Mapped[int] = mapped_column(BigInteger, primary_key=True)
     number: Mapped[int]
     title: Mapped[str] = mapped_column(Text)
     body: Mapped[str] = mapped_column(Text, default="")

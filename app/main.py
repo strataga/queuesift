@@ -1,14 +1,29 @@
 """QueueSift HTTP surface (Slice 3a: read-only shadow digest plus health)."""
 
+from contextlib import asynccontextmanager
 from pathlib import Path
 
 from fastapi import FastAPI, Response
 from fastapi.responses import FileResponse, HTMLResponse, JSONResponse
 
 from app import shadow_ui
-from app.db import count_issues, count_proposals, get_proposal, list_proposals, make_engine
+from app.db import (
+    count_issues,
+    count_proposals,
+    get_proposal,
+    init_db,
+    list_proposals,
+    make_engine,
+)
 
-app = FastAPI(title="QueueSift", version="0.1.0")
+
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    init_db(make_engine())
+    yield
+
+
+app = FastAPI(title="QueueSift", version="0.1.0", lifespan=lifespan)
 
 SCOPE = "astral-sh/uv backlog sweep (150-issue frozen cohort)"
 REPORTS_DIR = Path("evals/reports")

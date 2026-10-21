@@ -16,6 +16,9 @@ deterministic proposals; see `docs/spikes/2026-10-21-slice3-plan.md`.
 Slice 3b adds incremental read-only polling, outcome snapshots, and a daily
 Markdown digest artifact; see
 `docs/spikes/2026-10-21-slice3b-poll-outcomes.md`.
+Slice 3c deploys the digest UI with Compose, rehearses backup/restore
+against Postgres, and opens the 7-day shadow log; see
+`docs/runbooks/shadow-deploy.md` and `docs/shadow/7-day-shadow-log.md`.
 Shadow mode only — no GitHub writes anywhere.
 Local Ollama models are used behind the provider interface while OpenAI is
 postponed until final validation; local results are always labelled with
