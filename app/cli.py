@@ -11,8 +11,9 @@ from app.analysis import analyze_backfill
 from app.backfill import GitHubBackfillClient, run_backfill
 from app.config import load_local_env
 from app.db import init_db, make_engine, snapshot_from_github, store_proposal
+from app.eval_harness import run_qualified_baselines
 from app.github_client import fetch_issue
-from app.providers import check_providers
+from app.providers import OllamaProvider, check_providers
 from app.triage import propose, render_digest
 from app.uv_backlog import run_uv_backlog_cohort
 
@@ -45,6 +46,11 @@ def main(argv: list[str] | None = None) -> int:
         type=int,
         help="Build a deterministic uv stale/duplicate backlog sample of N eligible issues",
     )
+    source.add_argument(
+        "--run-qualified-baselines",
+        action="store_true",
+        help="Score qualified deterministic/local baselines only; no paid providers or duplicate scoring",
+    )
     parser.add_argument(
         "--uv-backlog-db",
         default="queuesift-uv-backlog.db",
@@ -61,6 +67,12 @@ def main(argv: list[str] | None = None) -> int:
         type=int,
         default=50,
         help="Maximum currently needs-mre-labelled issues in the backlog sample",
+    )
+    parser.add_argument(
+        "--eval-report",
+        type=Path,
+        default=Path("evals/reports/uv-qualified-baselines-2026-10-21.json"),
+        help="Destination for the qualified baseline report",
     )
     parser.add_argument("--repo", default="langchain-ai/langchain")
     parser.add_argument("--database-url", default=None, help="Override DATABASE_URL")
@@ -99,10 +111,24 @@ def main(argv: list[str] | None = None) -> int:
         )
         sys.stdout.write(manifest.model_dump_json(indent=2) + "\n")
         return 0
+    if args.run_qualified_baselines:
+        engine = make_engine(f"sqlite+pysqlite:///{args.uv_backlog_db}")
+        report = run_qualified_baselines(
+            engine,
+            repo=args.repo,
+            manifest_path=Path("evals/manifests/uv-backlog-sweep-2026-10-20.json"),
+            gold_path=Path("evals/adjudication/uv-backlog-gold-2026-10-20.json"),
+            titles_path=Path("evals/provenance/uv-backlog-original-titles-2026-10-20.json"),
+            report_path=args.eval_report,
+            embedder=OllamaProvider(),
+        )
+        sys.stdout.write(json.dumps(report, indent=2) + "\n")
+        return 0
     if args.issue_json is None and args.issue is None:
         parser.error(
             "one of --issue-json, --issue, --check-providers, --backfill-days, "
-            "--analyze-backfill, or --uv-backlog-sample is required"
+            "--analyze-backfill, --uv-backlog-sample, or --run-qualified-baselines "
+            "is required"
         )
 
     payload = (
