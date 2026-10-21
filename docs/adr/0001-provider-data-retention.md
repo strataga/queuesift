@@ -63,8 +63,9 @@ Status: accepted for no-provider Slice 2 input, provenance, rule, metric, and
 synthetic-test work. It does not authorize provider-backed scoring, shadow
 deployment, outreach, a maintainer pilot, or writes.
 
-- OpenAI billing remains inactive on the last verified check. Billing
-  activation is the remaining blocker for any scored evaluation run.
+- OpenAI billing remained inactive in the 2026-10-20 check and was
+  re-verified inactive on 2026-10-21 with one synthetic billing probe.
+  Billing activation is the remaining blocker for any scored evaluation run.
 - Paid provider spend is capped at `$0.00` per eligible issue and `$0.00` per
   day in
   `evals/cost/uv-backlog-pre-scoring-spend-cap-2026-10-20.json`.
