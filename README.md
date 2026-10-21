@@ -7,11 +7,13 @@ Tracker spec: https://github.com/strataga/queuesift/issues/1
 
 ## Status
 
-Slice 0 walking skeleton: template parser, deterministic proposal, persistence,
-static digest, and health endpoint. Shadow mode only — no GitHub writes anywhere.
-Slice 1 development temporarily uses local Ollama models behind the provider
-interface while OpenAI billing is inactive; local results are always labelled
-with their actual provider/model and are never reported as OpenAI results.
+Non-paid Slice 2 offline evaluation is complete on the frozen 150-issue
+`astral-sh/uv` backlog cohort; see
+`docs/spikes/2026-10-21-slice2-offline-eval-complete.md` and
+`evals/reports/README.md`. Shadow mode only — no GitHub writes anywhere.
+Local Ollama models are used behind the provider interface while OpenAI is
+postponed until final validation; local results are always labelled with
+their actual provider/model and are never reported as OpenAI results.
 
 ## Run locally (uv, project-local environment)
 
