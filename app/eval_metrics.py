@@ -105,6 +105,24 @@ def wilson_interval(successes: int, trials: int, z: float = 1.96) -> dict[str, f
     }
 
 
+def brier_score(y_true: list[int], y_prob: list[float]) -> float:
+    """Mean squared error between binary outcomes and predicted probabilities.
+
+    Reserved for probabilistic outputs such as future Jev battery scores.
+    Deterministic baselines report 0/1 predictions, never calibrated
+    probabilities, so this function is scaffolding until a probabilistic
+    system is scored.
+    """
+    if len(y_true) != len(y_prob):
+        raise ValueError("truth and prediction lists must have the same length")
+    if not y_true:
+        raise ValueError("truth and prediction lists must not be empty")
+    _check_binary(y_true, "y_true")
+    if any(not 0.0 <= value <= 1.0 for value in y_prob):
+        raise ValueError("probabilities must be between 0 and 1")
+    return sum((actual - predicted) ** 2 for actual, predicted in zip(y_true, y_prob)) / len(y_true)
+
+
 def _metric_value(
     y_true: list[int], y_pred: list[int], metric: str
 ) -> float:

@@ -3,6 +3,7 @@ import math
 import pytest
 
 from app.eval_metrics import (
+    brier_score,
     confusion_matrix,
     paired_bootstrap_difference,
     precision_recall_f1,
@@ -35,6 +36,14 @@ def test_wilson_interval_rejects_empty_or_invalid_counts() -> None:
         wilson_interval(0, 0)
     with pytest.raises(ValueError):
         wilson_interval(3, 2)
+
+
+def test_brier_score_measures_probability_error() -> None:
+    assert brier_score([1, 0, 1, 0], [1.0, 0.0, 0.5, 0.5]) == pytest.approx(0.125)
+    with pytest.raises(ValueError):
+        brier_score([1, 0], [1.5, 0.0])
+    with pytest.raises(ValueError):
+        brier_score([1], [])
 
 
 def test_paired_bootstrap_difference_is_deterministic() -> None:
