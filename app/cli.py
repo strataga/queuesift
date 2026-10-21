@@ -93,6 +93,11 @@ def main(argv: list[str] | None = None) -> int:
         action="store_true",
         help="Score the fixed local-semantic margin grid only; no paid providers or duplicate scoring",
     )
+    source.add_argument(
+        "--seed-deterministic-proposals",
+        action="store_true",
+        help="Store Slice 0 deterministic proposals for issues already in the uv-backlog DB (local only)",
+    )
     parser.add_argument(
         "--sweep-report",
         type=Path,
@@ -176,11 +181,20 @@ def main(argv: list[str] | None = None) -> int:
         )
         sys.stdout.write(json.dumps(sweep, indent=2) + "\n")
         return 0
+    if args.seed_deterministic_proposals:
+        from app.db import seed_deterministic_proposals
+
+        engine = make_engine(f"sqlite+pysqlite:///{args.uv_backlog_db}")
+        init_db(engine)
+        seeded = seed_deterministic_proposals(engine, args.repo)
+        sys.stdout.write(json.dumps({"seeded": seeded, "db": args.uv_backlog_db}) + "\n")
+        return 0
     if args.issue_json is None and args.issue is None:
         parser.error(
             "one of --issue-json, --issue, --check-providers, --backfill-days, "
             "--analyze-backfill, --uv-backlog-sample, --run-qualified-baselines, "
-            "--draft-spot-check, or --run-threshold-sweep is required"
+            "--draft-spot-check, --run-threshold-sweep, "
+            "or --seed-deterministic-proposals is required"
         )
 
     payload = (

@@ -10,7 +10,10 @@ Tracker spec: https://github.com/strataga/queuesift/issues/1
 Non-paid Slice 2 offline evaluation is complete on the frozen 150-issue
 `astral-sh/uv` backlog cohort; see
 `docs/spikes/2026-10-21-slice2-offline-eval-complete.md` and
-`evals/reports/README.md`. Shadow mode only — no GitHub writes anywhere.
+`evals/reports/README.md`. Slice 3a adds a read-only shadow digest UI
+(`GET /`, `/digest`, `/proposals/{n}`, `/evals`) over locally stored
+deterministic proposals; see `docs/spikes/2026-10-21-slice3-plan.md`.
+Shadow mode only — no GitHub writes anywhere.
 Local Ollama models are used behind the provider interface while OpenAI is
 postponed until final validation; local results are always labelled with
 their actual provider/model and are never reported as OpenAI results.

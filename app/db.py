@@ -104,8 +104,99 @@ def store_proposal(engine, issue: IssueSnapshot, proposal: Proposal) -> None:
 
 
 def count_proposals(engine) -> int:
-    with Session(engine) as session:
-        return session.query(ProposalRow).count()
+    from sqlalchemy.exc import OperationalError
+
+    try:
+        with Session(engine) as session:
+            return session.query(ProposalRow).count()
+    except OperationalError:
+        return 0
+
+
+def count_issues(engine) -> int:
+    from sqlalchemy.exc import OperationalError
+
+    try:
+        with Session(engine) as session:
+            return session.query(IssueRow).count()
+    except OperationalError:
+        return 0
+
+
+def list_proposals(engine, limit: int = 200) -> list[Proposal]:
+    from sqlalchemy.exc import OperationalError
+
+    try:
+        with Session(engine) as session:
+            rows = session.query(ProposalRow).order_by(ProposalRow.issue_number).limit(limit).all()
+            return [proposal_from_row(row) for row in rows]
+    except OperationalError:
+        return []
+
+
+def list_issue_snapshots(engine, repo: str | None = None) -> list[IssueSnapshot]:
+    from sqlalchemy.exc import OperationalError
+
+    try:
+        with Session(engine) as session:
+            query = session.query(IssueRow).order_by(IssueRow.number)
+            if repo is not None:
+                query = query.filter(IssueRow.repo == repo)
+            snapshots: list[IssueSnapshot] = []
+            for row in query.all():
+                try:
+                    labels = json.loads(row.labels_json or "[]")
+                except ValueError:
+                    labels = []
+                snapshots.append(
+                    IssueSnapshot(
+                        repo=row.repo,
+                        number=row.number,
+                        github_id=row.github_id,
+                        title=row.title or "",
+                        body=row.body or "",
+                        state=row.state or "open",
+                        labels=[str(label) for label in labels],
+                        issue_type=row.issue_type,
+                        author=row.author,
+                        created_at=row.created_at,
+                    )
+                )
+            return snapshots
+    except OperationalError:
+        return []
+
+
+def seed_deterministic_proposals(engine, repo: str | None = None) -> int:
+    """Run the Slice 0 deterministic proposer over stored issues (local only).
+
+    Idempotent: re-running overwrites the same (repo, number, system) rows.
+    Returns the number of issues seeded.
+    """
+    from app.triage import propose
+
+    snapshots = list_issue_snapshots(engine, repo)
+    for snapshot in snapshots:
+        store_proposal(engine, snapshot, propose(snapshot))
+    return len(snapshots)
+
+
+def get_proposal(engine, issue_number: int) -> Proposal | None:
+    from sqlalchemy.exc import OperationalError
+
+    try:
+        with Session(engine) as session:
+            rows = (
+                session.query(ProposalRow)
+                .filter(ProposalRow.issue_number == issue_number)
+                .order_by(ProposalRow.system)
+                .all()
+            )
+            if not rows:
+                return None
+            return proposal_from_row(rows[0])
+    except OperationalError:
+        return None
 
 
 def snapshot_from_github(repo: str, payload: dict) -> IssueSnapshot:
