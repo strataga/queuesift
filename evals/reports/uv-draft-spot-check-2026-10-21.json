@@ -1,0 +1,133 @@
+{
+  "repo": "astral-sh/uv",
+  "as_of": "2026-10-20T00:00:00Z",
+  "sample": [
+    2059,
+    2138,
+    2253,
+    2670,
+    2828
+  ],
+  "sample_basis": "first N MRE positives by issue number; spot-check only",
+  "provider_gates": {
+    "openai_used": false,
+    "paid_provider_calls": 0,
+    "paid_provider_spend_usd": 0.0
+  },
+  "drafts": [
+    {
+      "number": 2059,
+      "provider": "ollama",
+      "model": "qwen2.5:7b",
+      "latency_ms": 2459,
+      "prompt_tokens": 347,
+      "output_tokens": 75,
+      "gates": {
+        "citations_subset": true,
+        "requested_info_nonempty": true,
+        "reply_nonempty": true
+      },
+      "gates_pass": true,
+      "citations": [
+        "E-body",
+        "E-signal"
+      ],
+      "requested_info": [
+        "A minimal code snippet that reproduces the bug.",
+        "The exact error text you are encountering."
+      ],
+      "reply_preview": "Could you please provide a minimal code snippet that reproduces the issue and the exact error text you are encountering? This will help us diagnose the problem more effectively."
+    },
+    {
+      "number": 2138,
+      "provider": "ollama",
+      "model": "qwen2.5:7b",
+      "latency_ms": 3659,
+      "prompt_tokens": 718,
+      "output_tokens": 95,
+      "gates": {
+        "citations_subset": true,
+        "requested_info_nonempty": true,
+        "reply_nonempty": true
+      },
+      "gates_pass": true,
+      "citations": [
+        "E-body",
+        "E-body"
+      ],
+      "requested_info": [
+        "A minimal code snippet that reproduces the bug.",
+        "The command you invoked (e.g., `uv pip sync requirements.txt`), ideally including the `--verbose` flag."
+      ],
+      "reply_preview": "Could you provide a minimal code snippet that reproduces the issue and the exact uv command you used, including the `--verbose` flag? This will help us diagnose the problem."
+    },
+    {
+      "number": 2253,
+      "provider": "ollama",
+      "model": "qwen2.5:7b",
+      "latency_ms": 2580,
+      "prompt_tokens": 327,
+      "output_tokens": 91,
+      "gates": {
+        "citations_subset": true,
+        "requested_info_nonempty": true,
+        "reply_nonempty": true
+      },
+      "gates_pass": true,
+      "citations": [
+        "E-body"
+      ],
+      "requested_info": [
+        "reproduction",
+        "diagnostic logs"
+      ],
+      "reply_preview": "Could you provide a reproduction of the issue or any diagnostic logs that might help us understand why `last_modified_unix_timestamp` is `None` in `new_policy.response.headers` but `Some(1709511660)` in `self.response.headers`? This will help us diagnose the problem."
+    },
+    {
+      "number": 2670,
+      "provider": "ollama",
+      "model": "qwen2.5:7b",
+      "latency_ms": 2597,
+      "prompt_tokens": 358,
+      "output_tokens": 92,
+      "gates": {
+        "citations_subset": true,
+        "requested_info_nonempty": true,
+        "reply_nonempty": true
+      },
+      "gates_pass": true,
+      "citations": [
+        "E-body"
+      ],
+      "requested_info": [
+        "A minimal code snippet that reproduces the bug.",
+        "The command you invoked (e.g., `uv pip sync requirements.txt`), ideally including the `--verbose` flag."
+      ],
+      "reply_preview": "Could you please provide a minimal code snippet that reproduces the issue and the command you invoked, including the `--verbose` flag? This will help us diagnose the problem more effectively."
+    },
+    {
+      "number": 2828,
+      "provider": "ollama",
+      "model": "qwen2.5:7b",
+      "latency_ms": 1864,
+      "prompt_tokens": 296,
+      "output_tokens": 61,
+      "gates": {
+        "citations_subset": true,
+        "requested_info_nonempty": true,
+        "reply_nonempty": true
+      },
+      "gates_pass": true,
+      "citations": [
+        "E-body",
+        "E-signal"
+      ],
+      "requested_info": [
+        "exact commands and their output",
+        "error messages"
+      ],
+      "reply_preview": "Could you provide a detailed reproduction of the issue, including the exact commands and their output? Additionally, please include any error messages you encountered."
+    }
+  ],
+  "pass_count": 5
+}

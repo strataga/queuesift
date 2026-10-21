@@ -11,6 +11,7 @@ from app.analysis import analyze_backfill
 from app.backfill import GitHubBackfillClient, run_backfill
 from app.config import load_local_env
 from app.db import init_db, make_engine, snapshot_from_github, store_proposal
+from app.drafter import run_draft_spot_check
 from app.eval_harness import run_qualified_baselines
 from app.github_client import fetch_issue
 from app.providers import OllamaProvider, check_providers
@@ -74,6 +75,18 @@ def main(argv: list[str] | None = None) -> int:
         default=Path("evals/reports/uv-qualified-baselines-2026-10-21.json"),
         help="Destination for the qualified baseline report",
     )
+    source.add_argument(
+        "--draft-spot-check",
+        type=int,
+        default=None,
+        help="Draft local-only missing-evidence requests for the first N MRE positives",
+    )
+    parser.add_argument(
+        "--draft-report",
+        type=Path,
+        default=Path("evals/reports/uv-draft-spot-check-2026-10-21.json"),
+        help="Destination for the draft spot-check report",
+    )
     parser.add_argument("--repo", default="langchain-ai/langchain")
     parser.add_argument("--database-url", default=None, help="Override DATABASE_URL")
     parser.add_argument("--limit", type=int, default=None, help="Backfill issue limit (smoke runs)")
@@ -124,11 +137,25 @@ def main(argv: list[str] | None = None) -> int:
         )
         sys.stdout.write(json.dumps(report, indent=2) + "\n")
         return 0
+    if args.draft_spot_check is not None:
+        engine = make_engine(f"sqlite+pysqlite:///{args.uv_backlog_db}")
+        spot_check = run_draft_spot_check(
+            engine,
+            repo=args.repo,
+            manifest_path=Path("evals/manifests/uv-backlog-sweep-2026-10-20.json"),
+            gold_path=Path("evals/adjudication/uv-backlog-gold-2026-10-20.json"),
+            titles_path=Path("evals/provenance/uv-backlog-original-titles-2026-10-20.json"),
+            report_path=args.draft_report,
+            provider=OllamaProvider(),
+            limit=args.draft_spot_check,
+        )
+        sys.stdout.write(json.dumps(spot_check, indent=2) + "\n")
+        return 0
     if args.issue_json is None and args.issue is None:
         parser.error(
             "one of --issue-json, --issue, --check-providers, --backfill-days, "
-            "--analyze-backfill, --uv-backlog-sample, or --run-qualified-baselines "
-            "is required"
+            "--analyze-backfill, --uv-backlog-sample, --run-qualified-baselines, "
+            "or --draft-spot-check is required"
         )
 
     payload = (
