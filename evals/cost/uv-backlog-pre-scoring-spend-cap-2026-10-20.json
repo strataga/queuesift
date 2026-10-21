@@ -6,11 +6,14 @@
   "max_paid_provider_spend_usd_per_day": 0.0,
   "paid_provider_calls_permitted": 0,
   "status": "blocking",
+  "openai_deferred_until_final_validation": true,
+  "last_billing_check": "2026-10-21T00:00:00Z",
+  "last_billing_result": "billing_not_active",
   "basis": [
-    "OpenAI billing was last verified inactive; no OpenAI unit-cost measurement is available.",
+    "OpenAI billing was inactive on 2026-10-20 and re-verified inactive on 2026-10-21; no OpenAI unit-cost measurement is available.",
     "No paid OpenAI or TypeSafe scoring call has been made for Slice 2.",
     "TypeSafe token counts were measured during feasibility, but no dollar unit price was recorded.",
     "Local Ollama development calls and read-only GitHub metadata checks are not paid provider scoring."
   ],
-  "revision_rule": "A nonzero scored-run cap may be set only after OpenAI billing activation and a measured unit-cost spike. It must be recorded before scoring and cannot be raised retroactively to pass an evaluation."
+  "revision_rule": "A nonzero scored-run cap may be set only immediately before OpenAI final validation, after billing activation and a measured unit-cost spike. It must be recorded before scoring and cannot be raised retroactively to pass an evaluation."
 }

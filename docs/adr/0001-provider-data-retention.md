@@ -65,7 +65,8 @@ deployment, outreach, a maintainer pilot, or writes.
 
 - OpenAI billing remained inactive in the 2026-10-20 check and was
   re-verified inactive on 2026-10-21 with one synthetic billing probe.
-  Billing activation is the remaining blocker for any scored evaluation run.
+  OpenAI is postponed until final validation; before that final stage,
+  billing activation remains the blocker for any paid OpenAI scored run.
 - Paid provider spend is capped at `$0.00` per eligible issue and `$0.00` per
   day in
   `evals/cost/uv-backlog-pre-scoring-spend-cap-2026-10-20.json`.

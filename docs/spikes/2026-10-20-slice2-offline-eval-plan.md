@@ -1,8 +1,10 @@
 # Slice 2 offline-eval plan: qualified backlog outcomes only
 
-Status: **Plan only; scoring is blocked.** No model, embedding, drafting, or
-paid provider work may start from this plan until all unblock conditions in §6
-are satisfied.
+Status: **Plan only; paid scoring is blocked.** OpenAI is deferred until final
+validation. No OpenAI call, embedding, draft, or scored run may start from this
+plan. Paid provider scoring remains blocked until the nonzero-cap and pricing
+conditions in §6 are satisfied. This update only records sequencing; it does
+not start interim scoring.
 
 Tracker: https://github.com/strataga/queuesift/issues/4  
 Frozen cohort:
@@ -64,9 +66,10 @@ When unblocked, Slice 2 compares:
 2. **QueueSift decision method.** Deterministic code plus the approved Jev
    battery, retrieval, and versioned thresholds/weights.
 3. **Named LLM semantic baseline.** Used only to test whether the Jev-based
-   decision method adds value. Local Ollama may stand in during development,
-   but local results must be labelled with the local model and must never be
-   reported as OpenAI results.
+   decision method adds value. OpenAI is reserved for final validation; before
+   then, local Ollama may stand in for development-only checks. Local results
+   must be labelled with the local model and must never be reported as OpenAI
+   results.
 
 All systems use the same frozen inputs. All prompts, model IDs, retrieval
 limits, random seeds, thresholds, and weights are recorded for each run.
@@ -129,7 +132,8 @@ For every evaluated system:
 - Retrieval coverage, cost, and censored out-of-window misses.
 
 The spend cap must be fixed before scoring and cannot be raised retroactively.
-No paid OpenAI work has occurred.
+A scored nonzero cap requires measured unit pricing. No successful paid
+provider work has occurred.
 
 ## 5. Human evaluation and regression controls
 
@@ -144,14 +148,14 @@ No paid OpenAI work has occurred.
 - Full gold scoring is a deliberate local or workflow run with locked
   dependencies and recorded model/config versions.
 
-## 6. Unblock conditions before implementation or scoring
+## 6. Unblock conditions before paid implementation or scoring
 
-Slice 2 implementation and scoring remain blocked until all are true:
+Paid Slice 2 implementation and scoring remain blocked until all are true:
 
-1. OpenAI billing/account activation and a successful minimal cost/latency
-   spike.
+1. OpenAI is reserved for final validation; before that final stage, activate
+   OpenAI billing/account and run a successful minimal cost/latency spike.
 2. Updated provider training/retention ADR for real issue text.
-3. Recorded pre-scoring spend cap.
+3. Recorded nonzero pre-scoring spend cap with measured unit pricing.
 4. Completed MRE denominators: 55 positives and 30 negatives.
 5. A Slice 2 scope restricted to stale and secondary MRE evaluation.
 6. Completed issue-level creation-time test and title/body provenance gates in
