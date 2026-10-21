@@ -45,3 +45,26 @@ docker compose exec -T app sh -c \
   until those seven entries exist.
 - Next action: day-2 poll on 2026-10-22. Until a long-lived host takes over,
   each day is one manual run of the daily recipe.
+
+## Error analysis — 2026-10-21: digest has zero discrimination on uv backlog
+
+Screenshot review of `/digest` against the seeded 150-issue backlog DB: the
+page renders correctly (150 rows, working proposal links, route grouping),
+but all 150 proposals are identical — route `assisted`, declared
+`unknown; (none)`, missing `package, description`.
+
+- Cause (verified against stored bodies): ~110/150 bodies are free-form
+  prose with no `###` sections at all (e.g. #298, a 2023 pre-template issue
+  transferred from puffin); the remaining ~40 use `###` as ordinary
+  markdown subheadings (e.g. `option 1: ...`, `scenarios`), not issue-form
+  fields. Effectively 0/150 carry LangChain-shaped declared metadata, so
+  the deterministic parser — correct per its LangChain contract — finds
+  nothing everywhere.
+- This is the §12 non-transfer warning materializing, not a parser bug: no
+  tuning the parser to manufacture variance. Differentiation on uv must come
+  from the semantic layer (stale age, MRE labels, duplicate retrieval), which
+  is where the Slice 2 baselines already point.
+- Follow-up (not this entry): surface outcome flags in the HTML digest rows
+  as the Markdown artifact already does, so the page discriminates even when
+  declared metadata is absent. No code changed here; digest UI claim stays at
+  "renders real stored data", not "prioritizes the queue".
