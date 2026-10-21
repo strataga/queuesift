@@ -58,30 +58,46 @@ def overview_html(issue_count: int, proposal_count: int, scope: str) -> str:
     return _page("QueueSift shadow overview", body)
 
 
-def digest_html(proposals: list[Proposal]) -> str:
+def digest_html(
+    proposals: list[Proposal], outcomes: dict[int, dict] | None = None
+) -> str:
     if not proposals:
         return _page(
             "QueueSift digest",
             "<p>No stored proposals in this database. Point "
             "<code>DATABASE_URL</code> at the uv-backlog SQLite file and reload.</p>",
         )
+    outcomes = outcomes or {}
     groups: dict[str, list[Proposal]] = {}
     for proposal in proposals:
         groups.setdefault(proposal.route, []).append(proposal)
     parts = [f"<p class='meta'>{len(proposals)} stored proposals grouped by route.</p>"]
     for route in sorted(groups):
         parts.append(f"<h2>Route: {html.escape(route)} ({len(groups[route])})</h2>")
-        parts.append("<table><tr><th>Issue</th><th>Declared</th><th>Missing</th></tr>")
+        parts.append(
+            "<table><tr><th>Issue</th><th>Declared</th><th>Missing</th><th>Outcome</th></tr>"
+        )
         for proposal in groups[route]:
             declared = ", ".join(proposal.declared_packages) or "(none)"
             missing = ", ".join(proposal.missing_fields) or "(none)"
+            outcome = outcomes.get(proposal.issue_number)
+            if outcome is None:
+                outcome_text = "—"
+            else:
+                flag = (
+                    "maintainer-active"
+                    if outcome.get("has_maintainer_action")
+                    else "no-maintainer-action-yet"
+                )
+                outcome_text = f"{outcome.get('state', 'unknown')}; {flag}"
             parts.append(
                 "<tr><td><a href='/proposals/"
                 f"{proposal.issue_number}'>{html.escape(proposal.repo)}"
                 f"#{proposal.issue_number}</a></td>"
                 f"<td>{html.escape(proposal.issue_type or 'unknown')}; "
                 f"{html.escape(declared)}</td>"
-                f"<td>{html.escape(missing)}</td></tr>"
+                f"<td>{html.escape(missing)}</td>"
+                f"<td>{html.escape(outcome_text)}</td></tr>"
             )
         parts.append("</table>")
     return _page("QueueSift digest", "".join(parts))

@@ -15,6 +15,7 @@ from app.db import (
     list_proposals,
     make_engine,
 )
+from app.outcomes import score_outcomes
 
 
 @asynccontextmanager
@@ -26,6 +27,7 @@ async def lifespan(app: FastAPI):
 app = FastAPI(title="QueueSift", version="0.1.0", lifespan=lifespan)
 
 SCOPE = "astral-sh/uv backlog sweep (150-issue frozen cohort)"
+REPO = "astral-sh/uv"
 REPORTS_DIR = Path("evals/reports")
 
 
@@ -46,7 +48,10 @@ def overview() -> str:
 
 @app.get("/digest", response_class=HTMLResponse)
 def digest() -> str:
-    return shadow_ui.digest_html(list_proposals(_engine()))
+    engine = _engine()
+    proposals = list_proposals(engine)
+    by_number = {row["number"]: row for row in score_outcomes(engine, REPO)["issues"]}
+    return shadow_ui.digest_html(proposals, by_number)
 
 
 @app.get("/proposals/{issue_number}", response_class=HTMLResponse, response_model=None)

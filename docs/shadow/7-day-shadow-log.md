@@ -64,7 +64,8 @@ but all 150 proposals are identical — route `assisted`, declared
   tuning the parser to manufacture variance. Differentiation on uv must come
   from the semantic layer (stale age, MRE labels, duplicate retrieval), which
   is where the Slice 2 baselines already point.
-- Follow-up (not this entry): surface outcome flags in the HTML digest rows
-  as the Markdown artifact already does, so the page discriminates even when
-  declared metadata is absent. No code changed here; digest UI claim stays at
+- Follow-up done same day (outcome-flag digest rows): the HTML digest now
+  carries an Outcome column (`state; maintainer-active|no-maintainer-action-yet`)
+  from the stored outcome snapshot, so rows discriminate by maintainer
+  activity even when declared metadata is absent. Digest UI claim stays at
   "renders real stored data", not "prioritizes the queue".

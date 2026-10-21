@@ -30,11 +30,19 @@ def _is_bot(actor: str | None) -> bool:
 
 def score_outcomes(engine, repo: str) -> dict:
     """Snapshot one row per stored issue: current state plus maintainer activity."""
-    with Session(engine) as session:
-        issues = (
-            session.query(IssueRow).filter_by(repo=repo).order_by(IssueRow.number).all()
-        )
-        events = session.query(IssueEventRow).filter_by(repo=repo).all()
+    from sqlalchemy.exc import OperationalError
+
+    try:
+        with Session(engine) as session:
+            issues = (
+                session.query(IssueRow)
+                .filter_by(repo=repo)
+                .order_by(IssueRow.number)
+                .all()
+            )
+            events = session.query(IssueEventRow).filter_by(repo=repo).all()
+    except OperationalError:
+        return {"repo": repo, "generated_at": datetime.now(UTC).isoformat(), "issues": []}
     by_issue: dict[int, list] = {}
     for event in events:
         by_issue.setdefault(event.issue_number, []).append(event)

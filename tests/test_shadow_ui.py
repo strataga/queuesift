@@ -90,7 +90,27 @@ def test_digest_lists_seeded_proposal(tmp_path, monkeypatch):
     assert digest.status_code == 200
     assert "astral-sh/uv#1" in digest.text
     assert "reproduction" in digest.text
+    assert "open; no-maintainer-action-yet" in digest.text
     detail = client.get("/proposals/1")
     assert detail.status_code == 200
     assert "no usable reproduction" in detail.text
     assert "github.com/astral-sh/uv/issues/1" in detail.text
+
+
+def test_digest_html_renders_outcome_flags() -> None:
+    from app.shadow_ui import digest_html
+
+    proposal = Proposal(
+        repo="astral-sh/uv",
+        issue_number=9,
+        missing_fields=[],
+        route="human",
+        rationale=[],
+    )
+    text = digest_html(
+        [proposal],
+        {9: {"number": 9, "state": "closed", "has_maintainer_action": True}},
+    )
+    assert "closed; maintainer-active" in text
+    assert "—" in digest_html([proposal])
+    assert "—" in digest_html([proposal], {})
