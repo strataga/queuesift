@@ -1,0 +1,331 @@
+{
+  "repo": "astral-sh/uv",
+  "as_of": "2026-10-20T00:00:00Z",
+  "method": "Earliest previousTitle from pre-freeze GraphQL RENAMED_TITLE_EVENT chains. Later renames are provenance repair only; they are not model inputs.",
+  "issues": [
+    {
+      "number": 1404,
+      "original_title": "Use users pip.conf",
+      "current_title_at_freeze": "Use settings from the pip configuration file (`pip.conf`)",
+      "rename_count": 1,
+      "earliest_rename": {
+        "actor": "zanieb",
+        "created_at": "2024-11-26T23:59:22Z",
+        "previous_title": "Use users pip.conf",
+        "current_title": "Use settings from the pip configuration file (`pip.conf`)"
+      }
+    },
+    {
+      "number": 1419,
+      "original_title": "Enhancement: add `upgrade --all` option",
+      "current_title_at_freeze": "Add option to upgrade all packages in the environment, e.g., `upgrade --all`",
+      "rename_count": 1,
+      "earliest_rename": {
+        "actor": "zanieb",
+        "created_at": "2024-11-26T23:49:11Z",
+        "previous_title": "Enhancement: add `upgrade --all` option",
+        "current_title": "Add option to upgrade all packages in the environment, e.g., `upgrade --all`"
+      }
+    },
+    {
+      "number": 1566,
+      "original_title": "Machine-readable output",
+      "current_title_at_freeze": "Machine-readable progress output",
+      "rename_count": 3,
+      "earliest_rename": {
+        "actor": "joeyballentine",
+        "created_at": "2024-02-17T03:20:25Z",
+        "previous_title": "Machine-readable output",
+        "current_title": "Feature request: machine-readable/parseable output"
+      }
+    },
+    {
+      "number": 1703,
+      "original_title": "conda environment management",
+      "current_title_at_freeze": "Add support for managing Conda environments and packages",
+      "rename_count": 1,
+      "earliest_rename": {
+        "actor": "zanieb",
+        "created_at": "2024-11-26T23:58:19Z",
+        "previous_title": "conda environment management",
+        "current_title": "Add support for managing Conda environments and packages"
+      }
+    },
+    {
+      "number": 1910,
+      "original_title": "Feature Request: `uv shell`",
+      "current_title_at_freeze": "Add a command to activate the virtual environment, e.g., `uv shell`",
+      "rename_count": 2,
+      "earliest_rename": {
+        "actor": "zanieb",
+        "created_at": "2024-11-26T23:46:47Z",
+        "previous_title": "Feature Request: `uv shell`",
+        "current_title": "A command to activate the virtual environment, e.g., `uv shell`"
+      }
+    },
+    {
+      "number": 2006,
+      "original_title": "PackageName include base name",
+      "current_title_at_freeze": "`PackageName` include non-normalized name",
+      "rename_count": 1,
+      "earliest_rename": {
+        "actor": "tdejager",
+        "created_at": "2024-02-27T08:51:36Z",
+        "previous_title": "PackageName include base name",
+        "current_title": "`PackageName` include non-normalized name"
+      }
+    },
+    {
+      "number": 2491,
+      "original_title": "Enforce build isolation for Maturin-based packages",
+      "current_title_at_freeze": "Don't pull foreign cargo packages into workspace",
+      "rename_count": 1,
+      "earliest_rename": {
+        "actor": "konstin",
+        "created_at": "2024-03-18T08:50:27Z",
+        "previous_title": "Enforce build isolation for Maturin-based packages",
+        "current_title": "Don't pull foreign cargo packages into workspace"
+      }
+    },
+    {
+      "number": 2500,
+      "original_title": "uv pip list / freeze / show --system do not show system packages",
+      "current_title_at_freeze": "`uv pip list` does not read all system packages in `sys.path` and ignores `system-site-packages`",
+      "rename_count": 4,
+      "earliest_rename": {
+        "actor": "danielhollas",
+        "created_at": "2024-03-20T02:57:36Z",
+        "previous_title": "uv pip list / freeze / show --system do not show system packages",
+        "current_title": "uv pip list / freeze / show --system do not show system packages on Fedora"
+      }
+    },
+    {
+      "number": 2799,
+      "original_title": "shiv-like functionality?",
+      "current_title_at_freeze": "feature request : shiv/pyinstaller like functionality?",
+      "rename_count": 3,
+      "earliest_rename": {
+        "actor": "sahmad-d2x",
+        "created_at": "2024-04-03T07:27:01Z",
+        "previous_title": "shiv-like functionality?",
+        "current_title": "{shiv-,pyinstaller-} like functionality?"
+      }
+    },
+    {
+      "number": 3054,
+      "original_title": "`install --require-hashes`'s \"all requirement must have a hash\" can be better",
+      "current_title_at_freeze": "`install --require-hashes`'s \"all requirement must have a hash\" error can be better",
+      "rename_count": 1,
+      "earliest_rename": {
+        "actor": "bluetech",
+        "created_at": "2024-04-16T08:17:28Z",
+        "previous_title": "`install --require-hashes`'s \"all requirement must have a hash\" can be better",
+        "current_title": "`install --require-hashes`'s \"all requirement must have a hash\" error can be better"
+      }
+    },
+    {
+      "number": 3163,
+      "original_title": "Support pip download",
+      "current_title_at_freeze": "Support `pip download`",
+      "rename_count": 1,
+      "earliest_rename": {
+        "actor": "zanieb",
+        "created_at": "2024-08-11T14:49:13Z",
+        "previous_title": "Support pip download",
+        "current_title": "Support `pip download`"
+      }
+    },
+    {
+      "number": 3248,
+      "original_title": "Request: Allow --output-file multiple times, only use right-most",
+      "current_title_at_freeze": "Request: Allow --output-file, --annotation-style, etc. multiple times, only use right-most",
+      "rename_count": 1,
+      "earliest_rename": {
+        "actor": "AndydeCleyre",
+        "created_at": "2024-10-25T15:24:13Z",
+        "previous_title": "Request: Allow --output-file multiple times, only use right-most",
+        "current_title": "Request: Allow --output-file, --annotation-style, etc. multiple times, only use right-most"
+      }
+    },
+    {
+      "number": 3271,
+      "original_title": "Bug (?): `PACKAGE_ROOT` not working one level up",
+      "current_title_at_freeze": "`PROJECT_ROOT` in `requirements` uses the working directory",
+      "rename_count": 1,
+      "earliest_rename": {
+        "actor": "zanieb",
+        "created_at": "2025-04-30T17:33:38Z",
+        "previous_title": "Bug (?): `PACKAGE_ROOT` not working one level up",
+        "current_title": "`PROJECT_ROOT` in `requirements` uses the working directory"
+      }
+    },
+    {
+      "number": 3287,
+      "original_title": "[perf] uv pip install resolution is slow when installing from VCS (and branch) (?)",
+      "current_title_at_freeze": "[perf] uv pip install resolution is slow when installing from VCS",
+      "rename_count": 1,
+      "earliest_rename": {
+        "actor": "baggiponte",
+        "created_at": "2024-04-27T09:11:41Z",
+        "previous_title": "[perf] uv pip install resolution is slow when installing from VCS (and branch) (?)",
+        "current_title": "[perf] uv pip install resolution is slow when installing from VCS"
+      }
+    },
+    {
+      "number": 3518,
+      "original_title": "Option for \"Prefer wheels from \"--find-links\" directory to whatever's in the cache\"?",
+      "current_title_at_freeze": "Invalidate cache entries for same-version packages that have newer timestamps when also found externally (via --find-links)",
+      "rename_count": 3,
+      "earliest_rename": {
+        "actor": "charlesnicholson",
+        "created_at": "2024-09-27T20:37:37Z",
+        "previous_title": "Option for \"Prefer wheels from \"--find-links\" directory to whatever's in the cache\"?",
+        "current_title": "uv should use timestamps as same-version tiebreakers between packages from the uv cache and from --find-links directories"
+      }
+    },
+    {
+      "number": 3704,
+      "original_title": "--python should be allowed before command",
+      "current_title_at_freeze": "`--python` should be allowed before command",
+      "rename_count": 1,
+      "earliest_rename": {
+        "actor": "thejcannon",
+        "created_at": "2024-05-21T17:00:17Z",
+        "previous_title": "--python should be allowed before command",
+        "current_title": "`--python` should be allowed before command"
+      }
+    },
+    {
+      "number": 3796,
+      "original_title": "`uv` is caching installs based on config, even if build-backend is in-repo",
+      "current_title_at_freeze": "`uv` is caching installs based on config, even if build-backend is in-tree",
+      "rename_count": 1,
+      "earliest_rename": {
+        "actor": "thejcannon",
+        "created_at": "2024-05-23T14:56:05Z",
+        "previous_title": "`uv` is caching installs based on config, even if build-backend is in-repo",
+        "current_title": "`uv` is caching installs based on config, even if build-backend is in-tree"
+      }
+    },
+    {
+      "number": 3878,
+      "original_title": "Run tool as module when there is no entrypoint",
+      "current_title_at_freeze": "Support custom tool entrypoints",
+      "rename_count": 1,
+      "earliest_rename": {
+        "actor": "konstin",
+        "created_at": "2024-05-29T07:09:58Z",
+        "previous_title": "Run tool as module when there is no entrypoint",
+        "current_title": "Support custom tool entrypoints"
+      }
+    },
+    {
+      "number": 4359,
+      "original_title": "Support reading Python versions `tool.uv` ",
+      "current_title_at_freeze": "Support reading Python versions from `tool.uv` ",
+      "rename_count": 1,
+      "earliest_rename": {
+        "actor": "zanieb",
+        "created_at": "2024-07-24T02:39:42Z",
+        "previous_title": "Support reading Python versions `tool.uv` ",
+        "current_title": "Support reading Python versions from `tool.uv` "
+      }
+    },
+    {
+      "number": 9739,
+      "original_title": "Support externally-managed Python upgrades",
+      "current_title_at_freeze": "Don't break on upgrades of externally-managed Pythons",
+      "rename_count": 1,
+      "earliest_rename": {
+        "actor": "lishaduck",
+        "created_at": "2024-12-10T22:36:09Z",
+        "previous_title": "Support externally-managed Python upgrades",
+        "current_title": "Don't break on upgrades of externally-managed Pythons"
+      }
+    },
+    {
+      "number": 9902,
+      "original_title": "Bug: ModuleNotFoundError related to venv uv_cache.json",
+      "current_title_at_freeze": "Bug: ModuleNotFoundError related to venv uv_cache.json when store in iCloud",
+      "rename_count": 1,
+      "earliest_rename": {
+        "actor": "cvanea",
+        "created_at": "2025-07-11T19:32:31Z",
+        "previous_title": "Bug: ModuleNotFoundError related to venv uv_cache.json",
+        "current_title": "Bug: ModuleNotFoundError related to venv uv_cache.json when store in iCloud"
+      }
+    },
+    {
+      "number": 9929,
+      "original_title": "Cannot install from git+https url",
+      "current_title_at_freeze": "Termux cannot install from git+https url",
+      "rename_count": 1,
+      "earliest_rename": {
+        "actor": "joshcangit",
+        "created_at": "2024-12-19T23:52:25Z",
+        "previous_title": "Cannot install from git+https url",
+        "current_title": "Termux cannot install from git+https url"
+      }
+    },
+    {
+      "number": 10004,
+      "original_title": "How can I override a uv install with an editable package that will stay up to date on edits",
+      "current_title_at_freeze": "How can I override a uv install (via uv sync) with an editable package that will stay up to date in running docker container",
+      "rename_count": 1,
+      "earliest_rename": {
+        "actor": "adiberk",
+        "created_at": "2024-12-18T18:08:23Z",
+        "previous_title": "How can I override a uv install with an editable package that will stay up to date on edits",
+        "current_title": "How can I override a uv install (via uv sync) with an editable package that will stay up to date in running docker container"
+      }
+    },
+    {
+      "number": 10711,
+      "original_title": "Question/BUG? `No interpreter found for Python 3.12 in system path`",
+      "current_title_at_freeze": "`No interpreter found in search path` on nixOS",
+      "rename_count": 3,
+      "earliest_rename": {
+        "actor": "turbotimon",
+        "created_at": "2025-01-17T14:36:04Z",
+        "previous_title": "Question/BUG? `No interpreter found for Python 3.12 in system path`",
+        "current_title": "Question/BUG? `No interpreter found in search path`"
+      }
+    },
+    {
+      "number": 11636,
+      "original_title": "`uv pip install -r requirements.txt` flakiness with `datashader` and `llvmlite`",
+      "current_title_at_freeze": "`uv pip install -r requirements.txt` flakiness with `datashader` and `llvmlite` packages",
+      "rename_count": 1,
+      "earliest_rename": {
+        "actor": "chrisrodrigue",
+        "created_at": "2025-02-19T20:03:04Z",
+        "previous_title": "`uv pip install -r requirements.txt` flakiness with `datashader` and `llvmlite`",
+        "current_title": "`uv pip install -r requirements.txt` flakiness with `datashader` and `llvmlite` packages"
+      }
+    },
+    {
+      "number": 13288,
+      "original_title": "Cannot open shared object file: No such file or directory",
+      "current_title_at_freeze": "uv installing for incorrect architecture (raspberry pi)",
+      "rename_count": 1,
+      "earliest_rename": {
+        "actor": "jonathancyu",
+        "created_at": "2025-05-04T23:35:48Z",
+        "previous_title": "Cannot open shared object file: No such file or directory",
+        "current_title": "uv installing for incorrect architecture (raspberry pi)"
+      }
+    },
+    {
+      "number": 13515,
+      "original_title": "Entrypoint creation isn't targeting the direct dependency, instead is build through third-party dependency",
+      "current_title_at_freeze": "Entrypoint creation isn't targeting the direct dependency, instead is built through third-party dependency",
+      "rename_count": 1,
+      "earliest_rename": {
+        "actor": "WibblyGhost",
+        "created_at": "2025-05-18T21:42:43Z",
+        "previous_title": "Entrypoint creation isn't targeting the direct dependency, instead is build through third-party dependency",
+        "current_title": "Entrypoint creation isn't targeting the direct dependency, instead is built through third-party dependency"
+      }
+    }
+  ]
+}

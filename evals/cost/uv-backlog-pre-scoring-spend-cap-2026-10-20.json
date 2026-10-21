@@ -1,0 +1,16 @@
+{
+  "repo": "astral-sh/uv",
+  "as_of": "2026-10-20T00:00:00Z",
+  "scope": "Any Slice 2 scored evaluation run for the frozen 150-issue uv backlog cohort.",
+  "max_paid_provider_spend_usd_per_eligible_issue": 0.0,
+  "max_paid_provider_spend_usd_per_day": 0.0,
+  "paid_provider_calls_permitted": 0,
+  "status": "blocking",
+  "basis": [
+    "OpenAI billing was last verified inactive; no OpenAI unit-cost measurement is available.",
+    "No paid OpenAI or TypeSafe scoring call has been made for Slice 2.",
+    "TypeSafe token counts were measured during feasibility, but no dollar unit price was recorded.",
+    "Local Ollama development calls and read-only GitHub metadata checks are not paid provider scoring."
+  ],
+  "revision_rule": "A nonzero scored-run cap may be set only after OpenAI billing activation and a measured unit-cost spike. It must be recorded before scoring and cannot be raised retroactively to pass an evaluation."
+}

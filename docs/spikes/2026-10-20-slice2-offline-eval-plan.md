@@ -154,8 +154,8 @@ Slice 2 implementation and scoring remain blocked until all are true:
 3. Recorded pre-scoring spend cap.
 4. Completed MRE denominators: 55 positives and 30 negatives.
 5. A Slice 2 scope restricted to stale and secondary MRE evaluation.
-6. Issue-level creation-time test proving that no future state, current label,
-   or later timeline signal reaches model inputs.
+6. Completed issue-level creation-time test and title/body provenance gates in
+   `app/eval_inputs.py` and `tests/test_eval_inputs.py`.
 
 No duplicate scoring, shadow deployment, outreach, maintainer pilot, or write
 can be justified by this plan.

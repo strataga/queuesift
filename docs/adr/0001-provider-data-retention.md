@@ -56,3 +56,20 @@ Slice 1 feasibility can proceed (local drafting/embeddings, lean Jev spikes).
 Slice 2 evaluated comparisons must state exactly which provider produced each
 arm. Any customer pilot needs a fresh review of retention terms as they exist
 at that date; this ADR records only what was verified on 2026-10-20.
+
+## Slice 2 input-gate update — 2026-10-20
+
+Status: accepted for no-provider Slice 2 input, provenance, rule, metric, and
+synthetic-test work. It does not authorize provider-backed scoring, shadow
+deployment, outreach, a maintainer pilot, or writes.
+
+- OpenAI billing remains inactive on the last verified check. Billing
+  activation is the remaining blocker for any scored evaluation run.
+- Paid provider spend is capped at `$0.00` per eligible issue and `$0.00` per
+  day in
+  `evals/cost/uv-backlog-pre-scoring-spend-cap-2026-10-20.json`.
+- No new provider call, draft, embedding, trace payload, or paid evaluation
+  was made in this update.
+- The OpenAI no-training default, TypeSafe processing limits, local-Ollama
+  boundary, secret-handling rules, and hosted-tracing limits above remain
+  unchanged.
