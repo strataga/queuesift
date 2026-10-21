@@ -106,7 +106,7 @@ def _score_binary(
     return result
 
 
-def _embed_issue_texts(
+def embed_in_batches(
     embedder: Embedder, texts: list[str]
 ) -> tuple[list[list[float]], dict]:
     started_vectors = 0
@@ -151,7 +151,7 @@ def _semantic_predictions(
     negative_hypothesis: str,
 ) -> tuple[list[int], dict]:
     texts = [issue_text_for_embedding(item) for item in items]
-    vectors, metadata = _embed_issue_texts(
+    vectors, metadata = embed_in_batches(
         embedder, [*texts, positive_hypothesis, negative_hypothesis]
     )
     issue_vectors = vectors[:-2]

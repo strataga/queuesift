@@ -60,7 +60,7 @@ def predict_mre_by_template(item: CreationTimeIssueInput) -> int:
     return 0 if parse_template(item.body).has_reproduction else 1
 
 
-def _cosine(left: Sequence[float], right: Sequence[float]) -> float:
+def cosine_similarity(left: Sequence[float], right: Sequence[float]) -> float:
     if len(left) != len(right) or not left:
         raise ValueError("similarity vectors must have the same nonzero length")
     left_norm = math.sqrt(math.fsum(v * v for v in left))
@@ -107,7 +107,8 @@ def semantic_similarity_predictions(
     negative_vector = vectors[-1]
     return [
         1
-        if _cosine(vector, positive_vector) >= _cosine(vector, negative_vector)
+        if cosine_similarity(vector, positive_vector)
+        >= cosine_similarity(vector, negative_vector)
         else 0
         for vector in vectors[:-2]
     ]
